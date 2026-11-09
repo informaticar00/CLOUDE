@@ -7,6 +7,10 @@ if not exist .venv (
   exit /b 1
 )
 call .venv\Scripts\activate.bat
-echo Gold Bot radi. Zatvori ovaj prozor ili pritisni Ctrl+C da ga ugasis.
+:loop
+echo Gold Bot radi. Zatvori ovaj prozor da ga ugasis.
 python -m goldbot
-pause
+echo.
+echo Bot je stao. Ponovo pokrecem za 30 sekundi... (zatvori prozor da prekines)
+timeout /t 30 /nobreak >nul
+goto loop

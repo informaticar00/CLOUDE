@@ -26,19 +26,50 @@ Bot radi na računaru ili serveru, a ti njime upravljaš s iPhonea preko Telegra
 - **Obavijesti:** novi signali, otvorene i zatvorene pozicije (SL/TP) i greške stižu kao push notifikacije.
 - **MetaTrader 5 za iOS** (App Store): prijavi se na isti račun da vidiš grafikone i pozicije koje bot otvara.
 
-### Bot 24/7 bez računara (sve s iPhonea)
+### Bot 24/7 bez računara: Windows VPS (sve s iPhonea)
 
-Da bot radi i kad ti je računar ugašen, pokreni ga na **Windows VPS-u** (iznajmljeni Windows računar u cloudu):
+VPS je iznajmljeni Windows računar u cloudu koji radi stalno. Ti se na njega spajaš s iPhonea.
 
-1. **Iznajmi Windows VPS:**
-   - mnogi brokeri daju **besplatan VPS** uz MT5 račun, pa prvo pitaj svog brokera,
-   - inače ga nudi bilo koji hosting (Windows Server, 2 GB RAM-a je dovoljno), za otprilike 10–20 USD mjesečno.
-2. **Spoji se s iPhonea:** iz App Storea instaliraj **Windows App** (Microsoft, bivši *Remote Desktop*) i dodaj VPS (IP adresa, korisničko ime i lozinka od hostinga).
-3. **Instaliraj na VPS-u:** sve korake iz poglavlja ispod (Python, bot, MT5) radiš na VPS-u kroz Windows App, kao na običnom računaru.
-4. **Pokreni:** pokreni MT5 i `start.bat`, pa samo zatvori Windows App. **Ne odjavljuj se (Sign out)**, samo zatvori vezu, i bot nastavlja raditi.
-5. **Automatski start:** da se bot sam pokrene nakon restarta VPS-a, stavi prečice do MT5 i `start.bat` u `shell:startup` (Win+R → `shell:startup`).
+**1. Iznajmi VPS**
+- Prvo pitaj svog MT5 brokera: mnogi daju **besplatan VPS** ako imaš određeni depozit ili obim trgovanja.
+- Inače ga nudi bilo koji hosting koji ima **Windows Server**.
+- Preporučena konfiguracija:
+  - **2 vCPU, 4 GB RAM-a i 40 GB diska** (s 2 GB RAM-a Windows i MT5 rade sporo),
+  - **lokacija** blizu servera brokera (najčešće London, Frankfurt, Amsterdam ili New York).
+- Nakon kupovine dobiješ **IP adresu, korisničko ime** (obično `Administrator`) **i lozinku**.
 
-Nakon toga ti za svakodnevni rad treba samo Telegram na iPhoneu.
+**2. Spoji se s iPhonea**
+1. Iz App Storea instaliraj **Windows App** (Microsoft).
+2. Dodirni **+ → Add PC**. U *PC name* upiši IP adresu VPS-a, a pod *Credentials* korisničko ime i lozinku.
+3. Dodirni VPS i prihvati upozorenje o certifikatu. Vidiš Windows desktop.
+4. Na iPhoneu je ekran mali. Okreni telefon vodoravno, a prstom pomjeraš miš. Na iPadu ili s tastaturom je lakše.
+
+**3. Instaliraj bota na VPS-u**
+
+Na VPS-u otvori **Edge** i uradi isto kao na običnom računaru:
+1. **Python:** <https://www.python.org/downloads/> i označi **„Add python.exe to PATH“**.
+2. **Bot:** prijavi se na GitHub i skini ZIP grane `claude/determined-wright-ul7bdj`. Raspakuj ga u `C:\GoldBot`.
+3. **MT5:** instaliraj MetaTrader 5 od svog brokera, prijavi se i uključi **Algo Trading** (pogledaj poglavlje *MetaTrader 5*).
+4. **Instalacija i postavke:** pokreni `install.bat` i popuni `.env`.
+   - Token i chat ID najlakše kopiraš ako na VPS-u otvoriš <https://web.telegram.org>.
+   - Prijavu na Telegram Web potvrdiš s iPhonea.
+5. **Provjera:** pokreni `provjera.bat` i dočekaj „Sve radi ✅“.
+6. **Start:** pokreni `start.bat`. Ako se bot sruši, ova skripta ga sama ponovo pokrene za 30 sekundi.
+
+**4. Neka se bot sam pokreće**
+1. **Autostart:** pokreni **`autostart.bat`**. On napravi prečicu, pa se bot pokrene čim se prijaviš u Windows. MT5 terminal bot pokreće sam.
+2. **Automatska prijava:** Windows ponekad restartuje VPS zbog ažuriranja, a nakon restarta niko nije prijavljen. Zato uključi automatsku prijavu:
+   - skini **Autologon** sa <https://learn.microsoft.com/sysinternals/downloads/autologon> (zvanični Microsoftov alat),
+   - pokreni `Autologon64.exe`, upiši lozinku VPS-a i klikni **Enable**.
+3. **Test:** restartuj VPS (*Start → Power → Restart*). Za 1–2 minute u Telegramu treba stići poruka *„Gold Bot pokrenut“*.
+
+**5. Odspajanje**
+- **Ispravno:** samo zatvori Windows App ili dodirni **Disconnect**, i bot radi dalje.
+- **Pogrešno:** nikad ne biraj **Sign out / Odjava**, jer to gasi bota i MT5.
+
+**Sigurnost**
+- Za VPS koristi dugu, jedinstvenu lozinku i nikome je ne daj. Ko ima VPS, ima i tvoj trading račun.
+- `.env` sadrži Telegram token i MT5 lozinku, pa ga ne šalji nikome i ne stavljaj na GitHub. Ionako je u `.gitignore`.
 
 ---
 
@@ -242,5 +273,5 @@ goldbot/
   engine.py        glavna logika (tick, nalozi)
   telegram_bot.py  Telegram meni, dugmad i komande
   overrides.py     postavke iz Telegrama (čuvaju se u postavke.json)
-install.bat / provjera.bat / start.bat   Windows skripte
+install.bat / provjera.bat / start.bat / autostart.bat   Windows skripte
 ```

@@ -165,7 +165,7 @@ async def cmd_positions(update: Update, context: ContextTypes.DEFAULT_TYPE) -> N
 async def cmd_history(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     history = getattr(_engine(context).broker, "history", None)
     if history is None:
-        await _reply(update, "Historija je dostupna u OANDA platformi.")
+        await _reply(update, "Historija je dostupna u platformi brokera (OANDA / MT5).")
         return
     if not history:
         await _reply(update, "Još nema zatvorenih trejdova.")

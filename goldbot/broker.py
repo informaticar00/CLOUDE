@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 import logging
+import math
 import os
 import tempfile
 from typing import Protocol
@@ -30,6 +31,10 @@ class Broker(Protocol):
 
     async def positions(self) -> list[Position]: ...
 
+    async def normalize_units(self, units: float) -> float:
+        """Zaokruži količinu (unce) NANIŽE na ono što broker prihvata."""
+        ...
+
     async def open(self, side: str, units: float, stop_loss: float | None, take_profit: float | None) -> Position: ...
 
     async def close(self, position_id: str, reason: str = "Ručno zatvaranje") -> ClosedTrade: ...
@@ -37,6 +42,11 @@ class Broker(Protocol):
     async def sync(self) -> list[ClosedTrade]:
         """Provjeri SL/TP i vrati pozicije zatvorene od zadnje provjere."""
         ...
+
+
+def _floor(units: float, precision: int) -> float:
+    factor = 10**precision
+    return math.floor(units * factor + 1e-9) / factor
 
 
 def _direction(side: str) -> int:
@@ -120,6 +130,9 @@ class PaperBroker:
         if self._positions:
             self._mark(await self.quote())
         return list(self._positions.values())
+
+    async def normalize_units(self, units: float) -> float:
+        return _floor(units, self.units_precision)
 
     # ---- nalozi
     async def open(self, side: str, units: float, stop_loss: float | None, take_profit: float | None) -> Position:
@@ -241,6 +254,9 @@ class OandaBroker:
                 )
             )
         return out
+
+    async def normalize_units(self, units: float) -> float:
+        return _floor(units, self.units_precision)
 
     async def open(self, side: str, units: float, stop_loss: float | None, take_profit: float | None) -> Position:
         units_int = int(units)

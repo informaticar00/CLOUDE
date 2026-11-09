@@ -76,6 +76,14 @@ class Settings:
     oanda_account_id: str = ""
     oanda_env: str = "practice"
 
+    mt5_login: int | None = None
+    mt5_password: str = ""
+    mt5_server: str = ""
+    mt5_path: str = ""
+    mt5_symbol: str = "XAUUSD"
+    mt5_magic: int = 20260
+    mt5_deviation: int = 50
+
     timeframe: str = "M15"
     strategy: StrategyParams = field(default_factory=StrategyParams)
 
@@ -91,7 +99,7 @@ class Settings:
     paper_state_file: str = "paper_state.json"
 
     @classmethod
-    def from_env(cls, env_file: str | None = ".env") -> "Settings":
+    def from_env(cls, env_file: str | None = ".env", require_telegram: bool = True) -> "Settings":
         if env_file:
             load_dotenv(env_file)
 
@@ -109,6 +117,13 @@ class Settings:
             oanda_api_key=_get("OANDA_API_KEY", "") or "",
             oanda_account_id=_get("OANDA_ACCOUNT_ID", "") or "",
             oanda_env=(_get("OANDA_ENV", "practice") or "practice").lower(),
+            mt5_login=_int("MT5_LOGIN", 0) or None,
+            mt5_password=_get("MT5_PASSWORD", "") or "",
+            mt5_server=_get("MT5_SERVER", "") or "",
+            mt5_path=_get("MT5_PATH", "") or "",
+            mt5_symbol=_get("MT5_SYMBOL", "XAUUSD") or "XAUUSD",
+            mt5_magic=_int("MT5_MAGIC", 20260),
+            mt5_deviation=_int("MT5_DEVIATION", 50),
             timeframe=(_get("TIMEFRAME", "M15") or "M15").upper(),
             strategy=StrategyParams(
                 ema_fast=_int("EMA_FAST", 9),
@@ -131,20 +146,23 @@ class Settings:
             paper_spread=_float("PAPER_SPREAD", 0.30),
             paper_state_file=_get("PAPER_STATE_FILE", "paper_state.json") or "paper_state.json",
         )
-        s.validate()
+        s.validate(require_telegram)
         return s
 
-    def validate(self) -> None:
-        if not self.telegram_token:
-            raise ConfigError("TELEGRAM_TOKEN nije postavljen")
-        if not self.allowed_chat_ids:
-            raise ConfigError("ALLOWED_CHAT_IDS nije postavljen - bot mora znati ko smije njime upravljati")
-        if self.mode not in ("paper", "oanda"):
-            raise ConfigError("MODE mora biti 'paper' ili 'oanda'")
-        if self.data_source not in ("yahoo", "oanda"):
-            raise ConfigError("DATA_SOURCE mora biti 'yahoo' ili 'oanda'")
-        if self.mode == "oanda" and self.data_source != "oanda":
-            raise ConfigError("Kad je MODE=oanda, DATA_SOURCE mora biti 'oanda'")
+    def validate(self, require_telegram: bool = True) -> None:
+        if require_telegram:
+            if not self.telegram_token:
+                raise ConfigError("TELEGRAM_TOKEN nije postavljen")
+            if not self.allowed_chat_ids:
+                raise ConfigError("ALLOWED_CHAT_IDS nije postavljen - bot mora znati ko smije njime upravljati")
+        if self.mode not in ("paper", "oanda", "mt5"):
+            raise ConfigError("MODE mora biti 'paper', 'oanda' ili 'mt5'")
+        if self.data_source not in ("yahoo", "oanda", "mt5"):
+            raise ConfigError("DATA_SOURCE mora biti 'yahoo', 'oanda' ili 'mt5'")
+        if self.mode in ("oanda", "mt5") and self.data_source != self.mode:
+            raise ConfigError(f"Kad je MODE={self.mode}, DATA_SOURCE mora biti '{self.mode}'")
+        if self.mt5_login and not (self.mt5_password and self.mt5_server):
+            raise ConfigError("Uz MT5_LOGIN moraš postaviti i MT5_PASSWORD i MT5_SERVER")
         if (self.mode == "oanda" or self.data_source == "oanda") and not (
             self.oanda_api_key and self.oanda_account_id
         ):

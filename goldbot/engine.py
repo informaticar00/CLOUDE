@@ -121,14 +121,17 @@ class TradingEngine:
                 f"(maks. {self.settings.max_open_positions})."
             )
 
-        precision = self.broker.units_precision
         if units is None:
             balance = await self.broker.balance()
-            units = position_size(balance, self.settings.risk_pct, entry, sl, self.settings.max_units, precision)
+            units = position_size(balance, self.settings.risk_pct, entry, sl, self.settings.max_units, 4)
         else:
-            units = round(min(units, self.settings.max_units), precision)
+            units = min(units, self.settings.max_units)
+        units = await self.broker.normalize_units(units)
         if units <= 0:
-            raise BrokerError("Izračunata količina je 0 (premali saldo ili prevelik stop).")
+            raise BrokerError(
+                "Količina je 0 nakon zaokruživanja (premali saldo, prevelik stop "
+                "ili ispod minimalne veličine kod brokera)."
+            )
         return OrderPlan(side, units, entry, sl, tp, round(abs(entry - sl) * units, 2), close_ids)
 
     async def _execute_locked(

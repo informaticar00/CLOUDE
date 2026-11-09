@@ -84,6 +84,15 @@ class Settings:
     mt5_magic: int = 20260
     mt5_deviation: int = 50
 
+    ctrader_client_id: str = ""
+    ctrader_client_secret: str = ""
+    ctrader_access_token: str = ""
+    ctrader_refresh_token: str = ""
+    ctrader_account: int | None = None
+    ctrader_symbol: str = "XAUUSD"
+    ctrader_token_file: str = "ctrader_token.json"
+    ctrader_redirect_uri: str = "http://localhost"
+
     allow_real_money: bool = False
 
     timeframe: str = "M15"
@@ -127,6 +136,14 @@ class Settings:
             mt5_symbol=_get("MT5_SYMBOL", "XAUUSD") or "XAUUSD",
             mt5_magic=_int("MT5_MAGIC", 20260),
             mt5_deviation=_int("MT5_DEVIATION", 50),
+            ctrader_client_id=_get("CTRADER_CLIENT_ID", "") or "",
+            ctrader_client_secret=_get("CTRADER_CLIENT_SECRET", "") or "",
+            ctrader_access_token=_get("CTRADER_ACCESS_TOKEN", "") or "",
+            ctrader_refresh_token=_get("CTRADER_REFRESH_TOKEN", "") or "",
+            ctrader_account=_int("CTRADER_ACCOUNT", 0) or None,
+            ctrader_symbol=_get("CTRADER_SYMBOL", "XAUUSD") or "XAUUSD",
+            ctrader_token_file=_get("CTRADER_TOKEN_FILE", "ctrader_token.json") or "ctrader_token.json",
+            ctrader_redirect_uri=_get("CTRADER_REDIRECT_URI", "http://localhost") or "http://localhost",
             allow_real_money=_bool("ALLOW_REAL_MONEY", False),
             timeframe=(_get("TIMEFRAME", "M15") or "M15").upper(),
             strategy=StrategyParams(
@@ -160,11 +177,13 @@ class Settings:
                 raise ConfigError("TELEGRAM_TOKEN nije postavljen")
             if not self.allowed_chat_ids:
                 raise ConfigError("ALLOWED_CHAT_IDS nije postavljen - bot mora znati ko smije njime upravljati")
-        if self.mode not in ("paper", "oanda", "mt5"):
-            raise ConfigError("MODE mora biti 'paper', 'oanda' ili 'mt5'")
-        if self.data_source not in ("yahoo", "oanda", "mt5"):
-            raise ConfigError("DATA_SOURCE mora biti 'yahoo', 'oanda' ili 'mt5'")
-        if self.mode in ("oanda", "mt5") and self.data_source != self.mode:
+        if self.mode not in ("paper", "oanda", "mt5", "ctrader"):
+            raise ConfigError("MODE mora biti 'paper', 'oanda', 'mt5' ili 'ctrader'")
+        if self.data_source not in ("yahoo", "oanda", "mt5", "ctrader"):
+            raise ConfigError("DATA_SOURCE mora biti 'yahoo', 'oanda', 'mt5' ili 'ctrader'")
+        if "ctrader" in (self.mode, self.data_source) and not (self.ctrader_client_id and self.ctrader_client_secret):
+            raise ConfigError("Za cTrader postavi CTRADER_CLIENT_ID i CTRADER_CLIENT_SECRET (sa openapi.ctrader.com)")
+        if self.mode in ("oanda", "mt5", "ctrader") and self.data_source != self.mode:
             raise ConfigError(f"Kad je MODE={self.mode}, DATA_SOURCE mora biti '{self.mode}'")
         if self.mt5_login and not (self.mt5_password and self.mt5_server):
             raise ConfigError("Uz MT5_LOGIN moraš postaviti i MT5_PASSWORD i MT5_SERVER")

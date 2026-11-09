@@ -271,6 +271,20 @@ Početne postavke su u `.env.example`, s objašnjenjima. Ono što promijeniš iz
 - **Na svom računaru:** bot radi dok je računar upaljen. Isključi *Sleep* u Windows postavkama napajanja.
 - **Na Windows VPS-u (preporučeno):** pogledaj poglavlje *📱 Upravljanje s iPhonea* iznad.
 
+## 🧪 cTrader (eksperimentalno)
+
+Bot se može spojiti i na **cTrader** račun direktno preko interneta, bez MetaTradera i bez Windowsa.
+Testirano je samo protiv simuliranog servera, ne protiv pravog cTradera, pa ga prvo probaj na **demo** računu.
+
+1. Napravi cTrader ID i račun kod nekog cTrader brokera.
+2. Na <https://openapi.ctrader.com> prijavi se i dodaj aplikaciju (*Applications → Add new app*).
+   - U *Redirect URIs* dodaj `http://localhost`.
+   - Kad je aplikacija odobrena, kopiraj **Client ID** i **Client Secret** u `.env`.
+3. U `.env` postavi `MODE=ctrader` i `DATA_SOURCE=ctrader`.
+4. Pokreni **`ctrader-login.bat`**, otvori link, odobri pristup i zalijepi adresu iz preglednika.
+   - Token se čuva u `ctrader_token.json` i sam se obnavlja.
+5. Pokreni `provjera.bat`, pa `start.bat`.
+
 ## 🐧 Linux / macOS
 
 Na Linuxu i macOS-u rade paper i OANDA načini, ali MT5 ne radi:
@@ -306,6 +320,7 @@ goldbot/
   config.py        postavke iz .env
   data.py          izvori cijena (Yahoo, OANDA)
   mt5.py           MetaTrader 5 izvor cijena i broker
+  ctrader.py       cTrader Open API (eksperimentalno)
   indicators.py    EMA, RSI, ATR
   strategy.py      pravila za signale
   risk.py          veličina pozicije, dnevni limit

@@ -1,5 +1,6 @@
 python-telegram-bot[job-queue]==21.6
 httpx>=0.27,<1.0
 python-dotenv>=1.0
+websockets>=13.0,<16
 # MetaTrader 5 (radi samo na Windowsu)
 MetaTrader5>=5.0.45; sys_platform == "win32"

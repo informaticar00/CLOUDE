@@ -147,12 +147,14 @@ class Mt5Broker:
         symbol: str = "XAUUSD",
         magic: int = 20260,
         deviation: int = 50,
+        allow_real_money: bool = False,
     ) -> None:
         self.client = client
         self.feed = feed
         self.symbol = symbol
         self.magic = magic
         self.deviation = deviation
+        self.allow_real_money = allow_real_money
         self.name = "MetaTrader 5"
         self._known: set[str] | None = None
 
@@ -238,7 +240,12 @@ class Mt5Broker:
             raise BrokerError(f"Nepoznata strana: {side}")
 
         def send(mt5: Any) -> Position:
-            self._account(mt5)
+            acc = self._account(mt5)
+            if acc.trade_mode == 2 and not self.allow_real_money:
+                raise BrokerError(
+                    "Ovo je PRAVI (REAL) račun, a ALLOW_REAL_MONEY nije uključen u .env. "
+                    "Postavi ALLOW_REAL_MONEY=true i restartuj bota ako stvarno želiš trgovati pravim novcem."
+                )
             info = _symbol_info(mt5, self.symbol)
             lots = self._lots(units, info)
             if lots <= 0:

@@ -84,6 +84,8 @@ class Settings:
     mt5_magic: int = 20260
     mt5_deviation: int = 50
 
+    allow_real_money: bool = False
+
     timeframe: str = "M15"
     strategy: StrategyParams = field(default_factory=StrategyParams)
 
@@ -125,6 +127,7 @@ class Settings:
             mt5_symbol=_get("MT5_SYMBOL", "XAUUSD") or "XAUUSD",
             mt5_magic=_int("MT5_MAGIC", 20260),
             mt5_deviation=_int("MT5_DEVIATION", 50),
+            allow_real_money=_bool("ALLOW_REAL_MONEY", False),
             timeframe=(_get("TIMEFRAME", "M15") or "M15").upper(),
             strategy=StrategyParams(
                 ema_fast=_int("EMA_FAST", 9),
@@ -171,6 +174,8 @@ class Settings:
             raise ConfigError("OANDA_API_KEY i OANDA_ACCOUNT_ID su obavezni za OANDA")
         if self.oanda_env not in ("practice", "live"):
             raise ConfigError("OANDA_ENV mora biti 'practice' ili 'live'")
+        if self.mode == "oanda" and self.oanda_env == "live" and not self.allow_real_money:
+            raise ConfigError("OANDA_ENV=live je PRAVI NOVAC - postavi ALLOW_REAL_MONEY=true ako si siguran")
         if self.timeframe not in VALID_TIMEFRAMES:
             raise ConfigError(f"TIMEFRAME mora biti jedan od {', '.join(VALID_TIMEFRAMES)}")
         if self.strategy.ema_fast >= self.strategy.ema_slow:

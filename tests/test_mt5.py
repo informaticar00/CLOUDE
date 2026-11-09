@@ -111,3 +111,23 @@ def test_config_mt5_validation():
     with pytest.raises(ConfigError):
         Settings(telegram_token="x", allowed_chat_ids={1}, mode="mt5", data_source="mt5", mt5_login=1).validate()
     Settings(mode="paper").validate(require_telegram=False)
+
+
+def test_real_account_blocked_unless_allowed():
+    fake, feed, broker = setup()
+    real = lambda: NS(balance=5000.0, equity=5000.0, trade_mode=2, login=999)
+    fake.account_info = real
+    with pytest.raises(BrokerError, match="ALLOW_REAL_MONEY"):
+        run(broker.open(BUY, 5, 1990, 2020))
+    assert fake.requests == []
+    broker.allow_real_money = True
+    assert run(broker.open(BUY, 5, 1990, 2020)).units == 5
+    assert broker.name == "MetaTrader 5 REAL #999"
+
+
+def test_oanda_live_requires_flag():
+    base = dict(telegram_token="x", allowed_chat_ids={1}, mode="oanda", data_source="oanda",
+                oanda_api_key="k", oanda_account_id="a", oanda_env="live")
+    with pytest.raises(ConfigError, match="ALLOW_REAL_MONEY"):
+        Settings(**base).validate()
+    Settings(**base, allow_real_money=True).validate()

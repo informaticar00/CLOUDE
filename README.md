@@ -46,6 +46,20 @@ VPS je iznajmljeni Windows računar u cloudu koji radi stalno. Ti se na njega sp
 
 **3. Instaliraj bota na VPS-u**
 
+**Najbrže, jednom komandom.** Na VPS-u desni klik na Start → **Windows PowerShell (Admin)**, zalijepi ovo i pritisni Enter:
+
+```powershell
+irm https://raw.githubusercontent.com/informaticar00/CLOUDE/refs/heads/claude/determined-wright-ul7bdj/vps-setup.ps1 | iex
+```
+
+- **Šta radi:** instalira Python 3.12, skida bota u `C:\GoldBot`, instalira pakete, podesi autostart i otvori `.env` u Notepadu.
+- **Kopiranje s iPhonea:** kopiraj komandu na iPhoneu, pa je u PowerShellu na VPS-u zalijepi desnim klikom (dugi pritisak). Windows App prenosi clipboard.
+- **Ažuriranje:** istu komandu pokreneš kasnije da ažuriraš bota. `.env` i postavke ostaju.
+
+Nakon skripte ti ostaje: instaliraj MT5 od brokera, popuni `.env`, pa pokreni `provjera.bat` i `start.bat`.
+
+**Ručno, korak po korak:**
+
 Na VPS-u otvori **Edge** i uradi isto kao na običnom računaru:
 1. **Python:** <https://www.python.org/downloads/> i označi **„Add python.exe to PATH“**.
 2. **Bot:** prijavi se na GitHub i skini ZIP grane `claude/determined-wright-ul7bdj`. Raspakuj ga u `C:\GoldBot`.
@@ -79,7 +93,7 @@ MetaTrader 5 Python paket radi **samo na Windowsu**, pa je ovo preporučeni nač
 
 ### Korak 1: Instaliraj Python
 
-1. Otvori <https://www.python.org/downloads/> i skini Python 3.12 (ili noviji).
+1. Otvori <https://www.python.org/downloads/> i skini **Python 3.12** (ne noviji, jer MetaTrader5 paket ne podržava uvijek najnoviju verziju).
 2. Pokreni instalaciju i **obavezno označi kvadratić „Add python.exe to PATH“** na prvom ekranu.
 3. Klikni *Install Now*.
 
@@ -126,6 +140,32 @@ Snimi fajl (Ctrl+S). Za MetaTrader 5 pogledaj sljedeće poglavlje.
 Bot radi dok je prozor `start.bat` otvoren i računar uključen.
 
 ---
+
+## 💵 Pravi novac
+
+Bot **neće otvoriti nijednu poziciju na REAL računu** dok u `.env` ne postaviš `ALLOW_REAL_MONEY=true`. To je zaštita da ne trguješ pravim novcem slučajno. Demo računi rade i bez toga.
+
+**Preporučeni redoslijed:**
+1. **Demo:** 2–4 sedmice na **demo** računu, na istom VPS-u i s istim postavkama. Prati `/historija` i P/L.
+2. **Pravi račun, mali rizik:** tek ako su rezultati dobri, prebaci se na pravi račun s **malim rizikom**:
+   ```ini
+   MODE=mt5
+   DATA_SOURCE=mt5
+   MT5_LOGIN=broj_pravog_racuna
+   MT5_PASSWORD=lozinka
+   MT5_SERVER=Broker-Live        # tačan naziv REAL servera
+   ALLOW_REAL_MONEY=true
+   RISK_PCT=0.5                  # 0.5% salda po trejdu
+   MAX_UNITS=10                  # najviše 0.10 lota
+   MAX_OPEN_POSITIONS=1
+   DAILY_LOSS_LIMIT_PCT=2
+   AUTO_TRADE_ON_START=false     # auto-trading uključiš ručno iz Telegrama
+   ```
+3. **Provjera:** pokreni `provjera.bat`. Mora pisati `Račun: MetaTrader 5 REAL #...`.
+4. **Ručni nalog:** pokreni `start.bat`. U Telegramu prvo napravi **jedan ručni nalog od 1 oz** i provjeri u MT5 aplikaciji na iPhoneu da su SL i TP postavljeni. Zatim ga zatvori.
+5. **Auto-trading:** tek onda uključi 🤖 Auto-trading.
+
+> Ne ulaži novac koji ne smiješ izgubiti. Bot nije testiran na historijskim podacima i nema garancije zarade.
 
 ## 📈 MetaTrader 5
 
@@ -274,4 +314,5 @@ goldbot/
   telegram_bot.py  Telegram meni, dugmad i komande
   overrides.py     postavke iz Telegrama (čuvaju se u postavke.json)
 install.bat / provjera.bat / start.bat / autostart.bat   Windows skripte
+vps-setup.ps1    instalacija/ažuriranje na VPS-u jednom komandom
 ```

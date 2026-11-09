@@ -47,7 +47,8 @@ def build_engine(settings: Settings, http: httpx.AsyncClient) -> TradingEngine:
     elif settings.mode == "mt5":
         from .mt5 import Mt5Broker
 
-        broker = Mt5Broker(mt5_client, feed, settings.mt5_symbol, settings.mt5_magic, settings.mt5_deviation)
+        broker = Mt5Broker(mt5_client, feed, settings.mt5_symbol, settings.mt5_magic, settings.mt5_deviation,
+                           settings.allow_real_money)
     else:
         broker = PaperBroker(feed, settings.paper_start_balance, settings.paper_spread, settings.paper_state_file)
     return TradingEngine(settings, feed, broker)

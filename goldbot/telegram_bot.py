@@ -597,6 +597,10 @@ def _schedule(app: Application, interval: int) -> None:
 async def _post_init(app: Application) -> None:
     engine: TradingEngine = app.bot_data["engine"]
     await app.bot.set_my_commands(COMMANDS)
+    try:
+        await engine.broker.balance()  # učita naziv računa (npr. "MetaTrader 5 REAL #123")
+    except Exception as exc:  # noqa: BLE001
+        log.warning("Ne mogu pročitati račun pri pokretanju: %s", exc)
     state = "✅ UKLJUČEN" if engine.auto_enabled else "⏸ ISKLJUČEN"
     for chat_id in engine.settings.allowed_chat_ids:
         try:

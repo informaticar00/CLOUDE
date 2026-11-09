@@ -1,0 +1,7 @@
+.env
+state.json
+state.json.tmp
+trades.csv
+__pycache__/
+*.pyc
+.venv/

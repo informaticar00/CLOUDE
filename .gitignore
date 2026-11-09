@@ -6,3 +6,4 @@ venv/
 paper_state.json
 *.log
 .pytest_cache/
+postavke.json

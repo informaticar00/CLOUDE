@@ -97,6 +97,7 @@ class Settings:
     paper_start_balance: float = 10_000.0
     paper_spread: float = 0.30
     paper_state_file: str = "paper_state.json"
+    settings_file: str = "postavke.json"
 
     @classmethod
     def from_env(cls, env_file: str | None = ".env", require_telegram: bool = True) -> "Settings":
@@ -145,6 +146,7 @@ class Settings:
             paper_start_balance=_float("PAPER_START_BALANCE", 10_000.0),
             paper_spread=_float("PAPER_SPREAD", 0.30),
             paper_state_file=_get("PAPER_STATE_FILE", "paper_state.json") or "paper_state.json",
+            settings_file=_get("SETTINGS_FILE", "postavke.json") or "postavke.json",
         )
         s.validate(require_telegram)
         return s
@@ -179,3 +181,14 @@ class Settings:
             raise ConfigError("MAX_UNITS mora biti veći od 0")
         if self.check_interval < 10:
             raise ConfigError("CHECK_INTERVAL mora biti barem 10 sekundi")
+        if self.max_open_positions < 1:
+            raise ConfigError("MAX_OPEN_POSITIONS mora biti barem 1")
+        if not 0 < self.daily_loss_limit_pct <= 100:
+            raise ConfigError("DAILY_LOSS_LIMIT_PCT mora biti između 0 i 100")
+        p = self.strategy
+        if min(p.ema_fast, p.ema_slow, p.rsi_period, p.atr_period) < 1 or p.ema_trend < 0:
+            raise ConfigError("Periodi indikatora moraju biti pozitivni")
+        if not 0 <= p.rsi_oversold < p.rsi_overbought <= 100:
+            raise ConfigError("RSI granice: 0 <= dolje < gore <= 100")
+        if p.atr_sl_mult <= 0 or p.risk_reward <= 0:
+            raise ConfigError("SL množilac i RR moraju biti veći od 0")

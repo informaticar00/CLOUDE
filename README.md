@@ -10,6 +10,38 @@ Njime upravljaš preko Telegrama. Radi s **MetaTrader 5**, s **OANDA**-om ili ka
 
 ---
 
+## 📱 Upravljanje s iPhonea
+
+Bot radi na računaru ili serveru, a ti njime upravljaš s iPhonea preko Telegrama:
+
+```
+ iPhone (Telegram)  ⇄  Gold Bot (Windows PC / VPS)  ⇄  MetaTrader 5  ⇄  broker
+ iPhone (MT5 app)   ←─────────────────────────────────  isti račun
+```
+
+- **Dugmad:** u Telegramu imaš meni s dugmadima, pa ništa ne moraš kucati: 💰 Cijena · 📊 Signal · 🟢 Kupi · 🔴 Prodaj · 📂 Pozicije · 📋 Status · 🤖 Auto-trading · ⚙️ Postavke.
+- **Nalog:** dodirneš 🟢 Kupi, izabereš veličinu (Auto po riziku, 1, 2, 5 ili 10 oz) i potvrdiš ✅.
+- **Zatvaranje:** u 📂 Pozicije svaka pozicija ima dugme ❌ Zatvori.
+- **Postavke:** u ⚙️ Postavke se rizik, timeframe, SL/TP, EMA, dnevni limit i ostalo mijenjaju dodirom. Promjene se **čuvaju trajno** (u `postavke.json`), pa ne moraš dirati `.env`.
+- **Obavijesti:** novi signali, otvorene i zatvorene pozicije (SL/TP) i greške stižu kao push notifikacije.
+- **MetaTrader 5 za iOS** (App Store): prijavi se na isti račun da vidiš grafikone i pozicije koje bot otvara.
+
+### Bot 24/7 bez računara (sve s iPhonea)
+
+Da bot radi i kad ti je računar ugašen, pokreni ga na **Windows VPS-u** (iznajmljeni Windows računar u cloudu):
+
+1. **Iznajmi Windows VPS:**
+   - mnogi brokeri daju **besplatan VPS** uz MT5 račun, pa prvo pitaj svog brokera,
+   - inače ga nudi bilo koji hosting (Windows Server, 2 GB RAM-a je dovoljno), za otprilike 10–20 USD mjesečno.
+2. **Spoji se s iPhonea:** iz App Storea instaliraj **Windows App** (Microsoft, bivši *Remote Desktop*) i dodaj VPS (IP adresa, korisničko ime i lozinka od hostinga).
+3. **Instaliraj na VPS-u:** sve korake iz poglavlja ispod (Python, bot, MT5) radiš na VPS-u kroz Windows App, kao na običnom računaru.
+4. **Pokreni:** pokreni MT5 i `start.bat`, pa samo zatvori Windows App. **Ne odjavljuj se (Sign out)**, samo zatvori vezu, i bot nastavlja raditi.
+5. **Automatski start:** da se bot sam pokrene nakon restarta VPS-a, stavi prečice do MT5 i `start.bat` u `shell:startup` (Win+R → `shell:startup`).
+
+Nakon toga ti za svakodnevni rad treba samo Telegram na iPhoneu.
+
+---
+
 ## 📥 Instalacija (Windows, korak po korak)
 
 MetaTrader 5 Python paket radi **samo na Windowsu**, pa je ovo preporučeni način.
@@ -125,8 +157,11 @@ Sve radi. ✅
 
 ## 🤖 Telegram komande
 
+Sve ispod se može raditi i dugmadima. Komande su za one koji vole kucati.
+
 | Komanda | Opis |
 |---|---|
+| `/meni` | prikazuje dugmad |
 | `/cijena` | trenutna cijena (bid/ask) |
 | `/signal` | analiza: EMA, RSI, ATR i trenutni signal |
 | `/status` | račun, saldo, equity, auto-trading, dnevni gubitak |
@@ -136,10 +171,12 @@ Sve radi. ✅
 | `/zatvori [ID]` | zatvara jednu poziciju, a bez ID-a sve |
 | `/auto on` / `/auto off` | uključuje/isključuje automatsko trgovanje |
 | `/historija` | zadnji trejdovi (paper) |
-| `/postavke` | prikaz postavki |
-| `/rizik 0.5` | mijenja % rizika po trejdu |
+| `/postavke` | postavke s dugmadima |
+| `/postavi rizik 0.7` | postavlja bilo koju vrijednost (`/postavi` bez argumenata ispiše listu) |
+| `/rizik 0.5` | kraće za `/postavi rizik` |
+| `/postavke_reset` | vraća postavke iz `.env` |
 
-Svaki ručni nalog traži potvrdu dugmetom ✅. Botom mogu upravljati samo chat ID-evi iz `ALLOWED_CHAT_IDS`.
+Svaki ručni nalog, zatvaranje i uključivanje auto-tradinga traži potvrdu dugmetom ✅. Botom mogu upravljati samo chat ID-evi iz `ALLOWED_CHAT_IDS`.
 Kad je auto-trading isključen, bot ti i dalje šalje poruku za svaki novi signal.
 
 ---
@@ -154,15 +191,14 @@ Kad je auto-trading isključen, bot ti i dalje šalje poruku za svaki novi signa
 - **Suprotan signal** zatvara postojeću poziciju i otvara novu.
 - **Dnevni limit gubitka** (3%): auto-trading se pauzira do ponoći (UTC).
 
-Sve postavke su u `.env.example`, s objašnjenjima.
+Početne postavke su u `.env.example`, s objašnjenjima. Ono što promijeniš iz Telegrama ima prednost i čuva se u `postavke.json`.
 
 ---
 
 ## 🖥️ Da bot radi 24/7
 
 - **Na svom računaru:** bot radi dok je računar upaljen. Isključi *Sleep* u Windows postavkama napajanja.
-- **Na Windows VPS-u (preporučeno):** iznajmi Windows VPS (mnogi brokeri nude besplatan MT5 VPS), ponovi instalaciju i ostavi MT5 i `start.bat` da rade.
-- **Automatski start:** stavi prečicu do `start.bat` u folder koji se otvara sa `Win+R` → `shell:startup`.
+- **Na Windows VPS-u (preporučeno):** pogledaj poglavlje *📱 Upravljanje s iPhonea* iznad.
 
 ## 🐧 Linux / macOS
 
@@ -204,6 +240,7 @@ goldbot/
   risk.py          veličina pozicije, dnevni limit
   broker.py        PaperBroker i OandaBroker
   engine.py        glavna logika (tick, nalozi)
-  telegram_bot.py  Telegram komande
+  telegram_bot.py  Telegram meni, dugmad i komande
+  overrides.py     postavke iz Telegrama (čuvaju se u postavke.json)
 install.bat / provjera.bat / start.bat   Windows skripte
 ```

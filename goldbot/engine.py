@@ -69,6 +69,10 @@ class TradingEngine:
             ]
         return []
 
+    def reset_bar_tracking(self) -> None:
+        """Pozovi nakon promjene strategije/timeframea da se stari signal ne izvrši."""
+        self.last_bar_time = None
+
     def daily_loss(self, equity: float) -> float:
         if self._day_start_equity is None:
             return 0.0

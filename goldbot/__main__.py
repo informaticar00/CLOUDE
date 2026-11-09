@@ -17,6 +17,7 @@ from .broker import BrokerError, OandaBroker, PaperBroker
 from .config import ConfigError, Settings
 from .data import DataError, OandaClient, OandaFeed, YahooFeed
 from .engine import TradingEngine
+from .overrides import OverrideStore
 
 
 def build_engine(settings: Settings, http: httpx.AsyncClient) -> TradingEngine:
@@ -90,12 +91,16 @@ def main() -> int:
 
     from .telegram_bot import build_application
 
+    store = OverrideStore(settings.settings_file)
+    saved_auto = store.load_into(settings)
     try:
         engine = build_engine(settings, httpx.AsyncClient())
     except DataError as exc:
         print(f"Greška: {exc}", file=sys.stderr)
         return 1
-    app = build_application(settings.telegram_token, engine)
+    if saved_auto is not None:
+        engine.auto_enabled = saved_auto
+    app = build_application(settings.telegram_token, engine, store)
     logging.info("Pokrećem bota: %s, izvor %s, TF %s", engine.broker.name, engine.feed.name, settings.timeframe)
     app.run_polling(allowed_updates=["message", "callback_query"])
     return 0

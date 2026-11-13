@@ -1,11 +1,823 @@
 {
   "version": 2,
   "skills": {
+    "api-and-interface-design": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/api-and-interface-design/SKILL.md",
+      "computedHash": "f8cb4ee59fe787bf94bfe40086ca4652d3cb738e16805d10acca2da3b80a001e",
+      "installMode": "copy"
+    },
+    "ask-matt": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/ask-matt/SKILL.md",
+      "computedHash": "7ff2383b40fe9d8f3e753d267d964fb2b44d120a948fd2a57c3b26ddfc318370",
+      "installMode": "copy"
+    },
+    "banner-design": {
+      "source": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/banner-design/SKILL.md",
+      "computedHash": "4b22f6f48afc6fcd72e6f3ae106a4dca11b33b88221efded1f5c62d8f9afb50d",
+      "installMode": "copy"
+    },
+    "brainstorming": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/brainstorming/SKILL.md",
+      "computedHash": "a7424777b7f81e3eb9b4556d29fe233553736d8255780d3e1feea190fef61fef",
+      "installMode": "copy"
+    },
+    "brand": {
+      "source": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/brand/SKILL.md",
+      "computedHash": "d5619310b76bd204efd2f8b3832f72b5a2899712be0ab94d1b4b671271419c54",
+      "installMode": "copy"
+    },
+    "browser-testing-with-devtools": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/browser-testing-with-devtools/SKILL.md",
+      "computedHash": "4e76269b455e079e76f29e11fdd80c61a7dd6ef0ab12e26432ea1b782c0a245e",
+      "installMode": "copy"
+    },
+    "caveman": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "skillPath": "skills/caveman/SKILL.md",
+      "computedHash": "b51af74aacdadbc3c2d6bb79f05db58dc521854b87f7ffabd48faf286a81ed31",
+      "installMode": "copy"
+    },
+    "caveman-commit": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "skillPath": "skills/caveman-commit/SKILL.md",
+      "computedHash": "2c1472fb59eedd3cfba0b6512dc470a00287343ade421db55c21a6fb52afbe86",
+      "installMode": "copy"
+    },
+    "caveman-compress": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "skillPath": "skills/caveman-compress/SKILL.md",
+      "computedHash": "1f627a3ac239baa859918cf64a5e89619c162e1e9787c6d97ad41c5a1cc2fdb9",
+      "installMode": "copy"
+    },
+    "caveman-explore": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "skillPath": "skills/caveman-explore/SKILL.md",
+      "computedHash": "b508768e6afc649bf828ea3d68df66740fa238c869f8bb87083081b9ead18b85",
+      "installMode": "copy"
+    },
+    "caveman-help": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "skillPath": "skills/caveman-help/SKILL.md",
+      "computedHash": "6a3e3d37fa03b4aa0622a6aec14446a243619c1539ad419e065dc8b1cd70aacd",
+      "installMode": "copy"
+    },
+    "caveman-review": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "skillPath": "skills/caveman-review/SKILL.md",
+      "computedHash": "c55908f8ee0dca0e59690e939dfd4a877bd9361897ae5fced096274a77509154",
+      "installMode": "copy"
+    },
+    "caveman-stats": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "skillPath": "skills/caveman-stats/SKILL.md",
+      "computedHash": "d47db80af9353f411b5840fa207ac10c883f04576cd280b135e3a44a0ff86285",
+      "installMode": "copy"
+    },
+    "chief-of-staff": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/in-progress/chief-of-staff/SKILL.md",
+      "computedHash": "dc3348d0f641956ea78dafa037aea745154c516a286ed4156b0c2ec0cbcf581b",
+      "installMode": "copy"
+    },
+    "ci-cd-and-automation": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/ci-cd-and-automation/SKILL.md",
+      "computedHash": "fbffe27b3bc3df30ba2895a71b87b2f032bb7b163de762bc8900f2673631c96d",
+      "installMode": "copy"
+    },
+    "claude-handoff": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/in-progress/claude-handoff/SKILL.md",
+      "computedHash": "e903af941877ac195671a1eff550ba42266f5f5a4028ebeae4cd1fec82b88dd4",
+      "installMode": "copy"
+    },
+    "code-review": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/code-review/SKILL.md",
+      "computedHash": "ce86b40a3d1648a0018b712f0c70704e6c2316b2a9b9e915ab116916a31273dc",
+      "installMode": "copy"
+    },
+    "code-review-and-quality": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/code-review-and-quality/SKILL.md",
+      "computedHash": "e03fe4f99d65c959547e3e5d65229fe56a8cdf19144b747d78ebebcfffb76346",
+      "installMode": "copy"
+    },
+    "code-simplification": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/code-simplification/SKILL.md",
+      "computedHash": "48e59225ea45232623e47d35d4ac6028fb2f37a9fbbc0563313d67bab448f664",
+      "installMode": "copy"
+    },
+    "codebase-design": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/codebase-design/SKILL.md",
+      "computedHash": "d40f025dc1b0f2020663260f38f2bcb8d6ed3523afb11e5fda624b01238677e8",
+      "installMode": "copy"
+    },
+    "constraint-driven-development": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/constraint-driven-development/SKILL.md",
+      "computedHash": "6cbbb88bcec7893403d794ea0411a34ea3e913517a86fa86d2d0a1707a7095ba",
+      "installMode": "copy"
+    },
+    "context-engineering": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/context-engineering/SKILL.md",
+      "computedHash": "0b9e3d177ec4e42d9b39c76ef8ee751f88cce40e3879c785a1a8c6eeabc6119d",
+      "installMode": "copy"
+    },
+    "debugging-and-error-recovery": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/debugging-and-error-recovery/SKILL.md",
+      "computedHash": "f7390b705fa186b54fceae6faa77be7cb0ba1cf24c1dc4508c7c84ec149615f5",
+      "installMode": "copy"
+    },
+    "deprecation-and-migration": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/deprecation-and-migration/SKILL.md",
+      "computedHash": "0f86b1fd18c377eb69fd1991046d49f0a848bd32f7318d1399020b79a6391cec",
+      "installMode": "copy"
+    },
+    "design": {
+      "source": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/design/SKILL.md",
+      "computedHash": "029cd8e3c45bab68f017e8aeaa18edd8c980e63445ce3915d64e7b5f5bb11be6",
+      "installMode": "copy"
+    },
+    "design-system": {
+      "source": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/design-system/SKILL.md",
+      "computedHash": "9efdc106c73d8d298b5a90d55c56995840a37f754fb9d498d14e6562bdaadc23",
+      "installMode": "copy"
+    },
+    "diagnosing-bugs": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/diagnosing-bugs/SKILL.md",
+      "computedHash": "87c78ae966e591f9ceb177789cc5cc9de69277cd26679ffd36ca5300f430d513",
+      "installMode": "copy"
+    },
+    "diagnosing-superpowers": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/diagnosing-superpowers/SKILL.md",
+      "computedHash": "44d0295c3d59d6418f80c96e40d8e7b7ece99513ab6e63e5d04b1cf87cc5bbab",
+      "installMode": "copy"
+    },
+    "dispatching-parallel-agents": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/dispatching-parallel-agents/SKILL.md",
+      "computedHash": "d799e464fdfb0edc80b3b7ad7cce03e64ee07fc5db231c988688a81438503659",
+      "installMode": "copy"
+    },
+    "documentation-and-adrs": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/documentation-and-adrs/SKILL.md",
+      "computedHash": "a7fa200df9d2a41ac7cac858c4a78a26e220308488fbe25e376b7e755ffbc612",
+      "installMode": "copy"
+    },
+    "domain-modeling": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/domain-modeling/SKILL.md",
+      "computedHash": "b78689833404148c769077355e12dbe5ad996a158a1e21e58ddf169e439d9d8c",
+      "installMode": "copy"
+    },
+    "doubt-driven-development": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/doubt-driven-development/SKILL.md",
+      "computedHash": "bc1bb71936eb44e88bdae4699abe02756747eb8f36c2d38135721fa7f3d25085",
+      "installMode": "copy"
+    },
+    "executing-plans": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/executing-plans/SKILL.md",
+      "computedHash": "58b364f6e3f64602c7cfd0b34ceaad9de95d41fe7e4b46b274843ba19fc01ccc",
+      "installMode": "copy"
+    },
+    "figma": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/figma/SKILL.md",
+      "computedHash": "0e6398ef34b30dec730d4225a20bdb20e7ed2309ece8abea95949549fe19f3ac",
+      "installMode": "copy"
+    },
     "find-skills": {
       "source": "vercel-labs/skills",
       "sourceType": "github",
       "skillPath": "skills/find-skills/SKILL.md",
       "computedHash": "7bc223e2aafbdbf6e50ea243ba6ef67fe432bb069ab439fea0390795dac0bf7f"
+    },
+    "finishing-a-development-branch": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/finishing-a-development-branch/SKILL.md",
+      "computedHash": "7e24d821d45b8f10773edd9f1a4be2fac90eedae4f8fc8e70e34e27e44d3f3c0",
+      "installMode": "copy"
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "computedHash": "83485963700bcf11d5bf78118facb301676b69d918fee2e45a95e7f1a2840f6c",
+      "installMode": "copy"
+    },
+    "frontend-ui-engineering": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-ui-engineering/SKILL.md",
+      "computedHash": "73a13aa14acf407518dccde3d021becac59e42e0a90a6a52a86dc53c3a279d12",
+      "installMode": "copy"
+    },
+    "git-guardrails-claude-code": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/misc/git-guardrails-claude-code/SKILL.md",
+      "computedHash": "7aa92e9d469c6cd0b24ed8accb2e4be681c44c1524d71604c06b4055b7b56482",
+      "installMode": "copy"
+    },
+    "git-workflow-and-versioning": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/git-workflow-and-versioning/SKILL.md",
+      "computedHash": "860b88bf82d823eaed15b9b9fa9ce4273f94c7bdcf3aeaa3e6649eb578763d4b",
+      "installMode": "copy"
+    },
+    "grill-me": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/productivity/grill-me/SKILL.md",
+      "computedHash": "ab1acb9fbd9eaee03da254abb8a8de228d1e7a07475fe959da4a5eefa34ea4b9",
+      "installMode": "copy"
+    },
+    "grill-with-docs": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/grill-with-docs/SKILL.md",
+      "computedHash": "02e258f41d210f9b2e7cce9faf62b3c59e8fcebe5d2736369c3cd07d471324f8",
+      "installMode": "copy"
+    },
+    "grilling": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/productivity/grilling/SKILL.md",
+      "computedHash": "485451958784497cd4c4dbea13cb5bbb579da58fac0d0e45f3bcb310fab68ac7",
+      "installMode": "copy"
+    },
+    "gstack": {
+      "source": "garrytan/gstack",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "366b12cd192f8f72823046c1757bf7fb271450985d35b872d05f13637052c75f",
+      "installMode": "copy"
+    },
+    "humanizer": {
+      "source": "blader/humanizer",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "04cdabbcceaa7b5d4bd4b1ea02339013503d623b270b5b3b2e274837494d7134",
+      "installMode": "copy"
+    },
+    "hyperframes": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/hyperframes/SKILL.md",
+      "computedHash": "373b4b19ec8564cbf23f7f3b8399ee9fb4d92609d66948d4b98c13ebe63bbcbc",
+      "installMode": "copy"
+    },
+    "hyperframes-cli": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/hyperframes-cli/SKILL.md",
+      "computedHash": "864689d1c8b30389bb9dbc04dfd7a61ce8e62d2ba6924334e04a156e074c3029",
+      "installMode": "copy"
+    },
+    "hyperframes-registry": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/hyperframes-registry/SKILL.md",
+      "computedHash": "6ac664d7d7f2ffdf299136cffb1a9bbebe21fd2b9afa8e6f44cf0c7a2d3df3b6",
+      "installMode": "copy"
+    },
+    "idea-refine": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/idea-refine/SKILL.md",
+      "computedHash": "f93acea3b4a197e2fda976bc9b7aa1aafedfd819fe190c7b33e70eaf745820fb",
+      "installMode": "copy"
+    },
+    "implement": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/implement/SKILL.md",
+      "computedHash": "560465496ad0669329993bfdd0604e5c93b5c2446309a76f486040010b063908",
+      "installMode": "copy"
+    },
+    "implement-spec": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/implement-spec/SKILL.md",
+      "computedHash": "c3474ef320861d793e8b30d41fbdd2cb0ceaa1081bb5c81b7f26c455eb776573",
+      "installMode": "copy"
+    },
+    "improve-codebase-architecture": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/improve-codebase-architecture/SKILL.md",
+      "computedHash": "f0820b18426a7d9a6c823a890988ba0ac70bf0fd596d30d7ef07c88558728c23",
+      "installMode": "copy"
+    },
+    "incremental-implementation": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/incremental-implementation/SKILL.md",
+      "computedHash": "62ef93c6389f110af49ed4fad1fe2c27d3d9dd2d8fe0d0f6db089489c3d4aac3",
+      "installMode": "copy"
+    },
+    "interview-me": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/interview-me/SKILL.md",
+      "computedHash": "68615337944c1d56cd9db6b934e247ff1d67600dd9db3d41cc9bf7236b9d986c",
+      "installMode": "copy"
+    },
+    "investigate-first": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "skillPath": "skills/investigate-first/SKILL.md",
+      "computedHash": "129b1eba6d106c1d095baefd30578c6303b93119fcd21bd5583ebd34592f3acc",
+      "installMode": "copy"
+    },
+    "lean-build": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "skillPath": "skills/lean-build/SKILL.md",
+      "computedHash": "aee8fbb86c5e1e5066089293423f71dd6a87ab37486c360cd4488ef2fe96c7a7",
+      "installMode": "copy"
+    },
+    "loop-me": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/in-progress/loop-me/SKILL.md",
+      "computedHash": "5dac8f9919f3e1a528a4f1f00db07c81c3e6092e706376d81c697d16422ab163",
+      "installMode": "copy"
+    },
+    "media-use": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/media-use/SKILL.md",
+      "computedHash": "e1f3a9bd0366f1ff0341bd585443f271c8e176a80f295f3cf6d901f9ca87f7fb",
+      "installMode": "copy"
+    },
+    "megacave": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "skillPath": "skills/megacave/SKILL.md",
+      "computedHash": "d38301dd11ffdbf9c876cb5a15ff245a31fe7806a29f7800e7fbe44fc306fd62",
+      "installMode": "copy"
+    },
+    "migration": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "skillPath": "skills/migration/SKILL.md",
+      "computedHash": "e7c6efc84ff8f85d0242e7f29f51c09fd333c294cc3123ef8ee4b2aca2a93192",
+      "installMode": "copy"
+    },
+    "notebooklm": {
+      "source": "PleasePrompto/notebooklm-skill",
+      "sourceType": "github",
+      "skillPath": "SKILL.md",
+      "computedHash": "a69a684fd49cedcbd9bac8731bdde7d25c2fdc4ad384ab64e3039fd08409325e",
+      "installMode": "copy"
+    },
+    "observability-and-instrumentation": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/observability-and-instrumentation/SKILL.md",
+      "computedHash": "71661b8e1558d7eed8cdf93bfb731da1c3afed9b895b049ecf92792af0d8a364",
+      "installMode": "copy"
+    },
+    "performance-optimization": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/performance-optimization/SKILL.md",
+      "computedHash": "cfa0c39804554198a33e3beb2b0f920a1b468bb2e066822e1d08f4abeda3db33",
+      "installMode": "copy"
+    },
+    "planning-and-task-breakdown": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/planning-and-task-breakdown/SKILL.md",
+      "computedHash": "11b51e8874c451ef4d0d18f4a56f9210310f5364cc1b176a7df1ff36014cef41",
+      "installMode": "copy"
+    },
+    "ponytail": {
+      "source": "DietrichGebert/ponytail",
+      "sourceType": "github",
+      "skillPath": "skills/ponytail/SKILL.md",
+      "computedHash": "56d72677aca02689ac89bd48734e8c19b40ab86716d1257eaf5f1238b43cda6b",
+      "installMode": "copy"
+    },
+    "ponytail-audit": {
+      "source": "DietrichGebert/ponytail",
+      "sourceType": "github",
+      "skillPath": "skills/ponytail-audit/SKILL.md",
+      "computedHash": "20dca08a5d047285c61702d496317eb84f501bbd573a45f3c8f93fdb3cecde4c",
+      "installMode": "copy"
+    },
+    "ponytail-debt": {
+      "source": "DietrichGebert/ponytail",
+      "sourceType": "github",
+      "skillPath": "skills/ponytail-debt/SKILL.md",
+      "computedHash": "6bcafbbd5d7ab3c09fbe1b040c2c8f3d0aae3c7e6e24339be253af354ab5cacd",
+      "installMode": "copy"
+    },
+    "ponytail-gain": {
+      "source": "DietrichGebert/ponytail",
+      "sourceType": "github",
+      "skillPath": "skills/ponytail-gain/SKILL.md",
+      "computedHash": "8dc7d5a5314e0720ff2e2b740486314b4607765181ede820f6b7e86a3d5fd814",
+      "installMode": "copy"
+    },
+    "ponytail-help": {
+      "source": "DietrichGebert/ponytail",
+      "sourceType": "github",
+      "skillPath": "skills/ponytail-help/SKILL.md",
+      "computedHash": "decfe28950443ddc04cf06badab1ebe325d149bc7dccdd3ce43ff8be27d92103",
+      "installMode": "copy"
+    },
+    "ponytail-review": {
+      "source": "DietrichGebert/ponytail",
+      "sourceType": "github",
+      "skillPath": "skills/ponytail-review/SKILL.md",
+      "computedHash": "fe7b781db99ce79d931cdc798b3fbccd84b82538de4a3fc5f6d9d466946d1458",
+      "installMode": "copy"
+    },
+    "pr": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/pr/SKILL.md",
+      "computedHash": "a66195583d0f9323004cdd4da169f93449071f29023671f3e31a916e740f6861",
+      "installMode": "copy"
+    },
+    "prototype": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/prototype/SKILL.md",
+      "computedHash": "1e3ba2202a5b77b8aa50bc4447432331d6e42590e53ec0935689662cfed199ca",
+      "installMode": "copy"
+    },
+    "receiving-code-review": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/receiving-code-review/SKILL.md",
+      "computedHash": "528d336858d6f7d22cfcb887a249409ce682cb7d37a939cb15a82f2576a35876",
+      "installMode": "copy"
+    },
+    "remotion-to-hyperframes": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/remotion-to-hyperframes/SKILL.md",
+      "computedHash": "2e8210b6f9df473ab0c8028350c3a0f193430b37fdab917725a0d655674da512",
+      "installMode": "copy"
+    },
+    "requesting-code-review": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/requesting-code-review/SKILL.md",
+      "computedHash": "32bcc25e8c3315d0150f646ee0067c9d4bfbc7719c34012db9c202e17cce8a14",
+      "installMode": "copy"
+    },
+    "research": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/research/SKILL.md",
+      "computedHash": "7662666af51f8b1672ed7d88360d4b82656da21bb7b11c49e956eeb3036b85d5",
+      "installMode": "copy"
+    },
+    "retro": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/retro/SKILL.md",
+      "computedHash": "e260aefb7b75b3548a3ee9883afbf8808e521f2e86feec92399617894f83b7c2",
+      "installMode": "copy"
+    },
+    "reverse-any-video": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/reverse-any-video/SKILL.md",
+      "computedHash": "2cefe479a595e0bdaaeae6a23c297992ac133c1dfd49dd64b01b3e28eee591f0",
+      "installMode": "copy"
+    },
+    "safe-refactor": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "skillPath": "skills/safe-refactor/SKILL.md",
+      "computedHash": "709db1dfde3fe3baa362ecdb3f1f3c0be27587358242737dfa4ca82a23744269",
+      "installMode": "copy"
+    },
+    "security-and-hardening": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/security-and-hardening/SKILL.md",
+      "computedHash": "4970681073e6138c4cec8eca31546187f47723a61a7f1204710ae86d9f704517",
+      "installMode": "copy"
+    },
+    "setup-matt-pocock-skills": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/setup-matt-pocock-skills/SKILL.md",
+      "computedHash": "9659e7025d4cf1c0a0b40ddff32ed4b8debb87a4b20d7a52ff89c506a638df69",
+      "installMode": "copy"
+    },
+    "setup-pre-commit": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/misc/setup-pre-commit/SKILL.md",
+      "computedHash": "98523a8db5977c41a095834df8697123bb845ff6ddbb9500733b161f11441a37",
+      "installMode": "copy"
+    },
+    "setup-ts-deep-modules": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/in-progress/setup-ts-deep-modules/SKILL.md",
+      "computedHash": "8a3136caaea8fa439521917a624496769eba40cf8c59f62b4113a0dc916288a3",
+      "installMode": "copy"
+    },
+    "shipping-and-launch": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/shipping-and-launch/SKILL.md",
+      "computedHash": "ae9b095cfb74edd0d2b63c24aaca99e5a2f95b50527a7508841b501eabd3820a",
+      "installMode": "copy"
+    },
+    "slides": {
+      "source": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/slides/SKILL.md",
+      "computedHash": "059825b15a508a5f1533ab646f968ffcbcdbb8eadd76c2d122151bfbcf19d287",
+      "installMode": "copy"
+    },
+    "slideshow": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/slideshow/SKILL.md",
+      "computedHash": "9e0fe437b47e9edf4f1c6c9aa48b5c1d7c3a1b896d9a83a11934c7aa8e76d345",
+      "installMode": "copy"
+    },
+    "source-driven-development": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/source-driven-development/SKILL.md",
+      "computedHash": "60cff6e7bfaeebf37929399786730b260ea0441b23e1a05fdb4d7244eac3fae4",
+      "installMode": "copy"
+    },
+    "spec-driven-development": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/spec-driven-development/SKILL.md",
+      "computedHash": "e1ac9b69a18c946b903623ea9a07953e783758c60274bf63bea713b54504bed4",
+      "installMode": "copy"
+    },
+    "style-sampling": {
+      "source": "heygen-com/hyperframes",
+      "sourceType": "github",
+      "skillPath": "skills/style-sampling/SKILL.md",
+      "computedHash": "cb49372a8bfd06f5478802f56febf2d25371fd3401e83957139ecf12e80e490b",
+      "installMode": "copy"
+    },
+    "subagent-driven-development": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/subagent-driven-development/SKILL.md",
+      "computedHash": "da0ad5e635b6ff70c2b6dbf25e51ae6ca1cad6beebfc61a791195675468c492e",
+      "installMode": "copy"
+    },
+    "surgical-patch": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "skillPath": "skills/surgical-patch/SKILL.md",
+      "computedHash": "5fa48d8d44e476bd633b0dc856b8342a715b5d5416b01778df5d6245b360c9df",
+      "installMode": "copy"
+    },
+    "systematic-debugging": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/systematic-debugging/SKILL.md",
+      "computedHash": "79ff0583175346e39431b0dc713b223edd1bd7a7ea2b6c8b78b2fb9a3fed6782",
+      "installMode": "copy"
+    },
+    "tdd": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/tdd/SKILL.md",
+      "computedHash": "e3e0f78ff1c2d52ffefa0378baa1e80e129d359288cf9a56f4e59afcd2aac86c",
+      "installMode": "copy"
+    },
+    "teach": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/productivity/teach/SKILL.md",
+      "computedHash": "31bb3eed09dd2787e290e933def99fbf7d65044a29119c224af47c01404ab228",
+      "installMode": "copy"
+    },
+    "test-driven-development": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/test-driven-development/SKILL.md",
+      "computedHash": "60f294cc1ededf0d006811f4be199a415493fc048b6058c5b66193fba114a173",
+      "installMode": "copy"
+    },
+    "to-questionnaire": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/productivity/to-questionnaire/SKILL.md",
+      "computedHash": "0bcb2b31a45a3d176daa07c16d6532ee7819b802de081090c3fa856702767b13",
+      "installMode": "copy"
+    },
+    "to-spec": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/to-spec/SKILL.md",
+      "computedHash": "eb934b5eda9523c7853a2741544bd4721ee1bea471f5a04f8397827f67bdbdda",
+      "installMode": "copy"
+    },
+    "to-tickets": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/to-tickets/SKILL.md",
+      "computedHash": "17496514c92954f68eacdf2b1221e2ddb39fa231b83f03c70bc7d4422f704b2d",
+      "installMode": "copy"
+    },
+    "triage": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/triage/SKILL.md",
+      "computedHash": "4342a07c9ebe0696713ec93a883c46e56503a587a34d824fabab5ca61e3bdfbb",
+      "installMode": "copy"
+    },
+    "ui-styling": {
+      "source": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/ui-styling/SKILL.md",
+      "computedHash": "a598d8ad69832a394d4040e4c94e4b9c7b8daf2b1fdca050929058f7b70bc816",
+      "installMode": "copy"
+    },
+    "ui-ux-pro-max": {
+      "source": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/ui-ux-pro-max/SKILL.md",
+      "computedHash": "ff6863fc7c1be035b294703b2e7c90b2197548985ca4cb98f58740a7e84dc0cc",
+      "installMode": "copy"
+    },
+    "ultracave": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "skillPath": "skills/ultracave/SKILL.md",
+      "computedHash": "b9814ef35fbc9f4359f682c7f2e4944b30428f8c8d79463efa070f99fffaa453",
+      "installMode": "copy"
+    },
+    "using-agent-skills": {
+      "source": "addyosmani/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/using-agent-skills/SKILL.md",
+      "computedHash": "64ee1ea9d458df9cd5cdbf40dd0961a0322d9be6b85e45f9de8abae65b4fe7b1",
+      "installMode": "copy"
+    },
+    "using-git-worktrees": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/using-git-worktrees/SKILL.md",
+      "computedHash": "b69324cb5e5ba5b846fc2ae2811616008dc6f19858245100e472713190d4c9e4",
+      "installMode": "copy"
+    },
+    "using-superpowers": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/using-superpowers/SKILL.md",
+      "computedHash": "6a9104fac7e16c3cec2bc118943aefd331cac35b4cfabd427cea4dc16337c6a5",
+      "installMode": "copy"
+    },
+    "verification-before-completion": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/verification-before-completion/SKILL.md",
+      "computedHash": "09b0e3a4689c1c38a3b8fc6ef57a1d4165aa33c0013d546dbde9dd348941a319",
+      "installMode": "copy"
+    },
+    "verify-and-stop": {
+      "source": "JuliusBrussee/caveman",
+      "sourceType": "github",
+      "skillPath": "skills/verify-and-stop/SKILL.md",
+      "computedHash": "130048a85c3d028f9e8bb9fa923143b11b55511c9c43ab3f155b6c8022e48f56",
+      "installMode": "copy"
+    },
+    "wait-what": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/productivity/wait-what/SKILL.md",
+      "computedHash": "70c9bf9f5a84b6849760f9492f569d5aa12307a0310323fde5f583144730c26c",
+      "installMode": "copy"
+    },
+    "wayfinder": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/wayfinder/SKILL.md",
+      "computedHash": "bd82983c105881f6cb0c15e5d029c0d5fca756939b69eebe94e49003069a276f",
+      "installMode": "copy"
+    },
+    "webapp-testing": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "skillPath": "skills/webapp-testing/SKILL.md",
+      "computedHash": "48cd9a742a59250edec6db89cf081ef5465f365e2133f6d6c5e29c380b754b7d",
+      "installMode": "copy"
+    },
+    "wizard": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/wizard/SKILL.md",
+      "computedHash": "806f7f7461824054ffaf3344e1e56e5e8a42344e22bdf8d22c6a8117eb9b1c38",
+      "installMode": "copy"
+    },
+    "writing-beats": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/in-progress/writing-beats/SKILL.md",
+      "computedHash": "5af3ce4383f995c76a4780b3d3029af8e9c69aa1a44d57a6c8bc13a820836b8a",
+      "installMode": "copy"
+    },
+    "writing-for-agents": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/productivity/writing-for-agents/SKILL.md",
+      "computedHash": "e79a2476b2417b228922453478d9505a6b9af19f3a412e560728ce62ed3555ca",
+      "installMode": "copy"
+    },
+    "writing-fragments": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/in-progress/writing-fragments/SKILL.md",
+      "computedHash": "00d286876c139f3f764e5021923f632c785dba1eb2fd7afdd9f44854a12772d2",
+      "installMode": "copy"
+    },
+    "writing-plans": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/writing-plans/SKILL.md",
+      "computedHash": "ef082ddb5354d736059397133b3682e8a0c85c57906affe47c9da354cbb7c91e",
+      "installMode": "copy"
+    },
+    "writing-shape": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/in-progress/writing-shape/SKILL.md",
+      "computedHash": "7e06f4ca8a96c83b5b9a540c0279e998ba449e74586c77d44f9b8183c1bd8ef8",
+      "installMode": "copy"
+    },
+    "writing-skills": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "skillPath": "skills/writing-skills/SKILL.md",
+      "computedHash": "50d87a4c2c6a9d60156ccfdbe844e0a11678968157e494a8a8c02377c273483a",
+      "installMode": "copy"
     }
   }
 }

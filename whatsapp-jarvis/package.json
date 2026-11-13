@@ -1,0 +1,16 @@
+{
+  "name": "whatsapp-jarvis",
+  "version": "1.0.0",
+  "description": "Osobni AI asistent (Claude) koji odgovara na WhatsApp poruke preko službenog WhatsApp Cloud API-ja.",
+  "type": "module",
+  "main": "server.mjs",
+  "scripts": {
+    "start": "node server.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.8.0"
+  }
+}

@@ -1,172 +1,11 @@
 {
   "version": 2,
   "skills": {
-    "Agent Cost Report": {
-      "source": "thedotmack/claude-mem",
-      "sourceType": "github",
-      "skillPath": "plugin/skills/agent-cost-report/SKILL.md",
-      "computedHash": "8311e46b643d7352bcb42d879976262c2e7db34c16e66e9af12a9399c3ea851e",
-      "installMode": "copy"
-    },
-    "academy-guide": {
-      "source": "anthropics/skills",
-      "sourceType": "github",
-      "skillPath": "skills/academy-guide/SKILL.md",
-      "computedHash": "cc7e2ace6f4953fc564189865fb5529ba557a322826bbc73f3599d6441ce741f",
-      "installMode": "copy"
-    },
-    "accessibility": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/accessibility/SKILL.md",
-      "computedHash": "27e00a84ec716335fe622e40e8d53b6c3216b819af1fc1ef22030ed4cb570ecb",
-      "installMode": "copy"
-    },
-    "agent-architecture-audit": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/agent-architecture-audit/SKILL.md",
-      "computedHash": "f6f406de704ba1f3c4b678674e8ef60d7308ab5eee053c7e45a2ad9c4f1177bc",
-      "installMode": "copy"
-    },
-    "agent-eval": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/agent-eval/SKILL.md",
-      "computedHash": "917cd26404e1478b65ea5d1e562a5f6a53235e4b9e30a182c3bd572d30134cc6",
-      "installMode": "copy"
-    },
-    "agent-harness-construction": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/agent-harness-construction/SKILL.md",
-      "computedHash": "aba49468913f3a338af8a09cc1ad12ff305ec1792406b97421ae6d69c519f402",
-      "installMode": "copy"
-    },
-    "agent-introspection-debugging": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/agent-introspection-debugging/SKILL.md",
-      "computedHash": "a9697bba8b5424069a78a53bfb246e230ceda9d016c03d35f4ca07632b4f7ea1",
-      "installMode": "copy"
-    },
-    "agent-payment-x402": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/agent-payment-x402/SKILL.md",
-      "computedHash": "f7539826a62244bd07f032cc7f23a1ffac911a9138713572ef7a8b3d50d1a8fe",
-      "installMode": "copy"
-    },
-    "agent-runtime-gateway-smoke-test": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/agent-runtime-gateway-smoke-test/SKILL.md",
-      "computedHash": "221e63d33ad5924c47bbe9dacbf6eff7ea289fa358d98b03016929c6fca527fc",
-      "installMode": "copy"
-    },
-    "agent-security-hardening": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/agent-security-hardening/SKILL.md",
-      "computedHash": "5f34c60c6a164cb01360ee28603215393894f034f762681cb505e96b89022e5e",
-      "installMode": "copy"
-    },
-    "agent-self-evaluation": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/agent-self-evaluation/SKILL.md",
-      "computedHash": "255d268337db004f6c8e6ea75e3fe0a8551e00f29b9900417f586f733d139687",
-      "installMode": "copy"
-    },
-    "agent-sort": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/agent-sort/SKILL.md",
-      "computedHash": "2ae54e73bb82edbd82a95a9b36d4d1cc5c820fd3b282494bd62b0e199617c962",
-      "installMode": "copy"
-    },
-    "agentic-engineering": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/agentic-engineering/SKILL.md",
-      "computedHash": "de2f09092364cc89f2cf877c4af8ebd7c0075b69e50d9730a0eb81a7af7dc620",
-      "installMode": "copy"
-    },
-    "agentic-os": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/agentic-os/SKILL.md",
-      "computedHash": "22b67ebda14d0e809a944e0cfb6f2d8f95e5a00fe4587e23b12d022c9bf187b8",
-      "installMode": "copy"
-    },
-    "ai-first-engineering": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/ai-first-engineering/SKILL.md",
-      "computedHash": "7bb14406b85ef595d2984798b931a7d98d45fe494d81a6b2d288ebc5fb5bcfe6",
-      "installMode": "copy"
-    },
-    "ai-regression-testing": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/ai-regression-testing/SKILL.md",
-      "computedHash": "6bf926906555728aee226ceec2d58f4907f85ed878a1998cf56b7108e460ce2d",
-      "installMode": "copy"
-    },
-    "algorithmic-art": {
-      "source": "anthropics/skills",
-      "sourceType": "github",
-      "skillPath": "skills/algorithmic-art/SKILL.md",
-      "computedHash": "4a85abfeaa09f2dd2c4b76c85d57b65f61dc10d55c3cca245989cee8897c2be5",
-      "installMode": "copy"
-    },
-    "android-clean-architecture": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/android-clean-architecture/SKILL.md",
-      "computedHash": "b5513d6cf5102d341e1aa93337752a4bcf4862d67cf4570dc1ae746df366c6ba",
-      "installMode": "copy"
-    },
-    "angular-developer": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/angular-developer/SKILL.md",
-      "computedHash": "189958a7b46b2f152c22fb8b748397a8236a9762011619a159581eedf7e22c97",
-      "installMode": "copy"
-    },
     "api-and-interface-design": {
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
       "skillPath": "skills/api-and-interface-design/SKILL.md",
       "computedHash": "f8cb4ee59fe787bf94bfe40086ca4652d3cb738e16805d10acca2da3b80a001e",
-      "installMode": "copy"
-    },
-    "api-connector-builder": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/api-connector-builder/SKILL.md",
-      "computedHash": "97c075225c712789dd8abdf5edae1b0f7572a91930e69308dd459d4b3499d8af",
-      "installMode": "copy"
-    },
-    "api-design": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/api-design/SKILL.md",
-      "computedHash": "81d497a208fd9e18972b4a4a6fadc1a1af1de691382f02fd6d387bb505160a78",
-      "installMode": "copy"
-    },
-    "architecture-decision-records": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/architecture-decision-records/SKILL.md",
-      "computedHash": "8efc159025ce583f1947c1f2fe4d46c42644c787a70abc54f7fd18100b47b271",
-      "installMode": "copy"
-    },
-    "article-writing": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/article-writing/SKILL.md",
-      "computedHash": "6c7152e225bf13949c68f986ab59b62f486f7ef701b8ed27fd2e4fef37056ad2",
       "installMode": "copy"
     },
     "ask-matt": {
@@ -176,95 +15,11 @@
       "computedHash": "7ff2383b40fe9d8f3e753d267d964fb2b44d120a948fd2a57c3b26ddfc318370",
       "installMode": "copy"
     },
-    "automation-audit-ops": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/automation-audit-ops/SKILL.md",
-      "computedHash": "3dc469d4f6220478e26b23073df493cd343c85eb792a60a513836d83ba84e977",
-      "installMode": "copy"
-    },
-    "autonomous-agent-harness": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/autonomous-agent-harness/SKILL.md",
-      "computedHash": "072a63861ab1413f90a3a133ce3b842121de010cc35b0284aef8981d5928911d",
-      "installMode": "copy"
-    },
-    "autonomous-loops": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/autonomous-loops/SKILL.md",
-      "computedHash": "9eaedd840fa533809b9d5ade3006558146f0d1e69c9178071752c2b49b329075",
-      "installMode": "copy"
-    },
-    "babysit": {
-      "source": "thedotmack/claude-mem",
-      "sourceType": "github",
-      "skillPath": "plugin/skills/babysit/SKILL.md",
-      "computedHash": "407cb3f1ddfb19e3f841e9353393f9f08e63708c369d2270967aec1952ae7836",
-      "installMode": "copy"
-    },
-    "backend-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/backend-patterns/SKILL.md",
-      "computedHash": "e39330205cf49940fb809109a690b87afbbca5d2e86269267abb8416d2093c15",
-      "installMode": "copy"
-    },
-    "backup-setup": {
-      "source": "thedotmack/claude-mem",
-      "sourceType": "github",
-      "skillPath": "plugin/skills/backup-setup/SKILL.md",
-      "computedHash": "9c69435fcf8f3614afed5bf6911ab3a811a0d0cafd46132d4cd58704824bfecd",
-      "installMode": "copy"
-    },
     "banner-design": {
       "source": "nextlevelbuilder/ui-ux-pro-max-skill",
       "sourceType": "github",
       "skillPath": ".claude/skills/banner-design/SKILL.md",
       "computedHash": "4b22f6f48afc6fcd72e6f3ae106a4dca11b33b88221efded1f5c62d8f9afb50d",
-      "installMode": "copy"
-    },
-    "benchmark": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/benchmark/SKILL.md",
-      "computedHash": "448c26bc545cd09934c14ac58e147f1473d37d00f743c72ed8b97eb967967fe4",
-      "installMode": "copy"
-    },
-    "benchmark-methodology": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/benchmark-methodology/SKILL.md",
-      "computedHash": "e2aaa38c4765074535966e6befac4cc82b5e94598bb7f5210f4b63b610643ed3",
-      "installMode": "copy"
-    },
-    "benchmark-optimization-loop": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/benchmark-optimization-loop/SKILL.md",
-      "computedHash": "9be6ac3ac5ce4d15e4a6ef305dcbe33b86b55432166685ce7972e49e03362234",
-      "installMode": "copy"
-    },
-    "bengali-nlp": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/bengali-nlp/SKILL.md",
-      "computedHash": "04abed68cc72b69250311f9c38beea8e761131381f2fc18e311bd386020280bf",
-      "installMode": "copy"
-    },
-    "blender-motion-state-inspection": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/blender-motion-state-inspection/SKILL.md",
-      "computedHash": "31ee25fe3502a169443e60087ea2bdb940af312fbd4757f14bf4b4b7adcb8653",
-      "installMode": "copy"
-    },
-    "blueprint": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/blueprint/SKILL.md",
-      "computedHash": "3d27b96697d36643d5744f9ba39e58809ff0379498f0bfe9364b644fd143437e",
       "installMode": "copy"
     },
     "brainstorming": {
@@ -281,95 +36,11 @@
       "computedHash": "d5619310b76bd204efd2f8b3832f72b5a2899712be0ab94d1b4b671271419c54",
       "installMode": "copy"
     },
-    "brand-discovery": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/brand-discovery/SKILL.md",
-      "computedHash": "905d6203745fc50962ed86df2168c187a9a45520d730413a39cfc7b009062444",
-      "installMode": "copy"
-    },
-    "brand-guidelines": {
-      "source": "anthropics/skills",
-      "sourceType": "github",
-      "skillPath": "skills/brand-guidelines/SKILL.md",
-      "computedHash": "10067cdd9be9cd5d97c741fc6e25830135afa0e11cc71e567b75763e26d08799",
-      "installMode": "copy"
-    },
-    "brand-voice": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/brand-voice/SKILL.md",
-      "computedHash": "a544208ea2d49615d4659c788903bd0b89b08d74ec2645e7f1974dc984572dcb",
-      "installMode": "copy"
-    },
-    "brownfield-retrospective": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/brownfield-retrospective/SKILL.md",
-      "computedHash": "e0e4e49f5530f1347c7e1e8e1ffac68152e6f0179350effb7f3ea8d33a002523",
-      "installMode": "copy"
-    },
-    "browser-qa": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/browser-qa/SKILL.md",
-      "computedHash": "0ffdd602211e9158a425de6e8a2cb79f8e66112fd43a86a2b282ebebcc03eafa",
-      "installMode": "copy"
-    },
     "browser-testing-with-devtools": {
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
       "skillPath": "skills/browser-testing-with-devtools/SKILL.md",
       "computedHash": "4e76269b455e079e76f29e11fdd80c61a7dd6ef0ab12e26432ea1b782c0a245e",
-      "installMode": "copy"
-    },
-    "build": {
-      "source": "thedotmack/claude-mem",
-      "sourceType": "github",
-      "skillPath": "plugin/skills/build/SKILL.md",
-      "computedHash": "005afbc5fceca5d35be1f8bccfe10e8610e35b4a32e27433636c4fac6293ca60",
-      "installMode": "copy"
-    },
-    "build-and-release": {
-      "source": "thedotmack/claude-mem",
-      "sourceType": "github",
-      "skillPath": "plugin/skills/build-and-release/SKILL.md",
-      "computedHash": "af754b5f1dfc0ac4f0e33f52209bde8326c5e7fb4d3d1d629b77e882abd0bb08",
-      "installMode": "copy"
-    },
-    "bun-runtime": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/bun-runtime/SKILL.md",
-      "computedHash": "920e3f890c6a03d90cc0133d0a15ea8965f992ad48819e483b31a36b69377f2f",
-      "installMode": "copy"
-    },
-    "canary-watch": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/canary-watch/SKILL.md",
-      "computedHash": "deb5506c47cfe6cc1dbb55c60cefa3d29d86fbbfb6ddef5456fd5f9e9eed427b",
-      "installMode": "copy"
-    },
-    "canvas-design": {
-      "source": "anthropics/skills",
-      "sourceType": "github",
-      "skillPath": "skills/canvas-design/SKILL.md",
-      "computedHash": "1866477474e694f562261008bb6a817e53f027b6347b062fbd1e2ee2eb83f20d",
-      "installMode": "copy"
-    },
-    "carrier-relationship-management": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/carrier-relationship-management/SKILL.md",
-      "computedHash": "d96bf9ada2daf4ee2b6e83d40105968f79ad65f157cc40de45cbb005a4b31827",
-      "installMode": "copy"
-    },
-    "cavecrew": {
-      "source": "JuliusBrussee/caveman",
-      "sourceType": "github",
-      "skillPath": "skills/cavecrew/SKILL.md",
-      "computedHash": "e851caf8480d3ddf5de7fe490cbb2cda8840df760b3851510a24d605147d29e2",
       "installMode": "copy"
     },
     "caveman": {
@@ -393,20 +64,6 @@
       "computedHash": "1f627a3ac239baa859918cf64a5e89619c162e1e9787c6d97ad41c5a1cc2fdb9",
       "installMode": "copy"
     },
-    "caveman-discover": {
-      "source": "JuliusBrussee/caveman",
-      "sourceType": "github",
-      "skillPath": "skills/caveman-discover/SKILL.md",
-      "computedHash": "6f0f9bc37b6c5c8c7944a57f6e671ff3b6e58a9ca7ef1557a93b19645a5f1191",
-      "installMode": "copy"
-    },
-    "caveman-evidence-review": {
-      "source": "JuliusBrussee/caveman",
-      "sourceType": "github",
-      "skillPath": "skills/caveman-evidence-review/SKILL.md",
-      "computedHash": "cd258392c713b9cf77d2dd92f1a407a7dccaa54ced28c92192e67d76a0cfe9c6",
-      "installMode": "copy"
-    },
     "caveman-explore": {
       "source": "JuliusBrussee/caveman",
       "sourceType": "github",
@@ -421,39 +78,11 @@
       "computedHash": "6a3e3d37fa03b4aa0622a6aec14446a243619c1539ad419e065dc8b1cd70aacd",
       "installMode": "copy"
     },
-    "caveman-learn": {
-      "source": "JuliusBrussee/caveman",
-      "sourceType": "github",
-      "skillPath": "skills/caveman-learn/SKILL.md",
-      "computedHash": "bd8f0bedab21b580cddee401846aa81723378334548f41863fc131c58d612556",
-      "installMode": "copy"
-    },
-    "caveman-manage": {
-      "source": "JuliusBrussee/caveman",
-      "sourceType": "github",
-      "skillPath": "skills/caveman-manage/SKILL.md",
-      "computedHash": "2dd0ef43e4a5412913967513a494c2db2219fa34630378730409205f3a0b883a",
-      "installMode": "copy"
-    },
-    "caveman-optimize": {
-      "source": "JuliusBrussee/caveman",
-      "sourceType": "github",
-      "skillPath": "skills/caveman-optimize/SKILL.md",
-      "computedHash": "dc5eb46a2918c7250a069b1bcda3c5f385715801d42c317c251ba5208ccd685e",
-      "installMode": "copy"
-    },
     "caveman-review": {
       "source": "JuliusBrussee/caveman",
       "sourceType": "github",
       "skillPath": "skills/caveman-review/SKILL.md",
       "computedHash": "c55908f8ee0dca0e59690e939dfd4a877bd9361897ae5fced096274a77509154",
-      "installMode": "copy"
-    },
-    "caveman-setup": {
-      "source": "JuliusBrussee/caveman",
-      "sourceType": "github",
-      "skillPath": "skills/caveman-setup/SKILL.md",
-      "computedHash": "e0fe84073dee9da687de4b1fc27a5bd06601c2bfb9bcb71121e60e55f32ac7e4",
       "installMode": "copy"
     },
     "caveman-stats": {
@@ -463,32 +92,11 @@
       "computedHash": "d47db80af9353f411b5840fa207ac10c883f04576cd280b135e3a44a0ff86285",
       "installMode": "copy"
     },
-    "ccs-align": {
-      "source": "thedotmack/claude-mem",
-      "sourceType": "github",
-      "skillPath": "plugin/skills/ccs-align/SKILL.md",
-      "computedHash": "78e8652d8e8b6d9e477a8f27aa78fe745ed557485fbac4e2574704397bb585dd",
-      "installMode": "copy"
-    },
-    "change-impact": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/change-impact/SKILL.md",
-      "computedHash": "9ee50329f68ae434067dc3a53fb25d6970bec31f258ce8c6d302ae572ec70db1",
-      "installMode": "copy"
-    },
     "chief-of-staff": {
       "source": "mattpocock/skills",
       "sourceType": "github",
       "skillPath": "skills/in-progress/chief-of-staff/SKILL.md",
       "computedHash": "dc3348d0f641956ea78dafa037aea745154c516a286ed4156b0c2ec0cbcf581b",
-      "installMode": "copy"
-    },
-    "childhood": {
-      "source": "thedotmack/claude-mem",
-      "sourceType": "github",
-      "skillPath": "plugin/skills/childhood/SKILL.md",
-      "computedHash": "b0e8fe1e4566aca1a546a931d8106fcf49d83965aa49af9179962e7b9d198677",
       "installMode": "copy"
     },
     "ci-cd-and-automation": {
@@ -498,60 +106,11 @@
       "computedHash": "fbffe27b3bc3df30ba2895a71b87b2f032bb7b163de762bc8900f2673631c96d",
       "installMode": "copy"
     },
-    "cisco-ios-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/cisco-ios-patterns/SKILL.md",
-      "computedHash": "6bf1a0bbfd9328220b61eb93db2248c0d69cdad9e59e255ece1c51fddb4f27f7",
-      "installMode": "copy"
-    },
-    "ck": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/ck/SKILL.md",
-      "computedHash": "b9c0d8dcf9c7f291f354f418d8c1168f4aa895bcc47b12d52f10349a11f4a778",
-      "installMode": "copy"
-    },
-    "claude-api": {
-      "source": "anthropics/skills",
-      "sourceType": "github",
-      "skillPath": "skills/claude-api/SKILL.md",
-      "computedHash": "c567eeb8da5332098cb747d97f1a1f482c401a80e089ee069e673744575191bf",
-      "installMode": "copy"
-    },
-    "claude-devfleet": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/claude-devfleet/SKILL.md",
-      "computedHash": "6c746bde60e6e5eece162b4302eaaaac4e30f33a1cdf3ece9596ce782e29d176",
-      "installMode": "copy"
-    },
     "claude-handoff": {
       "source": "mattpocock/skills",
       "sourceType": "github",
       "skillPath": "skills/in-progress/claude-handoff/SKILL.md",
       "computedHash": "e903af941877ac195671a1eff550ba42266f5f5a4028ebeae4cd1fec82b88dd4",
-      "installMode": "copy"
-    },
-    "click-path-audit": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/click-path-audit/SKILL.md",
-      "computedHash": "5ca32a22b2bf9432f23fce66693d48f99a1bcb264c69aecb5a86b85c3c3e0083",
-      "installMode": "copy"
-    },
-    "clickhouse-io": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/clickhouse-io/SKILL.md",
-      "computedHash": "b8f5f328ca543c1bc4c6a6b231b14f0061176692708c4ba9be55b3f3c5d43244",
-      "installMode": "copy"
-    },
-    "cloud-sync": {
-      "source": "thedotmack/claude-mem",
-      "sourceType": "github",
-      "skillPath": "plugin/skills/cloud-sync/SKILL.md",
-      "computedHash": "355d33cf7be4bc3fc575457ee961ae0a4df760c661fa45265d4776b61e836ef0",
       "installMode": "copy"
     },
     "code-review": {
@@ -575,88 +134,11 @@
       "computedHash": "48e59225ea45232623e47d35d4ac6028fb2f37a9fbbc0563313d67bab448f664",
       "installMode": "copy"
     },
-    "code-tour": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/code-tour/SKILL.md",
-      "computedHash": "d68d4a34d8f0ad31f4330d36e9ffdebc9664b7f400eac14ef7533c97234849f4",
-      "installMode": "copy"
-    },
     "codebase-design": {
       "source": "mattpocock/skills",
       "sourceType": "github",
       "skillPath": "skills/engineering/codebase-design/SKILL.md",
       "computedHash": "d40f025dc1b0f2020663260f38f2bcb8d6ed3523afb11e5fda624b01238677e8",
-      "installMode": "copy"
-    },
-    "codebase-onboarding": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/codebase-onboarding/SKILL.md",
-      "computedHash": "2efb6878f3299953e031ffb0447d12aa4ace6f183d722882b3da2c2e50444ea7",
-      "installMode": "copy"
-    },
-    "codehealth-mcp": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/codehealth-mcp/SKILL.md",
-      "computedHash": "7b2094185db5b59ec51dc66d1d04626f80ac780e6c9180553745e3fcf74a711f",
-      "installMode": "copy"
-    },
-    "coding-standards": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/coding-standards/SKILL.md",
-      "computedHash": "7fc24f273f3203023b0e2b3d5c9d1172f5e3301ed4623859bda3399e163c1e4d",
-      "installMode": "copy"
-    },
-    "community-sweep": {
-      "source": "thedotmack/claude-mem",
-      "sourceType": "github",
-      "skillPath": ".claude/skills/community-sweep/SKILL.md",
-      "computedHash": "9cc2b3b2585a126b7ab2c33caf9a89a3aba01e023986a62b75d4177d2a8fafc8",
-      "installMode": "copy"
-    },
-    "competitive-platform-analysis": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/competitive-platform-analysis/SKILL.md",
-      "computedHash": "e1c51a2a4991052400cc3a1856e9a7bb5abea8b93a2ba67347876e7541cc5780",
-      "installMode": "copy"
-    },
-    "competitive-report-structure": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/competitive-report-structure/SKILL.md",
-      "computedHash": "f4271e666ea6de5eb75b2130ef0c7708ee2f4c3f4af09ce3d764be2292567d91",
-      "installMode": "copy"
-    },
-    "compose-multiplatform-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/compose-multiplatform-patterns/SKILL.md",
-      "computedHash": "daccc6ffb3398e0d656fd9fb69032c7c5c1d546df9832e43799733d54321cb75",
-      "installMode": "copy"
-    },
-    "config-gc": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/config-gc/SKILL.md",
-      "computedHash": "f0844375c2714477a852c771f0aa8fc613aa2fdd43f1f609d46dd4462ed7f5ee",
-      "installMode": "copy"
-    },
-    "configure-ecc": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/configure-ecc/SKILL.md",
-      "computedHash": "f5cfc7ea4001f579d21745ed6be6ad597dadebeb999fb3bff3b73b04ca85e470",
-      "installMode": "copy"
-    },
-    "connections-optimizer": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/connections-optimizer/SKILL.md",
-      "computedHash": "1136820336db2bab4f2c100909f12d7b1fece810c10e7b9d6dd742e5378dbd0b",
       "installMode": "copy"
     },
     "constraint-driven-development": {
@@ -666,34 +148,6 @@
       "computedHash": "6cbbb88bcec7893403d794ea0411a34ea3e913517a86fa86d2d0a1707a7095ba",
       "installMode": "copy"
     },
-    "content-engine": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/content-engine/SKILL.md",
-      "computedHash": "6cbbbd65a16045c8407a2c293e9df0d565c4b2772aeb51ffd3792c74a97981a4",
-      "installMode": "copy"
-    },
-    "content-hash-cache-pattern": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/content-hash-cache-pattern/SKILL.md",
-      "computedHash": "eee46dfb80f949a2c130581e209a53c9dfa195bab1ca34728b018db2a66744d6",
-      "installMode": "copy"
-    },
-    "context-and-decisions": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/context-and-decisions/SKILL.md",
-      "computedHash": "eee2f57bb0f788676560cb97a2d90c7ca02dd8b4232eb2447f89785dc00c7c20",
-      "installMode": "copy"
-    },
-    "context-budget": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/context-budget/SKILL.md",
-      "computedHash": "0887a797080daf6785d2c6e072a6848979bc2c1c959b7f2d56c04b2e219510c8",
-      "installMode": "copy"
-    },
     "context-engineering": {
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
@@ -701,193 +155,11 @@
       "computedHash": "0b9e3d177ec4e42d9b39c76ef8ee751f88cce40e3879c785a1a8c6eeabc6119d",
       "installMode": "copy"
     },
-    "continuous-agent-loop": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/continuous-agent-loop/SKILL.md",
-      "computedHash": "ad2a46096e31f4025d6a305f4310fc2aaa4905fd8624611fb4d1dec54d5cf83a",
-      "installMode": "copy"
-    },
-    "continuous-learning": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/continuous-learning/SKILL.md",
-      "computedHash": "89f4063186a4138bac94f35a3c4c80f4a6ea12212fe8ba988a60ba6a31b29273",
-      "installMode": "copy"
-    },
-    "continuous-learning-v2": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/continuous-learning-v2/SKILL.md",
-      "computedHash": "bfadef8a768538f1d2db1d304f580db28de7a7fa7757c4a2ed3099cd3e883042",
-      "installMode": "copy"
-    },
-    "contract-first": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/contract-first/SKILL.md",
-      "computedHash": "adc4242ec23a9f0257583d81d2e860a2b2bb118286f6d95a1cb0f51fe43cfc45",
-      "installMode": "copy"
-    },
-    "conventional-commit-review": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/conventional-commit-review/SKILL.md",
-      "computedHash": "cf7a9ecec5191797c407c0899538062ecbccdf595e95e81e6f9b9710781555a6",
-      "installMode": "copy"
-    },
-    "cost-aware-llm-pipeline": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/cost-aware-llm-pipeline/SKILL.md",
-      "computedHash": "1cb7a3eedadde685d935199a53f380a0ad6c9bff6c2b26cfd4bc0a1f1e89cfcc",
-      "installMode": "copy"
-    },
-    "cost-tracking": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/cost-tracking/SKILL.md",
-      "computedHash": "83d524c69288b825c7ffa37422c636e83c14091a3f2b53e45aa741f91323a469",
-      "installMode": "copy"
-    },
-    "council": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/council/SKILL.md",
-      "computedHash": "0f21768b43620a230dbb407203eda352abbb2c64406117d6fbe07e2bd29cf168",
-      "installMode": "copy"
-    },
-    "council-multi-model": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/council-multi-model/SKILL.md",
-      "computedHash": "ae12fb72afa2121e5109e2777c1c322a992050d9033cb944ad172182bbb9ac3c",
-      "installMode": "copy"
-    },
-    "counterparty-channel-discipline": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/counterparty-channel-discipline/SKILL.md",
-      "computedHash": "0428ae919f7889bb2a632f3e37d4a5e7ee56005f5166def80ca6853236f35bfc",
-      "installMode": "copy"
-    },
-    "cpp-coding-standards": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/cpp-coding-standards/SKILL.md",
-      "computedHash": "324ceea2c562f3eff848d258ba84318caf1e353ccce862e85ab4275486e72f1e",
-      "installMode": "copy"
-    },
-    "cpp-testing": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/cpp-testing/SKILL.md",
-      "computedHash": "09d2c32374ed6bdabede7a48b389ef8fc3f9e0b0dc2fa87deacd449fd9b7edf1",
-      "installMode": "copy"
-    },
-    "crosspost": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/crosspost/SKILL.md",
-      "computedHash": "e745c12974c296ca35713b404a5385195a92b07ee92e160705df5ad513bec323",
-      "installMode": "copy"
-    },
-    "csharp-testing": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/csharp-testing/SKILL.md",
-      "computedHash": "fc977b7015f60c5f34a5da552ddd5094f60ce639d7b0635a495797fc6d73632e",
-      "installMode": "copy"
-    },
-    "customer-billing-ops": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/customer-billing-ops/SKILL.md",
-      "computedHash": "992f0aeea0cab35379ddbd4c602641c4f5cc159be0b931b347210eed889246d6",
-      "installMode": "copy"
-    },
-    "customs-trade-compliance": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/customs-trade-compliance/SKILL.md",
-      "computedHash": "b831be00c00753f5390ebeb3d23d346fb0dbbec3cdfc2d65b730a3fc7bf2b071",
-      "installMode": "copy"
-    },
-    "dart-flutter-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/dart-flutter-patterns/SKILL.md",
-      "computedHash": "af324b4b37090b717c830e5a44c11a9069fcea5c81daeeb03ba5ddff8ea1e446",
-      "installMode": "copy"
-    },
-    "dashboard-builder": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/dashboard-builder/SKILL.md",
-      "computedHash": "e3f53accfe2fb290243154975401cfaa222503bbda73557c525d4387d1ab0171",
-      "installMode": "copy"
-    },
-    "data-scraper-agent": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/data-scraper-agent/SKILL.md",
-      "computedHash": "85e2ef04bfdc1ee778f3158378d973d888123edfe66040d32003dcb5965895a3",
-      "installMode": "copy"
-    },
-    "data-throughput-accelerator": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/data-throughput-accelerator/SKILL.md",
-      "computedHash": "40ee1b2b259ee2beaa81ccf6880bca4ccf95e8218e3b67554f59d542fe79509d",
-      "installMode": "copy"
-    },
-    "database-migrations": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/database-migrations/SKILL.md",
-      "computedHash": "c875c88a9cc136ce0a9935fa8a18d8d0648127dc0103d3d0a086efb33c205ec6",
-      "installMode": "copy"
-    },
     "debugging-and-error-recovery": {
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
       "skillPath": "skills/debugging-and-error-recovery/SKILL.md",
       "computedHash": "f7390b705fa186b54fceae6faa77be7cb0ba1cf24c1dc4508c7c84ec149615f5",
-      "installMode": "copy"
-    },
-    "deep-research": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/deep-research/SKILL.md",
-      "computedHash": "277a829d604912369da85acf0497cbf8671352b00bfb8c3c2003501d4759120d",
-      "installMode": "copy"
-    },
-    "deepseek-harness-setup": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/deepseek-harness-setup/SKILL.md",
-      "computedHash": "d846f88a55e8978a26d8ee1288c2ad7e8f51093e5ec2d546f8ef5007b553e94b",
-      "installMode": "copy"
-    },
-    "defi-amm-security": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/defi-amm-security/SKILL.md",
-      "computedHash": "aa44d30eb0583f293628818eb7fa704a759445a350cab929122bef40aa1f4869",
-      "installMode": "copy"
-    },
-    "delivery-gate": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/delivery-gate/SKILL.md",
-      "computedHash": "33bcb9d06a4f0cc13421bf9d0615a9ea946045936e1381593c64e2e3f95f449e",
-      "installMode": "copy"
-    },
-    "deployment-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/deployment-patterns/SKILL.md",
-      "computedHash": "7dafc004bd160aa57a3b88966ea9b7ed3aafb57b74be7c5d4635cd5cf14f9797",
       "installMode": "copy"
     },
     "deprecation-and-migration": {
@@ -904,25 +176,11 @@
       "computedHash": "029cd8e3c45bab68f017e8aeaa18edd8c980e63445ce3915d64e7b5f5bb11be6",
       "installMode": "copy"
     },
-    "design-is": {
-      "source": "thedotmack/claude-mem",
-      "sourceType": "github",
-      "skillPath": "plugin/skills/design-is/SKILL.md",
-      "computedHash": "ac9ab43fdb82e9340439249fcc95e2fa6b0d16a7237d8a4b8f859af5c4ccdef9",
-      "installMode": "copy"
-    },
     "design-system": {
       "source": "nextlevelbuilder/ui-ux-pro-max-skill",
       "sourceType": "github",
       "skillPath": ".claude/skills/design-system/SKILL.md",
       "computedHash": "9efdc106c73d8d298b5a90d55c56995840a37f754fb9d498d14e6562bdaadc23",
-      "installMode": "copy"
-    },
-    "dev-team": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/dev-team/SKILL.md",
-      "computedHash": "77bca3f358fc210785d6b98fa68d38c2c4bc7c650dbd6b2470249bcb7e3b512a",
       "installMode": "copy"
     },
     "diagnosing-bugs": {
@@ -939,88 +197,11 @@
       "computedHash": "44d0295c3d59d6418f80c96e40d8e7b7ece99513ab6e63e5d04b1cf87cc5bbab",
       "installMode": "copy"
     },
-    "discernment-nudge": {
-      "source": "anthropics/skills",
-      "sourceType": "github",
-      "skillPath": "skills/discernment-nudge/SKILL.md",
-      "computedHash": "c3f503f343e5e32f7c8539e47853ca4d69e0cfdbd294789510c8203ae8f92e1d",
-      "installMode": "copy"
-    },
     "dispatching-parallel-agents": {
       "source": "obra/superpowers",
       "sourceType": "github",
       "skillPath": "skills/dispatching-parallel-agents/SKILL.md",
       "computedHash": "d799e464fdfb0edc80b3b7ad7cce03e64ee07fc5db231c988688a81438503659",
-      "installMode": "copy"
-    },
-    "django-celery": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/django-celery/SKILL.md",
-      "computedHash": "622a6d5374c468eb989624635a79a07bce885db604cf63ac6d362d19e3f9b59d",
-      "installMode": "copy"
-    },
-    "django-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/django-patterns/SKILL.md",
-      "computedHash": "813575af295260cfe04c5690b15b4125fcec91db5bafb6730042692403f3161d",
-      "installMode": "copy"
-    },
-    "django-security": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/django-security/SKILL.md",
-      "computedHash": "c4fce4c844984e123d032522ffe261b85faf2330aa2fcdb2a23ec3273cffc504",
-      "installMode": "copy"
-    },
-    "django-tdd": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/django-tdd/SKILL.md",
-      "computedHash": "3f655e6035b29fe528a6bf4b705845ce7d44bc8957a5362a9df7562da1e561f5",
-      "installMode": "copy"
-    },
-    "django-verification": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/django-verification/SKILL.md",
-      "computedHash": "a6b0732e037230d3991f81de83e7fae71c77b10516b7eb20d5be92dde4e846e0",
-      "installMode": "copy"
-    },
-    "dmux-workflows": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/dmux-workflows/SKILL.md",
-      "computedHash": "9b0dd259604c51a6e7d8614afd5c6c739b3cc1ac3fa2b54f02f7135c6999ead1",
-      "installMode": "copy"
-    },
-    "do": {
-      "source": "thedotmack/claude-mem",
-      "sourceType": "github",
-      "skillPath": "plugin/skills/do/SKILL.md",
-      "computedHash": "4e2b51239a8c93681b77082d6bd516cde0c268a8a395b4ffc4f4385c94a46a1f",
-      "installMode": "copy"
-    },
-    "doc-coauthoring": {
-      "source": "anthropics/skills",
-      "sourceType": "github",
-      "skillPath": "skills/doc-coauthoring/SKILL.md",
-      "computedHash": "d32facc16a25b47a21a90e79c1e6c072d342a9e41b595b58b86f869ff33ccc26",
-      "installMode": "copy"
-    },
-    "docker-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/docker-patterns/SKILL.md",
-      "computedHash": "337f3f83dd67896b17c129619dbfdbc0db3c3c54adcb2e519bd9fce90fb49478",
-      "installMode": "copy"
-    },
-    "docs-governance": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/docs-governance/SKILL.md",
-      "computedHash": "7882798990319c4c4d43d86c27fb555caf655ef425dc60676417fac594b39540",
       "installMode": "copy"
     },
     "documentation-and-adrs": {
@@ -1030,32 +211,11 @@
       "computedHash": "a7fa200df9d2a41ac7cac858c4a78a26e220308488fbe25e376b7e755ffbc612",
       "installMode": "copy"
     },
-    "documentation-lookup": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/documentation-lookup/SKILL.md",
-      "computedHash": "0c160b26f3867a695d7c4787dc8e6fe52c669985d7f2e6f7e44e7331a1780c8e",
-      "installMode": "copy"
-    },
-    "docx": {
-      "source": "anthropics/skills",
-      "sourceType": "github",
-      "skillPath": "skills/docx/SKILL.md",
-      "computedHash": "566b0933d95f5a2f981050e781162e19cebacfdff5608ab23dbe556aaf7a59e5",
-      "installMode": "copy"
-    },
     "domain-modeling": {
       "source": "mattpocock/skills",
       "sourceType": "github",
       "skillPath": "skills/engineering/domain-modeling/SKILL.md",
       "computedHash": "b78689833404148c769077355e12dbe5ad996a158a1e21e58ddf169e439d9d8c",
-      "installMode": "copy"
-    },
-    "dotnet-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/dotnet-patterns/SKILL.md",
-      "computedHash": "1612ae15a03cb3f153dd7581fe8a8e2df0ff094a6b6c81b65a4a4e7c688c778e",
       "installMode": "copy"
     },
     "doubt-driven-development": {
@@ -1065,104 +225,6 @@
       "computedHash": "bc1bb71936eb44e88bdae4699abe02756747eb8f36c2d38135721fa7f3d25085",
       "installMode": "copy"
     },
-    "dynamic-workflow-mode": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/dynamic-workflow-mode/SKILL.md",
-      "computedHash": "fd0eab2f586bd3b19e918e53108dc06ee7b6866b9d2f378517c2c1d6cfc5024c",
-      "installMode": "copy"
-    },
-    "e2e-testing": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/e2e-testing/SKILL.md",
-      "computedHash": "8fcd852826a2486c8f09f9493e0536adc505ccd641b70841e74915ce2f1ffb41",
-      "installMode": "copy"
-    },
-    "ecc-conventions": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": ".agents/skills/ecc-conventions/SKILL.md",
-      "computedHash": "42014131f66d7231907dc3d129552c0821b951d378e3892b5e8f9b375963d0c7",
-      "installMode": "copy"
-    },
-    "ecc-guide": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/ecc-guide/SKILL.md",
-      "computedHash": "c81769a9d68540c01f0d98ba7b2aaf211ef9dcb5a519b502fd8644c8b24bf4d9",
-      "installMode": "copy"
-    },
-    "ecc-recipes": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/ecc-recipes/SKILL.md",
-      "computedHash": "4f886b09a3ff1e3eecd83798451947874b4557d330087c0302f42f0c8780b370",
-      "installMode": "copy"
-    },
-    "ecc-tools-cost-audit": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/ecc-tools-cost-audit/SKILL.md",
-      "computedHash": "feabdc9ec97a7c28bdbf7bcc38e1de3c6feaed4bd4b7a397d6ea46bca20623ae",
-      "installMode": "copy"
-    },
-    "email-ops": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/email-ops/SKILL.md",
-      "computedHash": "f134739a9a01504dfd18a80661d7f90479a6d6133e1410191fd18b4df10872fa",
-      "installMode": "copy"
-    },
-    "energy-procurement": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/energy-procurement/SKILL.md",
-      "computedHash": "6540c30d03b77eb716e045862d6751cbdeb9d98f90c516ed211225904decf34b",
-      "installMode": "copy"
-    },
-    "enterprise-agent-ops": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/enterprise-agent-ops/SKILL.md",
-      "computedHash": "11bf18ba1dfc52514658e84fd43e2915e4c2c7495abcd575cfc180fab02c4664",
-      "installMode": "copy"
-    },
-    "error-handling": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/error-handling/SKILL.md",
-      "computedHash": "cdb6b94c8881575d91e49c9969f3dfc853c1739b6220923da27265f3a1e0e929",
-      "installMode": "copy"
-    },
-    "esign-field-placement": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/esign-field-placement/SKILL.md",
-      "computedHash": "ae8b0a124178e26b62c8762bc80ea07426af23586731372b330f3fa5a1c73e02",
-      "installMode": "copy"
-    },
-    "eval-harness": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/eval-harness/SKILL.md",
-      "computedHash": "bac14a67924e24cdbde9eca5f3fad0439f0105daa61af2d7d06e1398c6e9fb16",
-      "installMode": "copy"
-    },
-    "evm-token-decimals": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/evm-token-decimals/SKILL.md",
-      "computedHash": "610703bbe89af7dd8a1e14d9490dc31ca1c5958fa84125d50301b6473454be60",
-      "installMode": "copy"
-    },
-    "exa-search": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/exa-search/SKILL.md",
-      "computedHash": "a452d10d01c9fd5a8b3dd2cc3854d9afa1003f22b2f310d4c672354395cdb3e5",
-      "installMode": "copy"
-    },
     "executing-plans": {
       "source": "obra/superpowers",
       "sourceType": "github",
@@ -1170,32 +232,11 @@
       "computedHash": "58b364f6e3f64602c7cfd0b34ceaad9de95d41fe7e4b46b274843ba19fc01ccc",
       "installMode": "copy"
     },
-    "fal-ai-media": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/fal-ai-media/SKILL.md",
-      "computedHash": "43d0cf8bdd03206f2cf354014e23abf2a8d8b518ad31000530bea1a8f7aafacd",
-      "installMode": "copy"
-    },
-    "fastapi-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/fastapi-patterns/SKILL.md",
-      "computedHash": "519f717c1a362888446a492b520106f15dbcd671dce3d34096ce346f4302d2ac",
-      "installMode": "copy"
-    },
     "figma": {
       "source": "heygen-com/hyperframes",
       "sourceType": "github",
       "skillPath": "skills/figma/SKILL.md",
       "computedHash": "0e6398ef34b30dec730d4225a20bdb20e7ed2309ece8abea95949549fe19f3ac",
-      "installMode": "copy"
-    },
-    "finance-billing-ops": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/finance-billing-ops/SKILL.md",
-      "computedHash": "1e5db52005820d1861f65cc84a14c42d1ed74053e3c1fde3ce52ce9b26bf0248",
       "installMode": "copy"
     },
     "find-skills": {
@@ -1211,60 +252,11 @@
       "computedHash": "7e24d821d45b8f10773edd9f1a4be2fac90eedae4f8fc8e70e34e27e44d3f3c0",
       "installMode": "copy"
     },
-    "flox-environments": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/flox-environments/SKILL.md",
-      "computedHash": "1c66c857165611a98e24d8808ff676b40a8f12a7e70625614530609ee2751c1d",
-      "installMode": "copy"
-    },
-    "flutter-dart-code-review": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/flutter-dart-code-review/SKILL.md",
-      "computedHash": "d05b112db73ee5779188d24e3ecef1f065d428231f69f943d9cd60f0c48cc075",
-      "installMode": "copy"
-    },
-    "foundation-models-on-device": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/foundation-models-on-device/SKILL.md",
-      "computedHash": "f04957e96139c3678918bdcbc66e8d524edd6bf847184c5f90b6900dcbaea998",
-      "installMode": "copy"
-    },
-    "frontend-a11y": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/frontend-a11y/SKILL.md",
-      "computedHash": "a75b4ef44b6b14f0eef8e48238f6e8e15c44cf3d329bf517e6bbc471de74efd2",
-      "installMode": "copy"
-    },
     "frontend-design": {
       "source": "anthropics/skills",
       "sourceType": "github",
       "skillPath": "skills/frontend-design/SKILL.md",
       "computedHash": "83485963700bcf11d5bf78118facb301676b69d918fee2e45a95e7f1a2840f6c",
-      "installMode": "copy"
-    },
-    "frontend-design-direction": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/frontend-design-direction/SKILL.md",
-      "computedHash": "f7b6c8d0883c750ee2fa2e4572c07bfe25699fd338305a2d9f7061b76e1a2d1a",
-      "installMode": "copy"
-    },
-    "frontend-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/frontend-patterns/SKILL.md",
-      "computedHash": "3c9ff06bd5ac5684fcaa83376dd544a116685c67e8bf6694d4fb1772488c161c",
-      "installMode": "copy"
-    },
-    "frontend-slides": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/frontend-slides/SKILL.md",
-      "computedHash": "5096deae5c65109100843234ffffb517d14ff3e5f47eb7addcc485c39c301dff",
       "installMode": "copy"
     },
     "frontend-ui-engineering": {
@@ -1274,34 +266,6 @@
       "computedHash": "73a13aa14acf407518dccde3d021becac59e42e0a90a6a52a86dc53c3a279d12",
       "installMode": "copy"
     },
-    "fsharp-testing": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/fsharp-testing/SKILL.md",
-      "computedHash": "18df259d2b040905a11ff35163bd3e9bce7797dfc497ad12eeb62aba8b54c46f",
-      "installMode": "copy"
-    },
-    "gan-style-harness": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/gan-style-harness/SKILL.md",
-      "computedHash": "a710f91a041de0a0a07a5139c6b6e3219939903ee9647f48082e58be810190b8",
-      "installMode": "copy"
-    },
-    "gateguard": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/gateguard/SKILL.md",
-      "computedHash": "95047aa8448db0c2706bf1f726ffd7acb8f96fcf9129b3ae95bae37e53d50f78",
-      "installMode": "copy"
-    },
-    "generating-python-installer": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/generating-python-installer/SKILL.md",
-      "computedHash": "97b7f3b831b19c55b7d9fbdd61a9036acf82722226ee554f52fe51a3254740c7",
-      "installMode": "copy"
-    },
     "git-guardrails-claude-code": {
       "source": "mattpocock/skills",
       "sourceType": "github",
@@ -1309,46 +273,11 @@
       "computedHash": "7aa92e9d469c6cd0b24ed8accb2e4be681c44c1524d71604c06b4055b7b56482",
       "installMode": "copy"
     },
-    "git-workflow": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/git-workflow/SKILL.md",
-      "computedHash": "5244c5e60bebea38bea18fb0970ccdb9f650eb2d44b164ac26775d62efadb547",
-      "installMode": "copy"
-    },
     "git-workflow-and-versioning": {
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
       "skillPath": "skills/git-workflow-and-versioning/SKILL.md",
       "computedHash": "860b88bf82d823eaed15b9b9fa9ce4273f94c7bdcf3aeaa3e6649eb578763d4b",
-      "installMode": "copy"
-    },
-    "github-ops": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/github-ops/SKILL.md",
-      "computedHash": "a56848f0b4ef06634b132dd807c0b4f0cce3af495743e8540365e39b9b88597d",
-      "installMode": "copy"
-    },
-    "golang-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/golang-patterns/SKILL.md",
-      "computedHash": "e3bbc199e6f2019880f160e09a2791507fdf2c6f68aed657912759b712cf7b71",
-      "installMode": "copy"
-    },
-    "golang-testing": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/golang-testing/SKILL.md",
-      "computedHash": "e47545b619c06e97a9617cc00e7979e2b45016ba474d04eebb2945acb046ab3d",
-      "installMode": "copy"
-    },
-    "google-workspace-ops": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/google-workspace-ops/SKILL.md",
-      "computedHash": "33e6f7089a470c06120fe78546bc99a223d240d2d4a4e10262351a1f75e35615",
       "installMode": "copy"
     },
     "grill-me": {
@@ -1372,123 +301,11 @@
       "computedHash": "485451958784497cd4c4dbea13cb5bbb579da58fac0d0e45f3bcb310fab68ac7",
       "installMode": "copy"
     },
-    "growth-log": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/growth-log/SKILL.md",
-      "computedHash": "ee6922df7112ce76eb304d302cc95484d9b1116dea6aa57630df6cc64fbe8e3a",
-      "installMode": "copy"
-    },
     "gstack": {
       "source": "garrytan/gstack",
       "sourceType": "github",
       "skillPath": "SKILL.md",
       "computedHash": "366b12cd192f8f72823046c1757bf7fb271450985d35b872d05f13637052c75f",
-      "installMode": "copy"
-    },
-    "handoff": {
-      "source": "thedotmack/claude-mem",
-      "sourceType": "github",
-      "skillPath": "plugin/skills/handoff/SKILL.md",
-      "computedHash": "0079d67bc9edda466981074e013283f35da030db68f8e5aa2089802da343b070",
-      "installMode": "copy"
-    },
-    "healthcare-cdss-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/healthcare-cdss-patterns/SKILL.md",
-      "computedHash": "57f7d0aad37ab3da969ec07685338501cd104ea87962c894e32c36962ec5d895",
-      "installMode": "copy"
-    },
-    "healthcare-emr-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/healthcare-emr-patterns/SKILL.md",
-      "computedHash": "2578551f1ed279763bec267eb24a0f0d1f758a072bbc289cb9d067197a696982",
-      "installMode": "copy"
-    },
-    "healthcare-eval-harness": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/healthcare-eval-harness/SKILL.md",
-      "computedHash": "ad2d690ba488c8560dd939e545ee84c4a10445c6548d1bbac4c05b0098980a12",
-      "installMode": "copy"
-    },
-    "healthcare-phi-compliance": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/healthcare-phi-compliance/SKILL.md",
-      "computedHash": "794c72d1130be730a62eab41a545730349c16c2a4186d04b755cec7f73d17296",
-      "installMode": "copy"
-    },
-    "hermes-imports": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/hermes-imports/SKILL.md",
-      "computedHash": "f17803d55b4969c3c0f0abc43c36a67a90f299a2adb44c7f5b0e8c9cea5cd8c5",
-      "installMode": "copy"
-    },
-    "hexagonal-architecture": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/hexagonal-architecture/SKILL.md",
-      "computedHash": "365f9ec13315c077889fbed05cdad5efb277c214a46f7ba3150e6738941d6860",
-      "installMode": "copy"
-    },
-    "hipaa-compliance": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/hipaa-compliance/SKILL.md",
-      "computedHash": "82352e4a81d62b75d98948c408001e918a435c9ea4252bee7c9c70f919923033",
-      "installMode": "copy"
-    },
-    "homelab-network-readiness": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/homelab-network-readiness/SKILL.md",
-      "computedHash": "e2611e0bed86d499659e2dd265492e2601c3b9dfdfa395cbfc1dc5fb64e57d19",
-      "installMode": "copy"
-    },
-    "homelab-network-setup": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/homelab-network-setup/SKILL.md",
-      "computedHash": "f860d9f7eac8261a72983563bc9816003fd33eeb7607c7d868ac0f28618aacea",
-      "installMode": "copy"
-    },
-    "homelab-pihole-dns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/homelab-pihole-dns/SKILL.md",
-      "computedHash": "25d6ae8408490d8ff7cf2016a24759373d2f8eaf437e48f34c1a359c7517a85c",
-      "installMode": "copy"
-    },
-    "homelab-vlan-segmentation": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/homelab-vlan-segmentation/SKILL.md",
-      "computedHash": "caf04b83d858e783cd4bade79e566ac9a5ea9f91eededb2593d8a2429a00f2e7",
-      "installMode": "copy"
-    },
-    "homelab-wireguard-vpn": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/homelab-wireguard-vpn/SKILL.md",
-      "computedHash": "15bea46e889e07cf6c08f4a2130fa213a3b8c50f3170b03599ba65ef2123745c",
-      "installMode": "copy"
-    },
-    "hookify-rules": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/hookify-rules/SKILL.md",
-      "computedHash": "e88cf1597697920c5549e466e9449a81624a23da00c775347889457498d64a78",
-      "installMode": "copy"
-    },
-    "how-it-works": {
-      "source": "thedotmack/claude-mem",
-      "sourceType": "github",
-      "skillPath": "plugin/skills/how-it-works/SKILL.md",
-      "computedHash": "eb059548a77f80d5a159862184e0a8edd372c462a203114a8ad76a92d64d7546",
       "installMode": "copy"
     },
     "humanizer": {
@@ -1517,13 +334,6 @@
       "sourceType": "github",
       "skillPath": "skills/hyperframes-registry/SKILL.md",
       "computedHash": "6ac664d7d7f2ffdf299136cffb1a9bbebe21fd2b9afa8e6f44cf0c7a2d3df3b6",
-      "installMode": "copy"
-    },
-    "i18n-sync": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/i18n-sync/SKILL.md",
-      "computedHash": "058c5d625d822109fb1c1047209c2f1e64caa47ee3fda2f5f4013fe4e366373d",
       "installMode": "copy"
     },
     "idea-refine": {
@@ -1561,39 +371,11 @@
       "computedHash": "62ef93c6389f110af49ed4fad1fe2c27d3d9dd2d8fe0d0f6db089489c3d4aac3",
       "installMode": "copy"
     },
-    "inherit-legacy-style": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/inherit-legacy-style/SKILL.md",
-      "computedHash": "b2fd4b2c12e6f64949c76136577df8bc0dc9014c9f064a94ad8c1e01d6ed6abe",
-      "installMode": "copy"
-    },
-    "intent-driven-development": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/intent-driven-development/SKILL.md",
-      "computedHash": "0c9833a5b0297bfdb24196f874edae4f55c3043fa848d6dc64f972289c2e1ab0",
-      "installMode": "copy"
-    },
-    "internal-comms": {
-      "source": "anthropics/skills",
-      "sourceType": "github",
-      "skillPath": "skills/internal-comms/SKILL.md",
-      "computedHash": "a864e111fed981a514102493dafd2bf426929af06cf35e8943ccbdeb4be65724",
-      "installMode": "copy"
-    },
     "interview-me": {
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
       "skillPath": "skills/interview-me/SKILL.md",
       "computedHash": "68615337944c1d56cd9db6b934e247ff1d67600dd9db3d41cc9bf7236b9d986c",
-      "installMode": "copy"
-    },
-    "inventory-demand-planning": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/inventory-demand-planning/SKILL.md",
-      "computedHash": "454458d70d739adf438e4eb44e94606ad292e3996a9d2ada45993b875104b3c6",
       "installMode": "copy"
     },
     "investigate-first": {
@@ -1603,195 +385,6 @@
       "computedHash": "129b1eba6d106c1d095baefd30578c6303b93119fcd21bd5583ebd34592f3acc",
       "installMode": "copy"
     },
-    "investor-materials": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/investor-materials/SKILL.md",
-      "computedHash": "d6bf2a26377a44c0678cd875cf1f5b03539c9a90f954f8bddb82e63cc6148da9",
-      "installMode": "copy"
-    },
-    "investor-outreach": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/investor-outreach/SKILL.md",
-      "computedHash": "a2899a5ec335fed2559543428b765e3784095b7b55e332159db1474f00fd9833",
-      "installMode": "copy"
-    },
-    "ios-icon-gen": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/ios-icon-gen/SKILL.md",
-      "computedHash": "bdfcfeb7f88bffde8753cf4d0e8977dbd3f14766896949b4f00d16c3ae8799a8",
-      "installMode": "copy"
-    },
-    "issue-review": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/issue-review/SKILL.md",
-      "computedHash": "d0af87ad9f140cb55c8c7ba3df08294f453f2a2d1c48b7bd5637ed6eb96195bf",
-      "installMode": "copy"
-    },
-    "iterative-retrieval": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/iterative-retrieval/SKILL.md",
-      "computedHash": "44ad3e51457af154995397722935c58882b871768b056f22d7eeefa11b5fdcfc",
-      "installMode": "copy"
-    },
-    "ito-baskets": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/ito-baskets/SKILL.md",
-      "computedHash": "f2e741402aea8b9f243e07390fff55bfd6d2c2a93dd9650c7ceb9047dc90ce85",
-      "installMode": "copy"
-    },
-    "ito-compute": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/ito-compute/SKILL.md",
-      "computedHash": "99604511fa2d28f9ce1db50432a985ec59301386da2fa29920d24e8af7e80d44",
-      "installMode": "copy"
-    },
-    "ito-inference": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/ito-inference/SKILL.md",
-      "computedHash": "2ed3d95d88eed361aa0ea2aa3ee3081558e14c1cade44f44bf44b696be23d22f",
-      "installMode": "copy"
-    },
-    "ito-training": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/ito-training/SKILL.md",
-      "computedHash": "55993545390b4ec1934ff30e181a52f1b32b1060719712bdb7d7a0a035b85393",
-      "installMode": "copy"
-    },
-    "java-coding-standards": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/java-coding-standards/SKILL.md",
-      "computedHash": "11df0ff4be3c05e6edf33ab47709c525fb884090b424f5c76da4610f15b0f83a",
-      "installMode": "copy"
-    },
-    "jira-integration": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/jira-integration/SKILL.md",
-      "computedHash": "be9bbf899bbf9086b516e5eff129145f1ba1624af1353af1b8702392d4e2a407",
-      "installMode": "copy"
-    },
-    "jpa-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/jpa-patterns/SKILL.md",
-      "computedHash": "1bb54df0b3c3c016a9b031e11c2365017e50176b47e69010cf4b4f54fff56823",
-      "installMode": "copy"
-    },
-    "knowledge-agent": {
-      "source": "thedotmack/claude-mem",
-      "sourceType": "github",
-      "skillPath": "plugin/skills/knowledge-agent/SKILL.md",
-      "computedHash": "3425e562e1e6817e0c70f19691d77a37846bb7990e390b6ca803dbfb80abb0de",
-      "installMode": "copy"
-    },
-    "knowledge-ops": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/knowledge-ops/SKILL.md",
-      "computedHash": "a61628ef43035b20aebe13f95ad44a92bfaf99c53c08fe00d757f559f8608d29",
-      "installMode": "copy"
-    },
-    "kotlin-coroutines-flows": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/kotlin-coroutines-flows/SKILL.md",
-      "computedHash": "d4a613f11c658c9505add74de43d1c720fa15742dfa81df8a54e12f9bed3f9fd",
-      "installMode": "copy"
-    },
-    "kotlin-exposed-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/kotlin-exposed-patterns/SKILL.md",
-      "computedHash": "66d33eb629289205af256c5fc972b96932476fcd0f326072324df17547f8289d",
-      "installMode": "copy"
-    },
-    "kotlin-ktor-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/kotlin-ktor-patterns/SKILL.md",
-      "computedHash": "b3c53370cc759c0818af9e51e6f16ed0735ded79138777a379aaf1cdcc759f7f",
-      "installMode": "copy"
-    },
-    "kotlin-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/kotlin-patterns/SKILL.md",
-      "computedHash": "440a4d922cbffb97e99f9de1668acf5b50ab4bc838a1c951c562bf08acd43235",
-      "installMode": "copy"
-    },
-    "kotlin-testing": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/kotlin-testing/SKILL.md",
-      "computedHash": "c894346ba381187c2ad004ff0acd621c19f58bfb4afbddd299f674a601f29b02",
-      "installMode": "copy"
-    },
-    "kubernetes-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/kubernetes-patterns/SKILL.md",
-      "computedHash": "66b4d10fec3ca575df8fa953b3558211d0199e7c1ba5b91b5dc81e54867a13db",
-      "installMode": "copy"
-    },
-    "laravel-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/laravel-patterns/SKILL.md",
-      "computedHash": "a05d0cb036c1bd75998d368b049b758a867cbe03d88c98fec62aa421ee7939c4",
-      "installMode": "copy"
-    },
-    "laravel-plugin-discovery": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/laravel-plugin-discovery/SKILL.md",
-      "computedHash": "8e8685725c9d45dd46dd0d55e651ac71021de3d4920bea766ca06f7f6a0beb04",
-      "installMode": "copy"
-    },
-    "laravel-security": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/laravel-security/SKILL.md",
-      "computedHash": "76754b92b4dbe1d7de632944924e51196e2a35c6dcb85ec0b4ba4d13adc15af6",
-      "installMode": "copy"
-    },
-    "laravel-tdd": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/laravel-tdd/SKILL.md",
-      "computedHash": "006ad22ac3d173507df1cdf01e4baf937622441c39b124c6226b7a450a3cfdc4",
-      "installMode": "copy"
-    },
-    "laravel-verification": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/laravel-verification/SKILL.md",
-      "computedHash": "18cb85c73c03991ab1ab8718883fb923fae3bbfe8a2a517261b0fc8740ef50ca",
-      "installMode": "copy"
-    },
-    "latency-critical-systems": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/latency-critical-systems/SKILL.md",
-      "computedHash": "d915145b3afe055757bfd62536a9efcf064ba64fd5cfa3c88bca83349d99a967",
-      "installMode": "copy"
-    },
-    "lead-intelligence": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/lead-intelligence/SKILL.md",
-      "computedHash": "72c7219f18ce3e95c7e3083596ca5e4ab061cae94175187c2febd7edf6b570fd",
-      "installMode": "copy"
-    },
     "lean-build": {
       "source": "JuliusBrussee/caveman",
       "sourceType": "github",
@@ -1799,123 +392,11 @@
       "computedHash": "aee8fbb86c5e1e5066089293423f71dd6a87ab37486c360cd4488ef2fe96c7a7",
       "installMode": "copy"
     },
-    "learn-codebase": {
-      "source": "thedotmack/claude-mem",
-      "sourceType": "github",
-      "skillPath": "plugin/skills/learn-codebase/SKILL.md",
-      "computedHash": "0dd06e52864fa37dda04718f7b14e99a52c22d59bb3bd4fd25fdbe48a96d045b",
-      "installMode": "copy"
-    },
-    "liquid-glass-design": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/liquid-glass-design/SKILL.md",
-      "computedHash": "2f9186dd3f5f8a9f480e90986c926aac0f3584f67b7dc9f20d90ddb874745b8f",
-      "installMode": "copy"
-    },
-    "living-docs-governance": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/living-docs-governance/SKILL.md",
-      "computedHash": "fdd7f5f250e47f4a8d8c18823657a8acd543e6b024c69dc0a516fc5ac2ed8e5c",
-      "installMode": "copy"
-    },
-    "llm-trading-agent-security": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/llm-trading-agent-security/SKILL.md",
-      "computedHash": "e459e93cf59a47288335e434221dd793cc8d85517829d6ccddc5656beb2dc281",
-      "installMode": "copy"
-    },
-    "logistics-exception-management": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/logistics-exception-management/SKILL.md",
-      "computedHash": "6d1b8bdb3e6a897feacc07fede934a4032485fdc6c708a413d078cf2e1355c13",
-      "installMode": "copy"
-    },
-    "loop-design-check": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/loop-design-check/SKILL.md",
-      "computedHash": "2eb0e3b9aa176368aa13374dd9332400850c3a0d8b7aed3b17cc5aeb540d6cfa",
-      "installMode": "copy"
-    },
     "loop-me": {
       "source": "mattpocock/skills",
       "sourceType": "github",
       "skillPath": "skills/in-progress/loop-me/SKILL.md",
       "computedHash": "5dac8f9919f3e1a528a4f1f00db07c81c3e6092e706376d81c697d16422ab163",
-      "installMode": "copy"
-    },
-    "mailtrap-email-integration": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/mailtrap-email-integration/SKILL.md",
-      "computedHash": "3a41e32e15ae17c8df25648ba64b5d66541ccb4e956085282c60667bb0a16fcf",
-      "installMode": "copy"
-    },
-    "make-interfaces-feel-better": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/make-interfaces-feel-better/SKILL.md",
-      "computedHash": "b826e2d3d748554ea314940a39f07eb4cf252ea9eaf03cbd241379d7a9719a2c",
-      "installMode": "copy"
-    },
-    "make-plan": {
-      "source": "thedotmack/claude-mem",
-      "sourceType": "github",
-      "skillPath": "plugin/skills/make-plan/SKILL.md",
-      "computedHash": "c76ca979e4a429b5265d005fb124683b019f0cd92c697eee66d9228c53ed8f86",
-      "installMode": "copy"
-    },
-    "manim-video": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/manim-video/SKILL.md",
-      "computedHash": "380872e3fb322de1cad1f73c51ce54a8878dca6ce5ab78955776796b61eae9fa",
-      "installMode": "copy"
-    },
-    "market-research": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/market-research/SKILL.md",
-      "computedHash": "49a2249cbc91a74a2b3efe6eb658dcec246e3d34b7f9c9b614f392dd5a5ef563",
-      "installMode": "copy"
-    },
-    "marketing-campaign": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/marketing-campaign/SKILL.md",
-      "computedHash": "37d268b375b462293cc4f97004dc2ddb0c96118b427b4040d4e27dda94129c0e",
-      "installMode": "copy"
-    },
-    "master-agreement-generator": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/master-agreement-generator/SKILL.md",
-      "computedHash": "38ada72dcf761faaf43b6b553c5987f031c9a278d03218bf8b6b1b13f93ed483",
-      "installMode": "copy"
-    },
-    "mcp-builder": {
-      "source": "anthropics/skills",
-      "sourceType": "github",
-      "skillPath": "skills/mcp-builder/SKILL.md",
-      "computedHash": "5a699fa929d99d7e6b1ebe10f13bf960d9ad452b70bd0733efd5d1de9524e285",
-      "installMode": "copy"
-    },
-    "mcp-dependency-review": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/mcp-dependency-review/SKILL.md",
-      "computedHash": "74195268c9b56b936b30c58882fd16f3791f8ba86d153817a9dc92b58a3c94d5",
-      "installMode": "copy"
-    },
-    "mcp-server-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/mcp-server-patterns/SKILL.md",
-      "computedHash": "7e2d81fd8515cc6a9dc1e8cafee476fcee4361d0922e1336a3d14ba655f694d5",
       "installMode": "copy"
     },
     "media-use": {
@@ -1932,172 +413,11 @@
       "computedHash": "d38301dd11ffdbf9c876cb5a15ff245a31fe7806a29f7800e7fbe44fc306fd62",
       "installMode": "copy"
     },
-    "mem-search": {
-      "source": "thedotmack/claude-mem",
-      "sourceType": "github",
-      "skillPath": "cowork/skills/mem-search/SKILL.md",
-      "computedHash": "b2b7b526293a629c699243951319ab689ec23c08bae639a52b7b60ae38635a13",
-      "installMode": "copy"
-    },
-    "mem-setup": {
-      "source": "thedotmack/claude-mem",
-      "sourceType": "github",
-      "skillPath": "cowork/skills/mem-setup/SKILL.md",
-      "computedHash": "fcd9b891dc6b80acb4bba9820366243087d83a0d63b4ae64f5038e03a90bb067",
-      "installMode": "copy"
-    },
-    "messages-ops": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/messages-ops/SKILL.md",
-      "computedHash": "ee8720af36feb51ae2ea3ab6bd2c12beaa2abf320fb343d639a91de9a33271ec",
-      "installMode": "copy"
-    },
-    "migrate-to-shoehorn": {
-      "source": "mattpocock/skills",
-      "sourceType": "github",
-      "skillPath": "skills/misc/migrate-to-shoehorn/SKILL.md",
-      "computedHash": "a63549df6d5b5c6595029f8c504ccf31a12f01312f03db70da4b45cb10ba5ca8",
-      "installMode": "copy"
-    },
     "migration": {
       "source": "JuliusBrussee/caveman",
       "sourceType": "github",
       "skillPath": "skills/migration/SKILL.md",
       "computedHash": "e7c6efc84ff8f85d0242e7f29f51c09fd333c294cc3123ef8ee4b2aca2a93192",
-      "installMode": "copy"
-    },
-    "ml-adoption-playbook": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/ml-adoption-playbook/SKILL.md",
-      "computedHash": "18458696faaad67c78b4f41e50bfebf4dbcafa33e0509fbb40eb8798103cac86",
-      "installMode": "copy"
-    },
-    "mle-workflow": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/mle-workflow/SKILL.md",
-      "computedHash": "1956faf371a3554e05856db769307402dac1e46c26c3d4e58cfe4f695ab3dc2b",
-      "installMode": "copy"
-    },
-    "mode-creator": {
-      "source": "thedotmack/claude-mem",
-      "sourceType": "github",
-      "skillPath": "plugin/skills/mode-creator/SKILL.md",
-      "computedHash": "7891850340dfbe689262cdeae85ec82c67277bb8ee0119a6a6a7bae1e6bd4a2b",
-      "installMode": "copy"
-    },
-    "module-governance": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/module-governance/SKILL.md",
-      "computedHash": "59fc0103558bed7c1cd3ef18c12b0f27be41add50ffac45065863f88f610f913",
-      "installMode": "copy"
-    },
-    "module-regression": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/module-regression/SKILL.md",
-      "computedHash": "29db47239f38dc86c5de099b76848f5ab46710b2f6e23beea045e884991cd15b",
-      "installMode": "copy"
-    },
-    "motion-advanced": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/motion-advanced/SKILL.md",
-      "computedHash": "20ea5771211756ca1fb705ac102dd59b90734feae8a9f0a3b103f48b752524d7",
-      "installMode": "copy"
-    },
-    "motion-foundations": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/motion-foundations/SKILL.md",
-      "computedHash": "2584c98dd4baae120b50201b1716203a55aed181dce82773b6568a13c6290b23",
-      "installMode": "copy"
-    },
-    "motion-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/motion-patterns/SKILL.md",
-      "computedHash": "7503959000ad77bd65a4865e5523ae38c29261285c67c16c6c5cb18534ded794",
-      "installMode": "copy"
-    },
-    "mybatis-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/mybatis-patterns/SKILL.md",
-      "computedHash": "f8c069ab5e8292a67bc1e15fc564cd74d7b7c3060c0eb6f3bfb7167d74599892",
-      "installMode": "copy"
-    },
-    "mysql-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/mysql-patterns/SKILL.md",
-      "computedHash": "7556fae8681a04fec2a4e5bc476933059bb4d01c6ea225914779869cdb41a00b",
-      "installMode": "copy"
-    },
-    "nanoclaw-repl": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/nanoclaw-repl/SKILL.md",
-      "computedHash": "547d2fb53b278b2bf4b5d772419df09e1cb528d36deb251966e72c9848fc6524",
-      "installMode": "copy"
-    },
-    "nasiko-control-plane": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/nasiko-control-plane/SKILL.md",
-      "computedHash": "b81b5e6e0b1342ba925bf5e9f1803739389cccbdf81e1f07ae2f417ca2290f06",
-      "installMode": "copy"
-    },
-    "nestjs-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/nestjs-patterns/SKILL.md",
-      "computedHash": "6af78622c8a23f94764b457ab836b7d7997c0310a04182798efd5c0691e26c9a",
-      "installMode": "copy"
-    },
-    "netmiko-ssh-automation": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/netmiko-ssh-automation/SKILL.md",
-      "computedHash": "51eb77390b420050e943820c53ce3ba626b429c66a9fa5adafed4f1a6bc6ce6f",
-      "installMode": "copy"
-    },
-    "network-bgp-diagnostics": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/network-bgp-diagnostics/SKILL.md",
-      "computedHash": "f4556d5a158507cee454e1cebfc8adf4589ab15e4bb749870a024d15f6d9fd63",
-      "installMode": "copy"
-    },
-    "network-config-validation": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/network-config-validation/SKILL.md",
-      "computedHash": "2723fa3362ba90eacdf3780de93a777169992f301d5e6f997bf5643ee53d4ebf",
-      "installMode": "copy"
-    },
-    "network-interface-health": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/network-interface-health/SKILL.md",
-      "computedHash": "6d46c3d6986fce63e1e8d72c1a92adde2ce37e03b1fe5c6ba53052c637f62e72",
-      "installMode": "copy"
-    },
-    "nextjs-turbopack": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/nextjs-turbopack/SKILL.md",
-      "computedHash": "f5424e835185651154581ddf3443006cf027c89b9d2345dde0a81f319abd7167",
-      "installMode": "copy"
-    },
-    "nodejs-keccak256": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/nodejs-keccak256/SKILL.md",
-      "computedHash": "f1683efb190485ac95aa300c6f46c8b303257099aafbaaf5f98cb5c14c62efb2",
       "installMode": "copy"
     },
     "notebooklm": {
@@ -2107,20 +427,6 @@
       "computedHash": "a69a684fd49cedcbd9bac8731bdde7d25c2fdc4ad384ab64e3039fd08409325e",
       "installMode": "copy"
     },
-    "nutrient-document-processing": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/nutrient-document-processing/SKILL.md",
-      "computedHash": "9fcfefae1c4c02252c167a633869b05bb5080267f7b9854081a23bc6f791bfd5",
-      "installMode": "copy"
-    },
-    "nuxt4-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/nuxt4-patterns/SKILL.md",
-      "computedHash": "a56413b9a4824f79bca233af995ef45227ca1bbeffbff6140b96e9744c80cdc3",
-      "installMode": "copy"
-    },
     "observability-and-instrumentation": {
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
@@ -2128,158 +434,11 @@
       "computedHash": "71661b8e1558d7eed8cdf93bfb731da1c3afed9b895b049ecf92792af0d8a364",
       "installMode": "copy"
     },
-    "oh-my-issues": {
-      "source": "thedotmack/claude-mem",
-      "sourceType": "github",
-      "skillPath": "plugin/skills/oh-my-issues/SKILL.md",
-      "computedHash": "86c15a9e1a52f7b6ca8cfbfef1546eec1850dda234864b24a9233ad939d6b8eb",
-      "installMode": "copy"
-    },
-    "openclaw-persona-forge": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/openclaw-persona-forge/SKILL.md",
-      "computedHash": "86570b96626cc823eb16c9d93ce0016f5c5fe713090e56a5bb3f8df7f41a3fc1",
-      "installMode": "copy"
-    },
-    "opensource-pipeline": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/opensource-pipeline/SKILL.md",
-      "computedHash": "066fbfd0def06d714493fa47cc9014e1066ba41fafa51e0911cb22bddf831e63",
-      "installMode": "copy"
-    },
-    "operator-approval-loop": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/operator-approval-loop/SKILL.md",
-      "computedHash": "d92bfad9ddf9c00d144b8d5027713a1dbdad0773645ae84c4e4a17394e7d0c46",
-      "installMode": "copy"
-    },
-    "orch-add-feature": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/orch-add-feature/SKILL.md",
-      "computedHash": "727ecbaae5d82307068c4940dda28baf0d37b06b3098b498f079c91f3c5a7d11",
-      "installMode": "copy"
-    },
-    "orch-build-mvp": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/orch-build-mvp/SKILL.md",
-      "computedHash": "c7fac73ae026ae4129ba287b1f68df283bee3a74af071a9e47c23efdb78fcdb3",
-      "installMode": "copy"
-    },
-    "orch-change-feature": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/orch-change-feature/SKILL.md",
-      "computedHash": "573f8459f0e1a4cc0019d1a8ff580653806c72c49ad3f2c271fdeb720fc11dbc",
-      "installMode": "copy"
-    },
-    "orch-fix-defect": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/orch-fix-defect/SKILL.md",
-      "computedHash": "c62d837797c3866f73af069d9493eeb8f7a85ef2edcf0ca81a88f40e557cb62f",
-      "installMode": "copy"
-    },
-    "orch-pipeline": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/orch-pipeline/SKILL.md",
-      "computedHash": "0eca6c67e129a6ee18171edac3e3e25b0bce3c68ec6fd726c80255e1ec45bcaf",
-      "installMode": "copy"
-    },
-    "orch-refine-code": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/orch-refine-code/SKILL.md",
-      "computedHash": "48d9e7a9dc7f8547fb4a1e597666ce6915c33f6406f29aa3253e4819f22ff775",
-      "installMode": "copy"
-    },
-    "osint-investigation": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/osint-investigation/SKILL.md",
-      "computedHash": "aa8c5d0b24727e4064da857ed8d9769c8e963da374a1aa78c3977cb57b54d272",
-      "installMode": "copy"
-    },
-    "owner-goals": {
-      "source": "thedotmack/claude-mem",
-      "sourceType": "github",
-      "skillPath": "plugin/skills/owner-goals/SKILL.md",
-      "computedHash": "affddf6b17b823e4f9f19fb74eab727fa538ccbf89a61101d9276bf051ea3434",
-      "installMode": "copy"
-    },
-    "parallel-execution-optimizer": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/parallel-execution-optimizer/SKILL.md",
-      "computedHash": "eba1fcdcb49dc780ecd0918395ad5729bd015056a287ad2412cef9add4f893a1",
-      "installMode": "copy"
-    },
-    "pathfinder": {
-      "source": "thedotmack/claude-mem",
-      "sourceType": "github",
-      "skillPath": "plugin/skills/pathfinder/SKILL.md",
-      "computedHash": "cbd848af3f3a9cf73e44c55b6175bca1c67db2458645b5f554a4d12cc925a5f2",
-      "installMode": "copy"
-    },
-    "pdf": {
-      "source": "anthropics/skills",
-      "sourceType": "github",
-      "skillPath": "skills/pdf/SKILL.md",
-      "computedHash": "48032992527f297b532782a85f9d4132417805eff1630944009bceb990d93f9a",
-      "installMode": "copy"
-    },
     "performance-optimization": {
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
       "skillPath": "skills/performance-optimization/SKILL.md",
       "computedHash": "cfa0c39804554198a33e3beb2b0f920a1b468bb2e066822e1d08f4abeda3db33",
-      "installMode": "copy"
-    },
-    "perl-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/perl-patterns/SKILL.md",
-      "computedHash": "c1a203a08327d7d4b3beb6fa45dbce185bdf45200e3cf8419cfa3332811cea68",
-      "installMode": "copy"
-    },
-    "perl-security": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/perl-security/SKILL.md",
-      "computedHash": "05eb57ada07673f163f461e96bd4fd077bfd02384fabd507e78dd51ae5c414bf",
-      "installMode": "copy"
-    },
-    "perl-testing": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/perl-testing/SKILL.md",
-      "computedHash": "c5114942aef2cd56d964a846d452293ac368ec9b6f8d16dc675d5533583be731",
-      "installMode": "copy"
-    },
-    "plan-canvas": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/plan-canvas/SKILL.md",
-      "computedHash": "89099cc3914565cbe0d13d5f0dc5eaa5a6cfc24e5273fae2f6c40ebff32dec23",
-      "installMode": "copy"
-    },
-    "plan-orchestrate": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/plan-orchestrate/SKILL.md",
-      "computedHash": "2600dc9c9b23658374e255203d1c9a0781af3293b4c8d99e67c581a06848856c",
-      "installMode": "copy"
-    },
-    "plankton-code-quality": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/plankton-code-quality/SKILL.md",
-      "computedHash": "8f0dc2d85acf0148648c31aed9f32586523ed532b0e8c2623ae09716a58ac8e7",
       "installMode": "copy"
     },
     "planning-and-task-breakdown": {
@@ -2331,95 +490,11 @@
       "computedHash": "fe7b781db99ce79d931cdc798b3fbccd84b82538de4a3fc5f6d9d466946d1458",
       "installMode": "copy"
     },
-    "postgres-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/postgres-patterns/SKILL.md",
-      "computedHash": "758f1bbc01cd005b51e04dce9a8e2a5052fbc3b0aacc35de257080a4ecc91948",
-      "installMode": "copy"
-    },
-    "pptx": {
-      "source": "anthropics/skills",
-      "sourceType": "github",
-      "skillPath": "skills/pptx/SKILL.md",
-      "computedHash": "cdec30578287eed9c8cdb12391f8a464c349ad9f9ea2543b3d9ad7d73b372c5c",
-      "installMode": "copy"
-    },
     "pr": {
       "source": "mattpocock/skills",
       "sourceType": "github",
       "skillPath": "skills/engineering/pr/SKILL.md",
       "computedHash": "a66195583d0f9323004cdd4da169f93449071f29023671f3e31a916e740f6861",
-      "installMode": "copy"
-    },
-    "prediction-market-oracle-research": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/prediction-market-oracle-research/SKILL.md",
-      "computedHash": "255db3e8fe50f4a4359192b755500bb1ee0eb2b6261fc2327c47a851bc5e1875",
-      "installMode": "copy"
-    },
-    "prediction-market-risk-review": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/prediction-market-risk-review/SKILL.md",
-      "computedHash": "8cf1cd82fd44d6addd2d7d4c5aeff9e4bb22cab4c536067847a283273c7e969d",
-      "installMode": "copy"
-    },
-    "prisma-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/prisma-patterns/SKILL.md",
-      "computedHash": "5d38f9a532d78723cf5372aa8aa6b0a02ca22866b6982f4b7029e7c0306d7a82",
-      "installMode": "copy"
-    },
-    "product-capability": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/product-capability/SKILL.md",
-      "computedHash": "7d2f88a8a5a6b27c68ab7ef9fff3e652faec1b2019ebaba57d8e7080f11b9c24",
-      "installMode": "copy"
-    },
-    "product-lens": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/product-lens/SKILL.md",
-      "computedHash": "53314970b3ef104f76de97f816009335c6444f8a51a1708e75cf2816b78d4a7c",
-      "installMode": "copy"
-    },
-    "production-audit": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/production-audit/SKILL.md",
-      "computedHash": "3c6c32f825a6ac78bafda43d6341b6a34016561ffcce7f00ca690fb4d1312125",
-      "installMode": "copy"
-    },
-    "production-scheduling": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/production-scheduling/SKILL.md",
-      "computedHash": "7f8ddc2cf8cbc0df019b342e5175c29662d4e09f7db8b7d3981266f46f3dc6e7",
-      "installMode": "copy"
-    },
-    "project-flow-ops": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/project-flow-ops/SKILL.md",
-      "computedHash": "478bc42d8abc730edf20bb734251ce80fa6b4d42260923f2e9cd62b021b23a34",
-      "installMode": "copy"
-    },
-    "prompt-caching-strategy": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/prompt-caching-strategy/SKILL.md",
-      "computedHash": "28cc6ff80da509f47d7a285ede38353239cdaa5ff1e6a6c194f38c3a794f48f3",
-      "installMode": "copy"
-    },
-    "prompt-optimizer": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/prompt-optimizer/SKILL.md",
-      "computedHash": "4d7b7fc3ee0bfe2f5f4d1fd1687b16aaf2e9674b2ba4a74700f4675c976e2c4f",
       "installMode": "copy"
     },
     "prototype": {
@@ -2429,104 +504,6 @@
       "computedHash": "1e3ba2202a5b77b8aa50bc4447432331d6e42590e53ec0935689662cfed199ca",
       "installMode": "copy"
     },
-    "python-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/python-patterns/SKILL.md",
-      "computedHash": "2771a46d843b25e27277c1acf10d1748fc75850ad3c2549dea3597db9354b0e6",
-      "installMode": "copy"
-    },
-    "python-testing": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/python-testing/SKILL.md",
-      "computedHash": "8a8be888ec64744560903855e07cc667e323e52a4d1fd415809218e6fff5a241",
-      "installMode": "copy"
-    },
-    "pytorch-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/pytorch-patterns/SKILL.md",
-      "computedHash": "27f10c0703d3673e050b2200d12aafdc1542352a13d5a2ba6511a7fd31e370fd",
-      "installMode": "copy"
-    },
-    "quality-nonconformance": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/quality-nonconformance/SKILL.md",
-      "computedHash": "979a16e3a117026f0e85d651b79901d76e3a006b1cf7588a6972e650458591a9",
-      "installMode": "copy"
-    },
-    "quarkus-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/quarkus-patterns/SKILL.md",
-      "computedHash": "c5d7d9c55407e47ac1b442462d7fc8a2d72eee1fea4efec91c45eea8e471431f",
-      "installMode": "copy"
-    },
-    "quarkus-security": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/quarkus-security/SKILL.md",
-      "computedHash": "0c02c5db9b3c5b812f6b716c0a668c75f4f7b2852816c253a09ccf30bd159109",
-      "installMode": "copy"
-    },
-    "quarkus-tdd": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/quarkus-tdd/SKILL.md",
-      "computedHash": "bd2c0bdd82e029a8848fac014a97581d98303bc6a45aa349559c1b1909c2d9db",
-      "installMode": "copy"
-    },
-    "quarkus-verification": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/quarkus-verification/SKILL.md",
-      "computedHash": "dbcd371d00be8e7adb84deedc37cdfad1219f07df7449e814975cd01bd70d04f",
-      "installMode": "copy"
-    },
-    "rails-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/rails-patterns/SKILL.md",
-      "computedHash": "52b54328f8e0bbc755f92967c75285e8b4fbc518c9bdda8439c5ec1e0a82f66b",
-      "installMode": "copy"
-    },
-    "ralphinho-rfc-pipeline": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/ralphinho-rfc-pipeline/SKILL.md",
-      "computedHash": "8095c1efc14c81dc56b1b7f120eadfdab05963470eb2ffb19fdaaaa4ebba6a8c",
-      "installMode": "copy"
-    },
-    "react-native-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/react-native-patterns/SKILL.md",
-      "computedHash": "84ff268ccb7eb5f8eb4db6a375d5f84d4200d2ab605ca03899a8307ad474cbc8",
-      "installMode": "copy"
-    },
-    "react-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/react-patterns/SKILL.md",
-      "computedHash": "94cbe8da465b425441563f529cee88f21c5b05ad824fd3b4272d3e9edc326f35",
-      "installMode": "copy"
-    },
-    "react-performance": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/react-performance/SKILL.md",
-      "computedHash": "ab40a9681c0f0623810ddc983c78235c213d366537559ae39fbe42048b03805b",
-      "installMode": "copy"
-    },
-    "react-testing": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/react-testing/SKILL.md",
-      "computedHash": "714afd851c8c43fe67ee327e28adb5e3b75caf38540abeef05e3ecb6a812c180",
-      "installMode": "copy"
-    },
     "receiving-code-review": {
       "source": "obra/superpowers",
       "sourceType": "github",
@@ -2534,67 +511,11 @@
       "computedHash": "528d336858d6f7d22cfcb887a249409ce682cb7d37a939cb15a82f2576a35876",
       "installMode": "copy"
     },
-    "recsys-pipeline-architect": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/recsys-pipeline-architect/SKILL.md",
-      "computedHash": "1f84bd155562fad2ff925f8ac1edb83f49d165c2412ed6d5434bb03487cb36a1",
-      "installMode": "copy"
-    },
-    "recursive-decision-ledger": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/recursive-decision-ledger/SKILL.md",
-      "computedHash": "5f40b1c0e9d54e56cd95bdfb57a4d0222ede3fed1f7067dc09e3fc6fb3ffbb23",
-      "installMode": "copy"
-    },
-    "redis-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/redis-patterns/SKILL.md",
-      "computedHash": "d1efd2542c3346805d6023cc7aad1013cc5acc94d02cb142cf7672953a769cfc",
-      "installMode": "copy"
-    },
-    "regex-vs-llm-structured-text": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/regex-vs-llm-structured-text/SKILL.md",
-      "computedHash": "836c29887edb97f842fbeeccdaf1b85bb73e300bd29a2a76cd4150d27cd498a0",
-      "installMode": "copy"
-    },
-    "release": {
-      "source": "thedotmack/claude-mem",
-      "sourceType": "github",
-      "skillPath": "plugin/skills/release/SKILL.md",
-      "computedHash": "0f428347abc0a42e0837abe5bc8f87ca6251c7eedb74d757bdea5734507a7bec",
-      "installMode": "copy"
-    },
     "remotion-to-hyperframes": {
       "source": "heygen-com/hyperframes",
       "sourceType": "github",
       "skillPath": "skills/remotion-to-hyperframes/SKILL.md",
       "computedHash": "2e8210b6f9df473ab0c8028350c3a0f193430b37fdab917725a0d655674da512",
-      "installMode": "copy"
-    },
-    "remotion-video-creation": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/remotion-video-creation/SKILL.md",
-      "computedHash": "a8b55456e0cf95c0edf3c97a5e9d4ea2e5899603dd1bbcb7623db6344b107c66",
-      "installMode": "copy"
-    },
-    "repo-scan": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/repo-scan/SKILL.md",
-      "computedHash": "e4b284e6dff19b2ac69fa12da162c2054c8e080af8fdf637ed3f6276c4f99039",
-      "installMode": "copy"
-    },
-    "request-progress": {
-      "source": "thedotmack/claude-mem",
-      "sourceType": "github",
-      "skillPath": "plugin/skills/request-progress/SKILL.md",
-      "computedHash": "87f5b12e68a86f7ce900a7855074bb0353484620626caf288d8f5159c19ca082",
       "installMode": "copy"
     },
     "requesting-code-review": {
@@ -2611,25 +532,11 @@
       "computedHash": "7662666af51f8b1672ed7d88360d4b82656da21bb7b11c49e956eeb3036b85d5",
       "installMode": "copy"
     },
-    "research-ops": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/research-ops/SKILL.md",
-      "computedHash": "68a9bd665d2ef089b25f369b85a7ac5740539defac4f928d44ac8aad3fad8ab9",
-      "installMode": "copy"
-    },
     "retro": {
       "source": "mattpocock/skills",
       "sourceType": "github",
       "skillPath": "skills/engineering/retro/SKILL.md",
       "computedHash": "e260aefb7b75b3548a3ee9883afbf8808e521f2e86feec92399617894f83b7c2",
-      "installMode": "copy"
-    },
-    "returns-reverse-logistics": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/returns-reverse-logistics/SKILL.md",
-      "computedHash": "bf2bc9decba8f93109dd3471de923bd97517ad0ca03d8455015e831c7e4f812b",
       "installMode": "copy"
     },
     "reverse-any-video": {
@@ -2639,27 +546,6 @@
       "computedHash": "2cefe479a595e0bdaaeae6a23c297992ac133c1dfd49dd64b01b3e28eee591f0",
       "installMode": "copy"
     },
-    "rules-distill": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/rules-distill/SKILL.md",
-      "computedHash": "d5ea4e639fcfe6d7834641468f6bd025dcb9deff8126df3a5af79ccbab305be6",
-      "installMode": "copy"
-    },
-    "rust-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/rust-patterns/SKILL.md",
-      "computedHash": "14ef9aaa812d58a8342ac913f2c00b1564b85606e588c9a2d9a4e4ffe2e5441e",
-      "installMode": "copy"
-    },
-    "rust-testing": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/rust-testing/SKILL.md",
-      "computedHash": "4a16853504a8d9ee1af3abb29e4db9b506ddc46f5ef6bafff45193a1a1a1e520",
-      "installMode": "copy"
-    },
     "safe-refactor": {
       "source": "JuliusBrussee/caveman",
       "sourceType": "github",
@@ -2667,109 +553,11 @@
       "computedHash": "709db1dfde3fe3baa362ecdb3f1f3c0be27587358242737dfa4ca82a23744269",
       "installMode": "copy"
     },
-    "safety-guard": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/safety-guard/SKILL.md",
-      "computedHash": "fe983aa81e8fd123615a855f824bce8754406b48e0f1a22cb93b1d5ddda04fe5",
-      "installMode": "copy"
-    },
-    "santa-method": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/santa-method/SKILL.md",
-      "computedHash": "24c60fe617c59b238c00e2d7078785c27c1f3dde4e874a98981fb7a53c4fb9d2",
-      "installMode": "copy"
-    },
-    "scaffold-exercises": {
-      "source": "mattpocock/skills",
-      "sourceType": "github",
-      "skillPath": "skills/misc/scaffold-exercises/SKILL.md",
-      "computedHash": "019bbcc250992c776244aa1c818aed4015364f65bb9d1dbfd3bef9bae196b065",
-      "installMode": "copy"
-    },
-    "scientific-db-pubmed-database": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/scientific-db-pubmed-database/SKILL.md",
-      "computedHash": "e118a99ec55edff807f7d61fb39d653f5af87ebdd498491e2740c0f9004c4e47",
-      "installMode": "copy"
-    },
-    "scientific-db-uspto-database": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/scientific-db-uspto-database/SKILL.md",
-      "computedHash": "a5914cec7f33feebe8258495705c39d29b2a32d7e12ae1c533092d725cf4b333",
-      "installMode": "copy"
-    },
-    "scientific-pkg-gget": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/scientific-pkg-gget/SKILL.md",
-      "computedHash": "b0fb366d73984f6dc15829a6b67856a6b30d55fe5f9b8f0aca974464b9d02c95",
-      "installMode": "copy"
-    },
-    "scientific-thinking-literature-review": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/scientific-thinking-literature-review/SKILL.md",
-      "computedHash": "cbdcd31a14ab4a3e74c9644f5b141c9607008e3df4151c2aeccf74aff4c774ec",
-      "installMode": "copy"
-    },
-    "scientific-thinking-scholar-evaluation": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/scientific-thinking-scholar-evaluation/SKILL.md",
-      "computedHash": "6a7639aca46d44ffe5bed9bce8c7cc198d90e4f9760bb5a8e6d0d028a556b6dd",
-      "installMode": "copy"
-    },
-    "screenpipe": {
-      "source": "thedotmack/claude-mem",
-      "sourceType": "github",
-      "skillPath": "plugin/skills/screenpipe/SKILL.md",
-      "computedHash": "c37ee62a5fafc1ce342543e545647879ce8d16af75405be33e5020507feca864",
-      "installMode": "copy"
-    },
-    "search-first": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/search-first/SKILL.md",
-      "computedHash": "f95b1d0ce088b1dd1b5de029c709c02a17cebf38f1ebcc1b0140fc97e4bf5ae9",
-      "installMode": "copy"
-    },
     "security-and-hardening": {
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
       "skillPath": "skills/security-and-hardening/SKILL.md",
       "computedHash": "4970681073e6138c4cec8eca31546187f47723a61a7f1204710ae86d9f704517",
-      "installMode": "copy"
-    },
-    "security-bounty-hunter": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/security-bounty-hunter/SKILL.md",
-      "computedHash": "814c1b3b4b251a2a4522f6909df5fc11258bac7fc5d3461897cff483c9a48e8c",
-      "installMode": "copy"
-    },
-    "security-review": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/security-review/SKILL.md",
-      "computedHash": "2f509e757d51e10acb45a7a707767f1d1a26f7b8f63477b83080aa7217b04283",
-      "installMode": "copy"
-    },
-    "security-scan": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/security-scan/SKILL.md",
-      "computedHash": "2df14b25fe855cba1f75df9e1174ef061f32b00b954c89dac5bc1bd589b7d9d4",
-      "installMode": "copy"
-    },
-    "seo": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/seo/SKILL.md",
-      "computedHash": "d3ab36bacbd4631faeff5d5e6d1ab3ca93fb9af33303fc25528ff650d842b1d0",
       "installMode": "copy"
     },
     "setup-matt-pocock-skills": {
@@ -2800,48 +588,6 @@
       "computedHash": "ae9b095cfb74edd0d2b63c24aaca99e5a2f95b50527a7508841b501eabd3820a",
       "installMode": "copy"
     },
-    "skill-comply": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/skill-comply/SKILL.md",
-      "computedHash": "4c2849c7d96489c6771ebea2f6f5a23a99fcba13c578d942c9c929f02bf6de29",
-      "installMode": "copy"
-    },
-    "skill-creator": {
-      "source": "anthropics/skills",
-      "sourceType": "github",
-      "skillPath": "skills/skill-creator/SKILL.md",
-      "computedHash": "2d7f889e6ae93c6c27d699856942c336b5b8644537496987d5571043d059b1dc",
-      "installMode": "copy"
-    },
-    "skill-host-compat": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/skill-host-compat/SKILL.md",
-      "computedHash": "3689568331d2e5c37e342a72b1801313ab44b4a1fac2ac324d8d72b8da8a3843",
-      "installMode": "copy"
-    },
-    "skill-scout": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/skill-scout/SKILL.md",
-      "computedHash": "bdae1ba41ca0d85115108d5669ef13c9ea09a589fb06c765191b2d0eb9f6e365",
-      "installMode": "copy"
-    },
-    "skill-stocktake": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/skill-stocktake/SKILL.md",
-      "computedHash": "d35f2b877bc2ae1e82f121eee2c00229866fa617c5420a02793fb8d363137a56",
-      "installMode": "copy"
-    },
-    "slack-gif-creator": {
-      "source": "anthropics/skills",
-      "sourceType": "github",
-      "skillPath": "skills/slack-gif-creator/SKILL.md",
-      "computedHash": "25581243f719e75121f9051ec671e810e53375fe648a6362d673d6bfbbe9d479",
-      "installMode": "copy"
-    },
     "slides": {
       "source": "nextlevelbuilder/ui-ux-pro-max-skill",
       "sourceType": "github",
@@ -2856,27 +602,6 @@
       "computedHash": "9e0fe437b47e9edf4f1c6c9aa48b5c1d7c3a1b896d9a83a11934c7aa8e76d345",
       "installMode": "copy"
     },
-    "smart-explore": {
-      "source": "thedotmack/claude-mem",
-      "sourceType": "github",
-      "skillPath": "plugin/skills/smart-explore/SKILL.md",
-      "computedHash": "094a6320da6b471e3750b9f7735f7582daa1d732c445d7dea1a59a28b2718075",
-      "installMode": "copy"
-    },
-    "social-graph-ranker": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/social-graph-ranker/SKILL.md",
-      "computedHash": "816afb4bf8880955ccf4f98f9b910f5df011431dce966378292d4402cda1ce3a",
-      "installMode": "copy"
-    },
-    "social-publisher": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/social-publisher/SKILL.md",
-      "computedHash": "87a5dd2edbbfd0081de70cf17acb4911b10c54b2cd8846831c742d8bace71da0",
-      "installMode": "copy"
-    },
     "source-driven-development": {
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
@@ -2889,55 +614,6 @@
       "sourceType": "github",
       "skillPath": "skills/spec-driven-development/SKILL.md",
       "computedHash": "e1ac9b69a18c946b903623ea9a07953e783758c60274bf63bea713b54504bed4",
-      "installMode": "copy"
-    },
-    "springboot-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/springboot-patterns/SKILL.md",
-      "computedHash": "127fd377709341153eef207148c51b23be20aed7626bd952aa6122988308d0a2",
-      "installMode": "copy"
-    },
-    "springboot-security": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/springboot-security/SKILL.md",
-      "computedHash": "0d3a005019c4fb8512303a71b30850765f59e03b4a495181aaf6e4477287444c",
-      "installMode": "copy"
-    },
-    "springboot-tdd": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/springboot-tdd/SKILL.md",
-      "computedHash": "c47807a038ed9761fb007629d5f60b563c5b61edf76b7cb57107326c9353bf73",
-      "installMode": "copy"
-    },
-    "springboot-verification": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/springboot-verification/SKILL.md",
-      "computedHash": "67581f124102895691967a5bd5ecf3ed9eb936942a4c1704877ab777659288c4",
-      "installMode": "copy"
-    },
-    "standup": {
-      "source": "thedotmack/claude-mem",
-      "sourceType": "github",
-      "skillPath": "plugin/skills/standup/SKILL.md",
-      "computedHash": "ab64daa7894e1a05d493881b849ce11d75c4ab9fa1c2c423b9f61f8acc486281",
-      "installMode": "copy"
-    },
-    "story-lifecycle": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/story-lifecycle/SKILL.md",
-      "computedHash": "c0a0f2ae7df8a03cbf94aa9111228c355f8f3e75140f12804bfdcb6fb6e69bc2",
-      "installMode": "copy"
-    },
-    "strategic-compact": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/strategic-compact/SKILL.md",
-      "computedHash": "950b2cc0b53ee680b762af6af1a02e056d4f08e9ae8efe24b78d32532c9b1b9b",
       "installMode": "copy"
     },
     "style-sampling": {
@@ -2961,67 +637,11 @@
       "computedHash": "5fa48d8d44e476bd633b0dc856b8342a715b5d5416b01778df5d6245b360c9df",
       "installMode": "copy"
     },
-    "swift-actor-persistence": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/swift-actor-persistence/SKILL.md",
-      "computedHash": "6fb4c3d77784b046810420ba329dd468f0ba8beeccfe00a1a920f74eba8eaa32",
-      "installMode": "copy"
-    },
-    "swift-concurrency-6-2": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/swift-concurrency-6-2/SKILL.md",
-      "computedHash": "ee71a0fe62566da7bc1f91b08ee8ce4763c82087ecb518002522b5eaa6261741",
-      "installMode": "copy"
-    },
-    "swift-protocol-di-testing": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/swift-protocol-di-testing/SKILL.md",
-      "computedHash": "9a8bf81a15dbeb9a120d5fd3c16300eca0d45fb7668d9d5d9fea7aad46bf5f75",
-      "installMode": "copy"
-    },
-    "swiftui-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/swiftui-patterns/SKILL.md",
-      "computedHash": "75939a8ddff51f6ec697c566fbc3382888acd062eb0a2e0879b50751ed04f196",
-      "installMode": "copy"
-    },
     "systematic-debugging": {
       "source": "obra/superpowers",
       "sourceType": "github",
       "skillPath": "skills/systematic-debugging/SKILL.md",
       "computedHash": "79ff0583175346e39431b0dc713b223edd1bd7a7ea2b6c8b78b2fb9a3fed6782",
-      "installMode": "copy"
-    },
-    "taste": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/taste/SKILL.md",
-      "computedHash": "372657fa406dbe86039fbd71115bb0bcb5f820ecad49d67d79aef309fa210dd1",
-      "installMode": "copy"
-    },
-    "taste-application": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/taste-application/SKILL.md",
-      "computedHash": "d1bd1db07a8d476f06f1b3d18f402921b982cc7fe7e6eccca107ce6664a087e7",
-      "installMode": "copy"
-    },
-    "taste-distillation": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/taste-distillation/SKILL.md",
-      "computedHash": "dddde968f78d3c2131b7f5caaa3add80673ca02648a653d706f422ece2b954b1",
-      "installMode": "copy"
-    },
-    "tasteforge-video": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/tasteforge-video/SKILL.md",
-      "computedHash": "97e7525aed9530cdbcd8445a58c393a65d587a8c78d6d2365b6c40ec0de5acf5",
       "installMode": "copy"
     },
     "tdd": {
@@ -3031,13 +651,6 @@
       "computedHash": "e3e0f78ff1c2d52ffefa0378baa1e80e129d359288cf9a56f4e59afcd2aac86c",
       "installMode": "copy"
     },
-    "tdd-workflow": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/tdd-workflow/SKILL.md",
-      "computedHash": "93a041dbf6a33a5cde4b3a51af43bea0e5ba194ecfbc5c29bf6390f69524f172",
-      "installMode": "copy"
-    },
     "teach": {
       "source": "mattpocock/skills",
       "sourceType": "github",
@@ -3045,74 +658,11 @@
       "computedHash": "31bb3eed09dd2787e290e933def99fbf7d65044a29119c224af47c01404ab228",
       "installMode": "copy"
     },
-    "team-agent-orchestration": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/team-agent-orchestration/SKILL.md",
-      "computedHash": "43719709506e4ab8955c3401c5b1e1276e2aa7dcbee82170ac2dff5cec3e8363",
-      "installMode": "copy"
-    },
-    "team-builder": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/team-builder/SKILL.md",
-      "computedHash": "48c912a1e17b29087dd2d1ca1abdf0b91972f27e82004e27477defbb6834248c",
-      "installMode": "copy"
-    },
-    "template-skill": {
-      "source": "anthropics/skills",
-      "sourceType": "github",
-      "skillPath": "template/SKILL.md",
-      "computedHash": "143ecbef94ad1b41d05d13ed6a1f52a80aef7ae7114d9cfa88a3fdf2f2049754",
-      "installMode": "copy"
-    },
-    "terminal-opener": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/terminal-opener/SKILL.md",
-      "computedHash": "a89aaa4a9e2b0b04c4aefb238f1c58ded0c582c243355987fbce53c5fd14af8f",
-      "installMode": "copy"
-    },
-    "terminal-ops": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/terminal-ops/SKILL.md",
-      "computedHash": "246c00f93dab893afe21bee3e78f42a4414c20d08ec416ab5ee8c048c29bee77",
-      "installMode": "copy"
-    },
-    "test-collaboration": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/test-collaboration/SKILL.md",
-      "computedHash": "37e013477e6e2c2f41451dcaa04a8e8fbad1adbbf6f6aa3c0271ceebf4ed8043",
-      "installMode": "copy"
-    },
     "test-driven-development": {
       "source": "addyosmani/agent-skills",
       "sourceType": "github",
       "skillPath": "skills/test-driven-development/SKILL.md",
       "computedHash": "60f294cc1ededf0d006811f4be199a415493fc048b6058c5b66193fba114a173",
-      "installMode": "copy"
-    },
-    "theme-factory": {
-      "source": "anthropics/skills",
-      "sourceType": "github",
-      "skillPath": "skills/theme-factory/SKILL.md",
-      "computedHash": "f426a07c06316201360be19324f2689c5bd3ab2d1669848c9383c321efa4386f",
-      "installMode": "copy"
-    },
-    "timeline-report": {
-      "source": "thedotmack/claude-mem",
-      "sourceType": "github",
-      "skillPath": "plugin/skills/timeline-report/SKILL.md",
-      "computedHash": "150edfb2b4275abcda962d7f3231a187c73782a5bc0e6e783e70a66e0fed330f",
-      "installMode": "copy"
-    },
-    "tinystruct-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/tinystruct-patterns/SKILL.md",
-      "computedHash": "349ff5b283a5fccd77b19f295385e47e95c524235ed94c1bcfa151513fd7b0d2",
       "installMode": "copy"
     },
     "to-questionnaire": {
@@ -3136,20 +686,6 @@
       "computedHash": "17496514c92954f68eacdf2b1221e2ddb39fa231b83f03c70bc7d4422f704b2d",
       "installMode": "copy"
     },
-    "token-budget-advisor": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/token-budget-advisor/SKILL.md",
-      "computedHash": "6f6bfc9a7c14e3aac678a2050dad269eff6bb39f7c09971616e040fee428990e",
-      "installMode": "copy"
-    },
-    "token-card": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/token-card/SKILL.md",
-      "computedHash": "3508bff5b933e41b543bedae1ac263707c16f71f104e7f9ccc55eaa55ec4f5fb",
-      "installMode": "copy"
-    },
     "triage": {
       "source": "mattpocock/skills",
       "sourceType": "github",
@@ -3157,32 +693,11 @@
       "computedHash": "4342a07c9ebe0696713ec93a883c46e56503a587a34d824fabab5ca61e3bdfbb",
       "installMode": "copy"
     },
-    "typescript-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/typescript-patterns/SKILL.md",
-      "computedHash": "7bf6b11a0e0b2bbccb5bcc90c30222842ae735effe85178fbeba58b50ce4891b",
-      "installMode": "copy"
-    },
-    "ui-demo": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/ui-demo/SKILL.md",
-      "computedHash": "98c063a5bbd2d1892aae08bbc5d3fc5576e4cef852e3dab21ec074bce3794729",
-      "installMode": "copy"
-    },
     "ui-styling": {
       "source": "nextlevelbuilder/ui-ux-pro-max-skill",
       "sourceType": "github",
       "skillPath": ".claude/skills/ui-styling/SKILL.md",
       "computedHash": "a598d8ad69832a394d4040e4c94e4b9c7b8daf2b1fdca050929058f7b70bc816",
-      "installMode": "copy"
-    },
-    "ui-to-vue": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/ui-to-vue/SKILL.md",
-      "computedHash": "3457cbf6ad968d24a51ed4af3e98365efbc9a37f021d8e2328e47905d8027dbf",
       "installMode": "copy"
     },
     "ui-ux-pro-max": {
@@ -3197,27 +712,6 @@
       "sourceType": "github",
       "skillPath": "skills/ultracave/SKILL.md",
       "computedHash": "b9814ef35fbc9f4359f682c7f2e4944b30428f8c8d79463efa070f99fffaa453",
-      "installMode": "copy"
-    },
-    "uncloud": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/uncloud/SKILL.md",
-      "computedHash": "556096ccf04d9bbf7fa4a27c9a44e0e3c7ae3b3957ae125688d7826abccab10d",
-      "installMode": "copy"
-    },
-    "unified-memory": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/unified-memory/SKILL.md",
-      "computedHash": "3a2a72b2fa5e1850476aae3188aaf35667ce8a9093a00fa9e185a9b05a235e7f",
-      "installMode": "copy"
-    },
-    "unified-notifications-ops": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/unified-notifications-ops/SKILL.md",
-      "computedHash": "c88b84add14bd43ee32e6ca89362cf7b0dcd42d1d981ac7dd8ef5f08e5a77580",
       "installMode": "copy"
     },
     "using-agent-skills": {
@@ -3248,60 +742,11 @@
       "computedHash": "09b0e3a4689c1c38a3b8fc6ef57a1d4165aa33c0013d546dbde9dd348941a319",
       "installMode": "copy"
     },
-    "verification-loop": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/verification-loop/SKILL.md",
-      "computedHash": "82125ed44eaccad22d6f39e77c2e35650c16e484c3f8a3e79989b0a197f94d21",
-      "installMode": "copy"
-    },
     "verify-and-stop": {
       "source": "JuliusBrussee/caveman",
       "sourceType": "github",
       "skillPath": "skills/verify-and-stop/SKILL.md",
       "computedHash": "130048a85c3d028f9e8bb9fa923143b11b55511c9c43ab3f155b6c8022e48f56",
-      "installMode": "copy"
-    },
-    "version-bump": {
-      "source": "thedotmack/claude-mem",
-      "sourceType": "github",
-      "skillPath": "plugin/skills/version-bump/SKILL.md",
-      "computedHash": "4c48096dc5401871b64637c3a35716373cc937767116b57594a2d07578508588",
-      "installMode": "copy"
-    },
-    "video-editing": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/video-editing/SKILL.md",
-      "computedHash": "b1a66c7e9337e7030cfef7c5a8b2a519123e63c8fef710105118eab89641e505",
-      "installMode": "copy"
-    },
-    "videodb": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/videodb/SKILL.md",
-      "computedHash": "01775aa7cee552fb2b16c21c340be3367e200f6b4ef691c0b6fc30db04afdb48",
-      "installMode": "copy"
-    },
-    "visa-doc-translate": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/visa-doc-translate/SKILL.md",
-      "computedHash": "5cd41e4d6c750db07888f4d083dab271546d95cf7bc794f0d81f47c6c1df7b03",
-      "installMode": "copy"
-    },
-    "vite-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/vite-patterns/SKILL.md",
-      "computedHash": "b0b6fbb9657445c7f0708cb8d185aa735f574a18877aa790bc530942208c8462",
-      "installMode": "copy"
-    },
-    "vue-patterns": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/vue-patterns/SKILL.md",
-      "computedHash": "85a2fce2336f884a992b4807f89527cbb0ad4c8395eeef0542fec7b2d7d0e9ea",
       "installMode": "copy"
     },
     "wait-what": {
@@ -3318,13 +763,6 @@
       "computedHash": "bd82983c105881f6cb0c15e5d029c0d5fca756939b69eebe94e49003069a276f",
       "installMode": "copy"
     },
-    "web-artifacts-builder": {
-      "source": "anthropics/skills",
-      "sourceType": "github",
-      "skillPath": "skills/web-artifacts-builder/SKILL.md",
-      "computedHash": "7a081b86fd5068d3ca2c4d9c059956634feff65ccbf1c39c3d34a6e5d0971139",
-      "installMode": "copy"
-    },
     "webapp-testing": {
       "source": "anthropics/skills",
       "sourceType": "github",
@@ -3332,46 +770,11 @@
       "computedHash": "48cd9a742a59250edec6db89cf081ef5465f365e2133f6d6c5e29c380b754b7d",
       "installMode": "copy"
     },
-    "weekly-digests": {
-      "source": "thedotmack/claude-mem",
-      "sourceType": "github",
-      "skillPath": "plugin/skills/weekly-digests/SKILL.md",
-      "computedHash": "bc6315d83812c79f4bcde07775fd9869a8ac503784c997e66fb25cca9800d003",
-      "installMode": "copy"
-    },
-    "what-the": {
-      "source": "thedotmack/claude-mem",
-      "sourceType": "github",
-      "skillPath": "plugin/skills/what-the/SKILL.md",
-      "computedHash": "658b9de124cd93af770da5af19080f43c4d445996b8332b1aea391b60a9093e1",
-      "installMode": "copy"
-    },
-    "windows-desktop-e2e": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/windows-desktop-e2e/SKILL.md",
-      "computedHash": "c45fba0e8dd9683efa222529b54410b092edd72a2edaa07280a252f1b6f0e5ca",
-      "installMode": "copy"
-    },
     "wizard": {
       "source": "mattpocock/skills",
       "sourceType": "github",
       "skillPath": "skills/engineering/wizard/SKILL.md",
       "computedHash": "806f7f7461824054ffaf3344e1e56e5e8a42344e22bdf8d22c6a8117eb9b1c38",
-      "installMode": "copy"
-    },
-    "workspace-surface-audit": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/workspace-surface-audit/SKILL.md",
-      "computedHash": "432b983801f86490ee5feed200856fa6d50c6b162025078b210cb37a45f051c2",
-      "installMode": "copy"
-    },
-    "wowerpoint": {
-      "source": "thedotmack/claude-mem",
-      "sourceType": "github",
-      "skillPath": "plugin/skills/wowerpoint/SKILL.md",
-      "computedHash": "ec1b616957d9fad1a48ebb0375af8ae894c91f84bb56f9c203bf60166d656df2",
       "installMode": "copy"
     },
     "writing-beats": {
@@ -3414,20 +817,6 @@
       "sourceType": "github",
       "skillPath": "skills/writing-skills/SKILL.md",
       "computedHash": "50d87a4c2c6a9d60156ccfdbe844e0a11678968157e494a8a8c02377c273483a",
-      "installMode": "copy"
-    },
-    "x-api": {
-      "source": "affaan-m/ECC",
-      "sourceType": "github",
-      "skillPath": "skills/x-api/SKILL.md",
-      "computedHash": "ea52c4e0be7530fba0233935f63fb3f2e171dab8290c3d16f6739c0ea667e64f",
-      "installMode": "copy"
-    },
-    "xlsx": {
-      "source": "anthropics/skills",
-      "sourceType": "github",
-      "skillPath": "skills/xlsx/SKILL.md",
-      "computedHash": "3572b018005308f765480622987ef576fcdf9ea332d1024d3fe6c58cd65566a1",
       "installMode": "copy"
     }
   }

@@ -37,7 +37,8 @@
   },
   "enabledPlugins": {
     "ponytail@ponytail": true,
-    "agent-skills@addy-agent-skills": true
+    "agent-skills@addy-agent-skills": true,
+    "rea@rea": true
   },
   "extraKnownMarketplaces": {
     "ponytail": {
@@ -50,6 +51,12 @@
       "source": {
         "source": "github",
         "repo": "addyosmani/agent-skills"
+      }
+    },
+    "rea": {
+      "source": {
+        "source": "github",
+        "repo": "morluto/rea"
       }
     }
   }

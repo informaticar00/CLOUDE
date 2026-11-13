@@ -3,7 +3,7 @@
 Moderna jednostranična web stranica za Agenciju „GLOCK-SIGURNOST“ d.o.o. Sarajevo, s formom za upite i automatskom potvrdom na WhatsApp.
 
 - `public/`: stranica (HTML, CSS, JS, bez frameworka)
-- `server.js`: mali Node server bez vanjskih paketa. Servira stranicu, prima upite, sprema ih u `data/upiti.jsonl` i šalje WhatsApp poruke.
+- `server.js`: mali Node server. Servira stranicu, prima upite, sprema ih u `data/upiti.jsonl` i šalje WhatsApp poruke i emailove. Jedina zavisnost je `nodemailer`, za slanje emaila.
 
 ## Pokretanje
 
@@ -11,19 +11,22 @@ Potreban je Node.js 22 ili noviji.
 
 ```bash
 cd glock-sigurnost
+npm install              # instalira nodemailer
 cp .env.example .env     # popunite podatke (vidi dolje)
 npm start                # http://localhost:3000
 npm test                 # testovi
 ```
 
-Stranica radi i bez WhatsApp podataka. Upiti se tada samo spremaju u `data/upiti.jsonl`.
+Stranica radi i bez WhatsApp i email podataka. Upiti se tada samo spremaju u `data/upiti.jsonl`.
 
 ## Kako radi forma
 
 1. Klijent upiše ime, broj telefona, email, uslugu i upit, te potvrdi saglasnost za kontakt.
 2. Server provjeri podatke, zaštićen je od spam botova (honeypot polje i ograničenje broja upita po IP adresi) i spremi upit.
-3. Klijent na WhatsApp dobije poruku da je upit zaprimljen i da će biti kontaktiran kad se upit obradi.
-4. Ako je podešeno, i službeni broj firme dobije WhatsApp obavijest s podacima novog upita.
+3. Klijent na WhatsApp i na email dobije poruku da je upit zaprimljen i da će biti kontaktiran kad se upit obradi.
+4. Firma dobije email s podacima novog upita. Klik na „Odgovori“ ide direktno klijentu. Ako je podešen šablon `novi_upit`, firma dobije i WhatsApp obavijest.
+
+WhatsApp i email rade nezavisno: ako jedan kanal nije podešen ili privremeno ne radi, drugi i dalje šalje poruke.
 
 Brojevi se automatski pretvaraju u međunarodni format: `061 123 456` postaje `38761123456`.
 
@@ -43,7 +46,7 @@ WHATSAPP_TOKEN=trajni_token
 WHATSAPP_PHONE_NUMBER_ID=123456789012345
 WHATSAPP_TEMPLATE_LANG=bs
 WHATSAPP_TEMPLATE_CLIENT=upit_zaprimljen
-COMPANY_WHATSAPP=+387 6X XXX XXX
+COMPANY_WHATSAPP=067 104 2939
 WHATSAPP_TEMPLATE_COMPANY=novi_upit
 ```
 
@@ -66,6 +69,20 @@ WHATSAPP_TEMPLATE_COMPANY=novi_upit
 Ako šablon nazovete drugačije ili koristite drugi jezik, promijenite odgovarajuću vrijednost u `.env`.
 
 Meta naplaćuje poslovne poruke po razgovoru. Cijene za BiH su na <https://developers.facebook.com/docs/whatsapp/pricing>.
+
+## Podešavanje emaila (Gmail)
+
+1. Na Google računu uključite **Potvrdu u 2 koraka**: Google račun → Sigurnost.
+2. Otvorite <https://myaccount.google.com/apppasswords>, napravite lozinku za aplikaciju (npr. „Glock web“) i kopirajte 16 znakova.
+3. Upišite u `.env`:
+
+```env
+SMTP_USER=vasa.adresa@gmail.com
+SMTP_PASS=lozinka_za_aplikacije
+COMPANY_EMAIL=vasa.adresa@gmail.com
+```
+
+Gmail dozvoljava do 500 poslanih poruka dnevno. Za veći obim, ili da poruke idu s adrese `@glock-sigurnost.ba`, koristite SMTP podatke svog hostinga ili servis kao što su Brevo i Mailgun. Dovoljno je promijeniti `SMTP_HOST`, `SMTP_PORT`, `SMTP_USER` i `SMTP_PASS`.
 
 ## Objava na internetu
 

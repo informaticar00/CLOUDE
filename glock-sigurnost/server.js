@@ -1,10 +1,11 @@
-// Glock Sigurnost: web server bez zavisnosti (Node 22+).
-// Servira /public, prima upite na POST /api/upit, sprema ih u data/upiti.jsonl
-// i preko WhatsApp Cloud API-ja šalje potvrdu klijentu i obavijest firmi.
+// Glock Sigurnost: web server (Node 22+).
+// Servira /public, prima upite na POST /api/upit, sprema ih u data/upiti.jsonl,
+// a klijentu i firmi šalje potvrdu i obavijest putem WhatsAppa (Cloud API) i emaila (SMTP).
 import { createServer } from 'node:http';
 import { readFile, appendFile, mkdir } from 'node:fs/promises';
 import { extname, join, normalize } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import nodemailer from 'nodemailer';
 
 const ROOT = fileURLToPath(new URL('.', import.meta.url));
 const PUBLIC = join(ROOT, 'public');
@@ -20,9 +21,29 @@ const WA = {
   lang: env.WHATSAPP_TEMPLATE_LANG || 'bs',
   clientTemplate: env.WHATSAPP_TEMPLATE_CLIENT || 'upit_zaprimljen',
   companyTemplate: env.WHATSAPP_TEMPLATE_COMPANY || '',
-  companyNumber: toE164(env.COMPANY_WHATSAPP || ''),
+  // Službeni WhatsApp broj firme; javan je, pa ima podrazumijevanu vrijednost.
+  companyNumber: toE164(env.COMPANY_WHATSAPP || '067 104 2939'),
 };
 const waEnabled = Boolean(WA.token && WA.phoneId);
+
+// Email preko SMTP-a (npr. Gmail: smtp.gmail.com, port 465, lozinka za aplikacije).
+const MAIL = {
+  host: env.SMTP_HOST || 'smtp.gmail.com',
+  port: Number(env.SMTP_PORT || 465),
+  user: env.SMTP_USER,
+  pass: env.SMTP_PASS,
+  from: env.MAIL_FROM || (env.SMTP_USER ? `"Glock Sigurnost" <${env.SMTP_USER}>` : ''),
+  company: env.COMPANY_EMAIL || env.SMTP_USER || '',
+};
+let mailTransport = MAIL.user && MAIL.pass
+  ? nodemailer.createTransport({ host: MAIL.host, port: MAIL.port, secure: MAIL.port === 465, auth: { user: MAIL.user, pass: MAIL.pass } })
+  : null;
+// Za testove: zamjena SMTP transporta.
+export function setMailTransport(t, { from = '"Glock Sigurnost" <test@example.com>', company = 'firma@example.com' } = {}) {
+  mailTransport = t;
+  MAIL.from = from;
+  MAIL.company = company;
+}
 
 const TYPES = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.webp': 'image/webp', '.ico': 'image/x-icon' };
 const SECURITY_HEADERS = {
@@ -59,6 +80,41 @@ async function sendTemplate(to, name, params) {
     signal: AbortSignal.timeout(10_000),
   });
   if (!res.ok) throw new Error(`WhatsApp ${res.status}: ${await res.text()}`);
+}
+
+const esc = s => String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+const mailShell = inner => `<div style="font-family:Arial,sans-serif;max-width:560px;margin:auto;color:#1f2937;line-height:1.6">
+<div style="background:#0a0f1c;color:#e3b04b;padding:18px 24px;font-weight:700;letter-spacing:.08em">GLOCK SIGURNOST</div>
+<div style="padding:24px;border:1px solid #e5e7eb;border-top:0">${inner}</div></div>`;
+
+// Potvrda klijentu da je upit zaprimljen.
+function clientMail(u) {
+  const text = `Poštovani/a ${u.ime},
+
+Vaš upit je uspješno zaprimljen u agenciji Glock Sigurnost. Kada upit bude obrađen, naš tim će Vas kontaktirati.
+
+Usluga: ${u.usluga}
+Vaš upit: ${u.poruka}
+
+Hvala na povjerenju!
+Agencija „GLOCK-SIGURNOST“ d.o.o. Sarajevo
+Muhameda ef. Pandže 199, 71000 Sarajevo · 033 222 214`;
+  const html = mailShell(`<p>Poštovani/a <b>${esc(u.ime)}</b>,</p>
+<p>Vaš upit je uspješno zaprimljen u agenciji Glock Sigurnost. Kada upit bude obrađen, naš tim će Vas kontaktirati.</p>
+<p style="background:#f9fafb;padding:12px 16px;border-left:3px solid #e3b04b"><b>Usluga:</b> ${esc(u.usluga)}<br><b>Vaš upit:</b><br>${esc(u.poruka).replace(/\n/g, '<br>')}</p>
+<p>Hvala na povjerenju!</p>
+<p style="font-size:13px;color:#6b7280">Agencija „GLOCK-SIGURNOST“ d.o.o. Sarajevo<br>Muhameda ef. Pandže 199, 71000 Sarajevo · 033 222 214</p>`);
+  return { from: MAIL.from, to: u.email, subject: 'Vaš upit je zaprimljen | Glock Sigurnost', text, html };
+}
+
+// Obavijest firmi o novom upitu; "Odgovori" ide direktno klijentu.
+function companyMail(u) {
+  const rows = [['Ime / firma', u.ime], ['Telefon', u.telefon], ['Email', u.email], ['Usluga', u.usluga], ['Upit', u.poruka]];
+  const text = rows.map(([k, v]) => `${k}: ${v}`).join('\n');
+  const html = mailShell(`<p><b>Novi upit sa web stranice</b></p><table style="border-collapse:collapse;width:100%">${rows
+    .map(([k, v]) => `<tr><td style="padding:6px 10px 6px 0;color:#6b7280;vertical-align:top;white-space:nowrap">${k}</td><td style="padding:6px 0">${esc(v).replace(/\n/g, '<br>')}</td></tr>`)
+    .join('')}</table>`);
+  return { from: MAIL.from, to: MAIL.company, replyTo: u.email, subject: `Novi upit: ${u.ime} (${u.usluga})`, text, html };
 }
 
 // Jednostavno ograničenje broja upita po IP adresi u 10 minuta.
@@ -106,7 +162,7 @@ async function handleUpit(req, res) {
 
   let body;
   try { body = await readJson(req); } catch (e) { return send(res, e.status || 400, { error: 'Neispravan zahtjev.' }); }
-  if (body.website) return send(res, 200, { ok: true, whatsappSent: false }); // honeypot: bot, tiho ignorišemo
+  if (body.website) return send(res, 200, { ok: true, whatsappSent: false, emailSent: false }); // honeypot: bot, tiho ignorišemo
 
   const { upit, error } = validate(body);
   if (error) return send(res, 400, { error });
@@ -115,20 +171,19 @@ async function handleUpit(req, res) {
   await mkdir(DATA, { recursive: true });
   await appendFile(join(DATA, 'upiti.jsonl'), JSON.stringify(zapis) + '\n');
 
-  let whatsappSent = false;
-  if (waEnabled) {
-    try {
-      await sendTemplate(zapis.telefonE164, WA.clientTemplate, [upit.ime]);
-      whatsappSent = true;
-    } catch (e) { console.error('[upit] potvrda klijentu nije poslana:', e.message); }
-    if (WA.companyTemplate && WA.companyNumber) {
-      sendTemplate(WA.companyNumber, WA.companyTemplate, [upit.ime, upit.telefon, upit.email, upit.usluga, upit.poruka])
-        .catch(e => console.error('[upit] obavijest firmi nije poslana:', e.message));
-    }
-  } else {
-    console.log('[upit] WhatsApp nije podešen, upit je samo sačuvan:', zapis.ime, zapis.telefonE164);
+  // Obavijesti firmi idu u pozadini; potvrde klijentu čekamo da bismo mu rekli šta je stiglo.
+  const log = what => e => { console.error(`[upit] ${what} nije poslana:`, e.message); return false; };
+  if (waEnabled && WA.companyTemplate && WA.companyNumber) {
+    sendTemplate(WA.companyNumber, WA.companyTemplate, [upit.ime, upit.telefon, upit.email, upit.usluga, upit.poruka]).catch(log('WhatsApp obavijest firmi'));
   }
-  send(res, 200, { ok: true, whatsappSent });
+  if (mailTransport && MAIL.company) mailTransport.sendMail(companyMail(upit)).catch(log('email obavijest firmi'));
+
+  const [whatsappSent, emailSent] = await Promise.all([
+    waEnabled ? sendTemplate(zapis.telefonE164, WA.clientTemplate, [upit.ime]).then(() => true, log('WhatsApp potvrda klijentu')) : false,
+    mailTransport ? mailTransport.sendMail(clientMail(upit)).then(() => true, log('email potvrda klijentu')) : false,
+  ]);
+  if (!waEnabled && !mailTransport) console.log('[upit] WhatsApp i email nisu podešeni, upit je samo sačuvan:', zapis.ime, zapis.telefonE164);
+  send(res, 200, { ok: true, whatsappSent, emailSent });
 }
 
 async function serveStatic(req, res) {

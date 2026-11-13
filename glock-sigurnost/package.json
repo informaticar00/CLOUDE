@@ -2,9 +2,14 @@
   "name": "glock-sigurnost-web",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=22.9" },
+  "engines": {
+    "node": ">=22.9"
+  },
   "scripts": {
     "start": "node --env-file-if-exists=.env server.js",
     "test": "node --test"
+  },
+  "dependencies": {
+    "nodemailer": "10.3.1"
   }
 }

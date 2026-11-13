@@ -138,8 +138,9 @@ form.addEventListener('submit', async e => {
     const body = await res.json().catch(() => ({}));
     if (!res.ok) throw new Error(body.error || 'Slanje nije uspjelo.');
     status.classList.add('is-ok');
-    status.textContent = body.whatsappSent
-      ? 'Hvala! Vaš upit je zaprimljen, a potvrdu smo Vam poslali na WhatsApp. Kontaktiraćemo Vas čim upit obradimo.'
+    const kanali = [body.whatsappSent && 'WhatsApp', body.emailSent && 'email'].filter(Boolean).join(' i na ');
+    status.textContent = kanali
+      ? `Hvala! Vaš upit je zaprimljen, a potvrdu smo Vam poslali na ${kanali}. Kontaktiraćemo Vas čim upit obradimo.`
       : 'Hvala! Vaš upit je zaprimljen. Kontaktiraćemo Vas čim upit obradimo.';
     form.reset();
   } catch (err) {

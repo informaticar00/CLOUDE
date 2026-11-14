@@ -28,4 +28,6 @@ Grane, pull requestovi, CI/CD i puštanje u produkciju.
 | [`setup-matt-pocock-skills`](../.claude/skills/setup-matt-pocock-skills/SKILL.md) | Matt Pocock | Pripremi repo za Matt Pocock skillove |
 | [`ci-cd-and-automation`](../.claude/skills/ci-cd-and-automation/SKILL.md) | agent-skills (Addy Osmani) | Postavljanje build i deploy pipelinea |
 | [`shipping-and-launch`](../.claude/skills/shipping-and-launch/SKILL.md) | agent-skills (Addy Osmani) | Priprema za puštanje u produkciju |
+| [`deploy-to-vercel`](../.claude/skills/deploy-to-vercel/SKILL.md) | Vercel | Objavi aplikaciju ili stranicu na Vercelu |
+| [`vercel-cli-with-tokens`](../.claude/skills/vercel-cli-with-tokens/SKILL.md) | Vercel | Vercel CLI s tokenom: deploy, varijable okruženja |
 | [`wizard`](../.claude/skills/wizard/SKILL.md) | Matt Pocock | Interaktivni bash vodič za korake koje samo čovjek može napraviti |

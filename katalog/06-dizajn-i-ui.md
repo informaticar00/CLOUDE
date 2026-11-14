@@ -18,6 +18,9 @@ Izgled aplikacija, dizajn sustavi i vizualni identitet.
 | Skill | Izvor | Za šta služi |
 |---|---|---|
 | [`frontend-design`](../.claude/skills/frontend-design/SKILL.md) | Anthropic | Upečatljiv dizajn sučelja koji ne izgleda kao AI predložak |
+| [`impeccable`](../.claude/skills/impeccable/SKILL.md) | impeccable | Dizajn, kritika i doterivanje sučelja: hijerarhija, tipografija, boje, pokret |
+| [`design-taste-frontend`](../.claude/skills/design-taste-frontend/SKILL.md) | taste-skill | Profesionalne web stranice bez generičkog AI izgleda |
+| [`emil-design-eng`](../.claude/skills/emil-design-eng/SKILL.md) | Emil Kowalski | Sitni detalji koji čine sučelje gotovim: animacije, hover, prijelazi |
 | [`frontend-ui-engineering`](../.claude/skills/frontend-ui-engineering/SKILL.md) | agent-skills (Addy Osmani) | Produkcijsko, pristupačno i responzivno sučelje |
 | [`ui-ux-pro-max`](../.claude/skills/ui-ux-pro-max/SKILL.md) | ui-ux-pro-max | Stilovi, palete i fontovi za web, mobitel i desktop |
 | [`ui-styling`](../.claude/skills/ui-styling/SKILL.md) | ui-ux-pro-max | shadcn/ui, Radix i Tailwind komponente |

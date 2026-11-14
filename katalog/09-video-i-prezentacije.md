@@ -18,3 +18,7 @@ Video iz HTML-a (HyperFrames) i prezentacije. Za renderiranje videa treba HyperF
 | [`style-sampling`](../.claude/skills/style-sampling/SKILL.md) | hyperframes | Nova epizoda u provjerenom stilu videa |
 | [`slideshow`](../.claude/skills/slideshow/SKILL.md) | hyperframes | Prezentacija uživo s bilješkama za govornika |
 | [`slides`](../.claude/skills/slides/SKILL.md) | ui-ux-pro-max | HTML prezentacije s grafikonima |
+| [`remotion-best-practices`](../.claude/skills/remotion-best-practices/SKILL.md) | Remotion | Početna točka za video iz React koda (Remotion) |
+| [`remotion-create`](../.claude/skills/remotion-create/SKILL.md) | Remotion | Napravi novi Remotion video |
+| [`remotion-render`](../.claude/skills/remotion-render/SKILL.md) | Remotion | Izvezi Remotion video |
+| [`remotion-captions`](../.claude/skills/remotion-captions/SKILL.md) | Remotion | Transkripcija i animirani titlovi |

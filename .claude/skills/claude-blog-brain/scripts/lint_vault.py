@@ -1,0 +1,317 @@
+#!/usr/bin/env python3
+"""Lint Obsidian vault structure, frontmatter, raw manifest, and wikilinks.
+
+Exit codes: 0 the vault passed, 1 lint failures (errors in the vault), 2 the
+lint could not read its input (a non-UTF-8 note, a malformed .obsidian/graph.json),
+so the result is unknown. Lint failures take priority when both occur.
+"""
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import re
+import sys
+from pathlib import Path
+
+
+REPO = Path(__file__).resolve().parent.parent
+DEFAULT_VAULT = REPO / "assets" / "template-brain"
+REQUIRED_FRONTMATTER = {"type", "title", "domain", "status", "created", "updated", "tags"}
+DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+ALLOWED_STATUSES = {"active", "draft", "seed", "archived", "review", "evergreen"}
+
+
+def main(argv: list[str] | None = None) -> int:
+    parser = argparse.ArgumentParser(description="Lint a brain vault.")
+    parser.add_argument("--vault", default=str(DEFAULT_VAULT))
+    parser.add_argument("--template", action="store_true")
+    parser.add_argument("--json", action="store_true", help="Print structured diagnostics.")
+    args = parser.parse_args(argv)
+    vault = Path(args.vault).expanduser().resolve()
+    is_template = args.template or vault == DEFAULT_VAULT.resolve()
+    errors: list[str] = []
+    warnings: list[str] = []
+    unreadable: list[str] = []
+    for rel in ["CODEX.md", "README.md", "shipping-rules.md", ".raw/.manifest.json", "wiki/hot.md", "wiki/index.md", "wiki/overview.md", "wiki/log.md", "wiki/meta/Start Here.md", "wiki/meta/dashboard.md"]:
+        if not (vault / rel).exists():
+            errors.append(f"missing {rel}")
+    check_raw_manifest(vault, errors)
+    graph = vault / ".obsidian" / "graph.json"
+    if graph.exists():
+        try:
+            data = json.loads(graph.read_text(encoding="utf-8"))
+            if not isinstance(data, dict):
+                raise ValueError("expected a JSON object")
+            groups = data.get("colorGroups") or []
+            if not isinstance(groups, list):
+                raise ValueError("colorGroups must be a list")
+        except (ValueError, OSError) as exc:
+            unreadable.append(f"cannot read .obsidian/graph.json: {exc}")
+        else:
+            if len(groups) < 4:
+                errors.append("graph.json has fewer than 4 color groups")
+    notes = list((vault / "wiki").rglob("*.md")) if (vault / "wiki").exists() else []
+    stems = {p.stem.lower(): p for p in notes}
+    rels = {p.relative_to(vault).with_suffix("").as_posix().lower(): p for p in notes}
+    incoming = {p: 0 for p in notes}
+    outgoing = {p: 0 for p in notes}
+    duplicate_stems: dict[str, list[str]] = {}
+    for path in notes:
+        duplicate_stems.setdefault(path.stem.lower(), []).append(path.relative_to(vault).as_posix())
+        try:
+            text = path.read_text(encoding="utf-8")
+        except (UnicodeDecodeError, OSError) as exc:
+            unreadable.append(f"cannot read {path.relative_to(vault).as_posix()}: {exc}")
+            continue
+        if not text.startswith("---\n"):
+            errors.append(f"missing frontmatter: {path.relative_to(vault)}")
+        else:
+            validate_frontmatter(vault, path, text, errors, warnings, template=is_template)
+        if re.search(r"\{\{(?!date|owner|client_slug|client_name)[^}]+\}\}|__[A-Z0-9_]+__|\bTODO\b", text):
+            errors.append(f"unresolved placeholder in {path.relative_to(vault)}")
+        if any(part in {"deliverables", "reports"} for part in path.parts) and "[[" not in text and ".raw/" not in text and "sha256" not in text.lower():
+            errors.append(f"deliverable/report lacks source citation: {path.relative_to(vault)}")
+        for raw in re.findall(r"!?\[\[([^\]]+)\]\]", text):
+            raw_target = raw.split("|", 1)[0].split("#", 1)[0].strip()
+            target = raw_target.replace(".md", "").replace(".canvas", "").strip()
+            if not target:
+                continue
+            outgoing[path] += 1
+            key = target.lower()
+            if key in stems:
+                incoming[stems[key]] += 1
+            elif key in rels:
+                incoming[rels[key]] += 1
+            elif not safe_link_exists(vault, raw_target):
+                errors.append(f"dead wikilink in {path.relative_to(vault)}: {raw}")
+    zero_in = [p.relative_to(vault).as_posix() for p in notes if incoming[p] == 0]
+    zero_out = [p.relative_to(vault).as_posix() for p in notes if outgoing[p] == 0]
+    if zero_in:
+        warnings.append("zero incoming wiki notes: " + ", ".join(zero_in[:20]))
+    if zero_out:
+        warnings.append("zero outgoing wiki notes: " + ", ".join(zero_out[:20]))
+    for stem, paths in duplicate_stems.items():
+        if stem != "_index" and len(paths) > 1:
+            errors.append(f"duplicate note stem {stem}: {', '.join(paths)}")
+    if args.json:
+        rows = diagnostics(errors, warnings)
+        rows += [
+            {"severity": "error", "code": "UNREADABLE", "file": "", "line": None, "message": item}
+            for item in unreadable
+        ]
+        print(json.dumps({"ok": not errors and not unreadable, "diagnostics": rows}, indent=2, sort_keys=True))
+    else:
+        for warning in warnings:
+            print(f"WARNING: {warning}")
+        for error in errors:
+            print(f"ERROR: {error}", file=sys.stderr)
+        for item in unreadable:
+            print(f"ERROR: {item}", file=sys.stderr)
+        if errors:
+            print("Vault lint failed")
+        elif unreadable:
+            print("Vault lint could not finish: unreadable input (exit 2)")
+        else:
+            print("Vault lint passed")
+    if errors:
+        return 1
+    return 2 if unreadable else 0
+
+
+def validate_frontmatter(vault: Path, path: Path, text: str, errors: list[str], warnings: list[str], *, template: bool) -> None:
+    rel = path.relative_to(vault).as_posix()
+    frontmatter = frontmatter_block(text)
+    if frontmatter is None:
+        errors.append(f"invalid frontmatter fence: {rel}")
+        return
+    fields = parse_frontmatter(frontmatter)
+    missing = sorted(REQUIRED_FRONTMATTER - set(fields))
+    if missing:
+        target = warnings if template else errors
+        target.append(f"frontmatter missing {', '.join(missing)}: {rel}")
+    status = str(fields.get("status", "")).strip().strip("\"'")
+    if status and status not in ALLOWED_STATUSES:
+        errors.append(f"frontmatter invalid status {status}: {rel}")
+    for key in ("created", "updated"):
+        value = str(fields.get(key, "")).strip().strip("\"'")
+        if value and not DATE_RE.match(value) and "{{date}}" not in value:
+            errors.append(f"frontmatter invalid {key} date: {rel}")
+    tags = fields.get("tags")
+    if tags is not None and (not isinstance(tags, list) or not all(isinstance(tag, str) and tag.strip() for tag in tags)):
+        errors.append(f"frontmatter tags must be an array: {rel}")
+
+
+def frontmatter_block(text: str) -> str | None:
+    if not text.startswith("---\n"):
+        return None
+    end = text.find("\n---", 4)
+    if end == -1:
+        return None
+    return text[4:end]
+
+
+def parse_frontmatter(frontmatter: str) -> dict[str, object]:
+    """Parse the supported flat YAML fields, including scalar block sequences.
+
+    Nested mappings and arbitrary YAML objects are outside this vault contract.
+    Tag lists must be complete arrays, never just a string starting with '['.
+    """
+    fields: dict[str, object] = {}
+    current: str | None = None
+    for line in frontmatter.splitlines():
+        stripped = line.strip()
+        if not stripped or stripped.startswith("#"):
+            continue
+        if line[:1].isspace() or stripped.startswith("-"):
+            if current and re.match(r"^\s*-\s+", line):
+                value = tag_scalar(re.sub(r"^\s*-\s+", "", line).strip())
+                if isinstance(fields[current], list):
+                    fields[current].append(value)
+            elif current:
+                # Invalid/nested block values stay non-array so lint rejects tags.
+                fields[current] = "<unsupported block>"
+            continue
+        current = None
+        if ":" not in line:
+            continue
+        key, value = line.split(":", 1)
+        key, value = key.strip(), value.strip()
+        if not value:
+            fields[key] = []
+            current = key
+        elif value.startswith("[") and value.endswith("]"):
+            inner = value[1:-1].strip()
+            fields[key] = [tag_scalar(item.strip()) for item in inner.split(",")] if inner else []
+        else:
+            fields[key] = value
+    return fields
+
+
+def tag_scalar(value: str) -> object:
+    """Reject nested or typed YAML objects where this schema needs a tag string."""
+    if len(value) >= 2 and value[0] == value[-1] == "'":
+        return value[1:-1].replace("''", "'")
+    if len(value) >= 2 and value[0] == value[-1] == '"':
+        try:
+            return json.loads(value)
+        except ValueError:
+            return None
+    value = re.split(r"\s+#", value, maxsplit=1)[0].strip()
+    if not value or any(char in value for char in "[]{}") or re.search(r":\s", value):
+        return None
+    if value.lower() in {"true", "false", "yes", "no", "on", "off", "null", "~"} or re.fullmatch(r"[-+]?\d+(?:\.\d+)?", value):
+        return None
+    return value
+
+
+def safe_link_exists(vault: Path, raw_target: str) -> bool:
+    raw_target = raw_target.strip()
+    normalized = raw_target.replace(".md", "").replace(".canvas", "").strip()
+    if not normalized or any(char in normalized for char in "*?[]{}"):
+        return False
+    candidate = Path(normalized)
+    if candidate.is_absolute() or ".." in candidate.parts:
+        return False
+    possibilities = [
+        vault / normalized,
+        vault / f"{normalized}.md",
+        vault / f"{normalized}.canvas",
+        vault / "wiki" / f"{normalized}.md",
+        vault / "wiki" / f"{normalized}.canvas",
+        vault / "_attachments" / raw_target,
+        vault / "wiki" / "canvases" / raw_target,
+    ]
+    if any(path.exists() for path in possibilities):
+        return True
+    if "/" in raw_target or "\\" in raw_target:
+        return False
+    search_root = vault / "wiki"
+    if not search_root.exists():
+        return False
+    names = {raw_target, f"{normalized}.md", f"{normalized}.canvas"}
+    return any(path.name in names for path in search_root.rglob("*"))
+
+
+def diagnostics(errors: list[str], warnings: list[str]) -> list[dict[str, object]]:
+    rows: list[dict[str, object]] = []
+    for severity, items in (("error", errors), ("warning", warnings)):
+        for item in items:
+            rows.append({
+                "severity": severity,
+                "code": diagnostic_code(item),
+                "file": diagnostic_file(item),
+                "line": None,
+                "message": item,
+            })
+    return rows
+
+
+def diagnostic_code(message: str) -> str:
+    if "frontmatter" in message:
+        return "FRONTMATTER"
+    if "wikilink" in message:
+        return "WIKILINK"
+    if "raw manifest" in message:
+        return "RAW_MANIFEST"
+    return "VAULT"
+
+
+def diagnostic_file(message: str) -> str:
+    if ": " in message:
+        return message.rsplit(": ", 1)[-1].split(": ", 1)[0]
+    return ""
+
+
+def check_raw_manifest(vault: Path, errors: list[str]) -> None:
+    manifest_path = vault / ".raw" / ".manifest.json"
+    if not manifest_path.exists():
+        return
+    try:
+        data = json.loads(manifest_path.read_text(encoding="utf-8"))
+    except ValueError as exc:
+        errors.append(f"invalid raw manifest: {exc}")
+        return
+    sources = data.get("sources", [])
+    if not isinstance(sources, list):
+        errors.append("raw manifest sources must be a list")
+        return
+    seen_paths: set[str] = set()
+    for index, entry in enumerate(sources, start=1):
+        label = f"raw manifest source #{index}"
+        if not isinstance(entry, dict):
+            errors.append(f"{label} must be an object")
+            continue
+        rel = entry.get("path")
+        expected = entry.get("sha256")
+        if not isinstance(rel, str) or not rel.strip():
+            errors.append(f"{label} missing path")
+            continue
+        rel = rel.strip()
+        if rel in seen_paths:
+            errors.append(f"duplicate raw manifest path: {rel}")
+        seen_paths.add(rel)
+        if rel.startswith("/") or ".." in Path(rel).parts:
+            errors.append(f"{label} has unsafe path: {rel}")
+            continue
+        source = vault / rel
+        if not source.is_file():
+            errors.append(f"{label} missing file: {rel}")
+            continue
+        if not isinstance(expected, str) or not re.fullmatch(r"[0-9a-f]{64}", expected):
+            errors.append(f"{label} missing valid sha256")
+            continue
+        if sha256_file(source) != expected:
+            errors.append(f"{label} sha256 mismatch: {rel}")
+
+
+def sha256_file(path: Path) -> str:
+    h = hashlib.sha256()
+    with path.open("rb") as f:
+        for chunk in iter(lambda: f.read(1024 * 1024), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

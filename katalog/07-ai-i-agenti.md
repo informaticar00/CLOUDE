@@ -20,5 +20,4 @@ Izrada LLM aplikacija i rad s više agenata.
 | [`context-engineering`](../.claude/skills/context-engineering/SKILL.md) | agent-skills (Addy Osmani) | Postavljanje konteksta kad kvaliteta odgovora padne |
 | [`dispatching-parallel-agents`](../.claude/skills/dispatching-parallel-agents/SKILL.md) | superpowers | Više neovisnih zadataka paralelno |
 | [`chief-of-staff`](../.claude/skills/chief-of-staff/SKILL.md) | Matt Pocock | Dugi cilj u jednoj sesiji uz koordinaciju subagenata |
-| [`claude-handoff`](../.claude/skills/claude-handoff/SKILL.md) | Matt Pocock | Predaj razgovor novom agentu u pozadini |
 | [`writing-for-agents`](../.claude/skills/writing-for-agents/SKILL.md) | Matt Pocock | Pisanje skillova, AGENTS.md i CLAUDE.md |

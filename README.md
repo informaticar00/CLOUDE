@@ -8,7 +8,7 @@ Moja postavka za Claude Code: agenti, skillovi i mali projekti.
 |---|---|
 | [`katalog/`](katalog/README.md) | **Pregled svih agenata i skillova po kategorijama.** Kreni odavde. |
 | [`.claude/agents/`](.claude/agents) | 41 agent (specijalisti za kod, dizajn, DevOps, AI…) |
-| [`.claude/skills/`](.claude/skills) | 318 skillova (planiranje, TDD, code review, dizajn, video, marketing, SEO…) |
+| [`.claude/skills/`](.claude/skills) | 249 skillova (planiranje, TDD, code review, dizajn, video, marketing, SEO…) |
 | [`whatsapp-jarvis/`](whatsapp-jarvis/README.md) | Osobni AI asistent koji odgovara na WhatsAppu |
 | `CLAUDE.md`, `.claude/CLAUDE.md` | Upute koje Claude Code čita u svakoj sesiji |
 | `skills-lock.json` | Točne verzije i izvori instaliranih skillova |

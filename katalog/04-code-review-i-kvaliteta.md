@@ -17,8 +17,6 @@ Pregled koda, sigurnost i čišćenje tehničkog duga.
 
 | Skill | Izvor | Za šta služi |
 |---|---|---|
-| [`code-review`](../.claude/skills/code-review/SKILL.md) | Matt Pocock | Pregled promjena od zadane točke (commit, grana) |
-| [`code-review-and-quality`](../.claude/skills/code-review-and-quality/SKILL.md) | agent-skills (Addy Osmani) | Pregled na više osi prije spajanja |
 | [`requesting-code-review`](../.claude/skills/requesting-code-review/SKILL.md) | superpowers | Zatraži pregled kad završiš veći posao |
 | [`receiving-code-review`](../.claude/skills/receiving-code-review/SKILL.md) | superpowers | Kako kritički primiti komentare s pregleda |
 | [`doubt-driven-development`](../.claude/skills/doubt-driven-development/SKILL.md) | agent-skills (Addy Osmani) | Svaka važna odluka prolazi kroz "đavoljeg odvjetnika" |
@@ -26,6 +24,3 @@ Pregled koda, sigurnost i čišćenje tehničkog duga.
 | [`ponytail-review`](../.claude/skills/ponytail-review/SKILL.md) | ponytail | Pregled jedne promjene: logika, sigurnost, brzina |
 | [`ponytail-audit`](../.claude/skills/ponytail-audit/SKILL.md) | ponytail | Pregled cijelog repozitorija: bugovi, rupe, spori dijelovi |
 | [`ponytail-debt`](../.claude/skills/ponytail-debt/SKILL.md) | ponytail | Popis svih prečaca (`shortcut:` komentara) kao duga |
-| [`ponytail-gain`](../.claude/skills/ponytail-gain/SKILL.md) | ponytail | Koliko ponytail štedi (kod, trošak, brzina) |
-| [`ponytail-help`](../.claude/skills/ponytail-help/SKILL.md) | ponytail | Kratke upute za ponytail |
-| [`retro`](../.claude/skills/retro/SKILL.md) | Matt Pocock | Retrospektiva sesije programiranja |

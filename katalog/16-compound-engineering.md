@@ -15,7 +15,6 @@ Every-jev tok rada: planiranje, rad, review i bilježenje naučenog, tako da sva
 | [`ce-commit`](../.claude/skills/ce-commit/SKILL.md) | Compound Engineering | Create a git commit with a clear, value-communicating message. |
 | [`ce-commit-push-pr`](../.claude/skills/ce-commit-push-pr/SKILL.md) | Compound Engineering | Commit, push, and open a PR. |
 | [`ce-compound`](../.claude/skills/ce-compound/SKILL.md) | Compound Engineering | Capture a solved problem's lesson in its cheapest durable form, a test or lint rule, a coding standard, or a repo learning, or refresh ex… |
-| [`ce-compound-refresh`](../.claude/skills/ce-compound-refresh/SKILL.md) | Compound Engineering | Old name for refreshing learnings, which now lives in `ce-compound`. |
 | [`ce-debug`](../.claude/skills/ce-debug/SKILL.md) | Compound Engineering | Diagnosis loop for bugs and failing behavior. |
 | [`ce-doc-review`](../.claude/skills/ce-doc-review/SKILL.md) | Compound Engineering | Review requirements, plans, or specs with role-specific lenses. |
 | [`ce-dogfood`](../.claude/skills/ce-dogfood/SKILL.md) | Compound Engineering | Hands-off, diff-scoped browser QA of the active branch: maps user flows, drives a real browser, autonomously fixes small breakages with r… |
@@ -30,15 +29,12 @@ Every-jev tok rada: planiranje, rad, review i bilježenje naučenog, tako da sva
 | [`ce-pov`](../.claude/skills/ce-pov/SKILL.md) | Compound Engineering | Judge a supplied subject against the project's evidence and constraints. |
 | [`ce-product-pulse`](../.claude/skills/ce-product-pulse/SKILL.md) | Compound Engineering | Generate time-windowed product pulse reports from configured signals. |
 | [`ce-promote`](../.claude/skills/ce-promote/SKILL.md) | Compound Engineering | Draft launch or promotion copy for a shipped feature. |
-| [`ce-proof`](../.claude/skills/ce-proof/SKILL.md) | Compound Engineering | Publish, read, comment on, or edit markdown in Proof. |
 | [`ce-prototype`](../.claude/skills/ce-prototype/SKILL.md) | Compound Engineering | Build a throwaway prototype to answer how something should work, feel, or read. |
 | [`ce-resolve-pr-feedback`](../.claude/skills/ce-resolve-pr-feedback/SKILL.md) | Compound Engineering | Judge PR feedback centrally, apply valid fixes, and complete review conversations with publication verified. |
 | [`ce-retro`](../.claude/skills/ce-retro/SKILL.md) | Compound Engineering | Look back over an agent session in this repo, the current one by default or any scope the user names across harnesses, and find what in t… |
 | [`ce-retune`](../.claude/skills/ce-retune/SKILL.md) | Compound Engineering | Retune a skill corpus for a new model, measurement-first: mine the run archive for a baseline, establish a noise floor, audit the corpus … |
-| [`ce-riffrec-feedback-analysis`](../.claude/skills/ce-riffrec-feedback-analysis/SKILL.md) | Compound Engineering | Analyze recorded product feedback into evidence for bugs and requirements. |
 | [`ce-setup`](../.claude/skills/ce-setup/SKILL.md) | Compound Engineering | Check Compound Engineering's tools and repo config and fix what it finds, scaffold a Compound Pack with `pack:<id>`, or draft and refresh… |
 | [`ce-simplify-code`](../.claude/skills/ce-simplify-code/SKILL.md) | Compound Engineering | Simplify code for clarity, reuse, quality, and efficiency while preserving behavior, and prune tests and comments that carry no value. |
-| [`ce-skill-work`](../.claude/skills/ce-skill-work/SKILL.md) | Compound Engineering | Applies this repository's skill-authoring standard as a procedure. |
 | [`ce-strategy`](../.claude/skills/ce-strategy/SKILL.md) | Compound Engineering | Create or update STRATEGY.md. |
 | [`ce-sweep`](../.claude/skills/ce-sweep/SKILL.md) | Compound Engineering | Sweep configured feedback sources (Slack, GitHub Issues; email experimental) for new items: acknowledge at source, analyze recordings, ve… |
 | [`ce-test-browser`](../.claude/skills/ce-test-browser/SKILL.md) | Compound Engineering | Run browser tests for pages affected by the current branch or PR. |

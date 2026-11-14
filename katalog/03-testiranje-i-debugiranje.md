@@ -17,13 +17,7 @@ Testovi, traženje uzroka grešaka i provjera da stvari stvarno rade.
 
 | Skill | Izvor | Za šta služi |
 |---|---|---|
-| [`tdd`](../.claude/skills/tdd/SKILL.md) | Matt Pocock | Razvoj vođen testovima |
 | [`test-driven-development`](../.claude/skills/test-driven-development/SKILL.md) | agent-skills (Addy Osmani) | Petlja red-green-refactor |
 | [`systematic-debugging`](../.claude/skills/systematic-debugging/SKILL.md) | superpowers | Sustavno traženje uzroka prije popravka |
-| [`diagnosing-bugs`](../.claude/skills/diagnosing-bugs/SKILL.md) | Matt Pocock | Dijagnoza teških bugova i usporavanja |
-| [`debugging-and-error-recovery`](../.claude/skills/debugging-and-error-recovery/SKILL.md) | agent-skills (Addy Osmani) | Kad padnu testovi ili build |
-| [`investigate-first`](../.claude/skills/investigate-first/SKILL.md) | caveman | Prvo istraži nejasnu grešku, tek onda mijenjaj |
 | [`verification-before-completion`](../.claude/skills/verification-before-completion/SKILL.md) | superpowers | Pokreni provjere prije nego kažeš "gotovo" |
-| [`verify-and-stop`](../.claude/skills/verify-and-stop/SKILL.md) | caveman | Samo provjeri da posao zadovoljava uvjete |
 | [`webapp-testing`](../.claude/skills/webapp-testing/SKILL.md) | Anthropic | Testiranje web aplikacija s Playwrightom |
-| [`browser-testing-with-devtools`](../.claude/skills/browser-testing-with-devtools/SKILL.md) | agent-skills (Addy Osmani) | Testiranje u pravom pregledniku (Chrome DevTools MCP) |

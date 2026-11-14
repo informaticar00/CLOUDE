@@ -34,5 +34,6 @@ Prije pisanja koda: razjasni ideju, napiši specifikaciju i podijeli posao na ko
 | [`constraint-driven-development`](../.claude/skills/constraint-driven-development/SKILL.md) | agent-skills (Addy Osmani) | Zapiši ljestvicu kvalitete i drži je se |
 | [`domain-modeling`](../.claude/skills/domain-modeling/SKILL.md) | Matt Pocock | Model domene i rječnik pojmova projekta |
 | [`research`](../.claude/skills/research/SKILL.md) | Matt Pocock | Istraži pitanje iz pouzdanih izvora i spremi nalaze |
+| [`last30days`](../.claude/skills/last30days/SKILL.md) | last30days | Što ljudi pričaju o temi u zadnjih 30 dana (Reddit, X, YouTube, HN) |
 | [`teach`](../.claude/skills/teach/SKILL.md) | Matt Pocock | Nauči te novu vještinu ili koncept |
 | [`wait-what`](../.claude/skills/wait-what/SKILL.md) | Matt Pocock | Prethodni odgovor nije bio jasan? Objasni ponovno, jednostavnije |

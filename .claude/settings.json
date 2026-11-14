@@ -36,9 +36,19 @@
     ]
   },
   "enabledPlugins": {
-    "rea@rea": true
+    "rea@rea": true,
+    "context7@claude-plugins-official": true,
+    "playwright@claude-plugins-official": true,
+    "code-review@claude-plugins-official": true,
+    "security-guidance@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
+    "claude-plugins-official": {
+      "source": {
+        "source": "github",
+        "repo": "anthropics/claude-plugins-official"
+      }
+    },
     "rea": {
       "source": {
         "source": "github",
